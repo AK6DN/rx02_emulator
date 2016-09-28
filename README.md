@@ -119,9 +119,13 @@ RX: EMPBUF rx_xmit_es(0000)
 
 Notes:
 
-(1) This code has been written with the assumption that <B>xxprintf</B> support has been added to the Arduino development environment.
+(1) This code has been written with the assumption that <B>xxprintf</B> support has been added to the PRINT class in the Arduino development environment.
 Refer to:  http://playground.arduino.cc/Main/Printf  for instructions on how to do this.
 
 (2) Right now there is a lot of 'extraneous' code (ie, the TU58 driver interface) that is included by default but not currently used. A future plan is to add support to map a backend TU58 server to a file connection (ie, by using a pseudo filename) so that not only local MicroSD card file access can be supported, but simultaenous access to a backend PC-based file storage server can happen.
+
+(3) EEPROM support for saving the default RX02 drive file mapping as user-supplied filenames (rather than RX0.DSK and RX1.DSK) is planned.
+
+(4) This code was written with tap stops set at 4 (versus the default of 2). Manually edit the Arduino <B>preferences.txt</B> file tab size line to be: <B>editor.tabs.size=4</B> if desired.
 
 Don
