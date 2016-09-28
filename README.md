@@ -1,4 +1,4 @@
-<B>rx02_emulator</B> is a hardware/software emulation of a DEC RX02 dual 8" floppy disk drive.The software code runs on an Arduino Mega2560 processor board with a custom hardware interface shield that maps a dozen or so digital port bits to the custom DEC RX02 interface protocol hardware.
+<B>rx02_emulator</B> is a hardware/software emulation of a DEC RX02 dual 8" floppy disk drive.The software code runs on an Arduino Mega2560 processor board with a custom hardware interface shield that maps a dozen or so digital port bits to the custom DEC RX02 interface hardware protocol.
 
 The emulator simulates two RX02 drives mapped to files on an attached MicroSD card.
 
@@ -6,7 +6,7 @@ This implementation was originally based on the design at:  http://www.chdickman
 
 As it currently stands this implementation boots/runs under the XXDP and RT-11 operating systems, and passes the DEC RX02 hardware diagnostics ZRXDC0 Performance Exerciser, ZRXEA0 Formatter, and ZRXFB0 RX02/RX211 Logic/Function Test.
 
-<B>More detailed information to be provided ...</B>
+<I>More detailed information to be provided ...</I>
 
 The MicroSD card in the emulator is a FAT32 formatted filesystem, and it can be inserted (offline) into a WindowsPC to copy files to/from the device. By default, the files 'RX0.DSK' and 'RX1.DSK' are mapped to drive 0 and 1 on initialization.
 
@@ -117,3 +117,11 @@ RX: EMPBUF rx_xmit_es(0000)
 ...
 ```
 
+Notes:
+
+(1) This code has been written with the assumption that <B>xxprintf</B> support has been added to the Arduino development environment.
+Refer to:  http://playground.arduino.cc/Main/Printf  for instructions on how to do this.
+
+(2) Right now there is a lot of 'extraneous' code (ie, the TU58 driver interface) that is included by default but not currently used. A future plan is to add support to map a backend TU58 server to a file connection (ie, by using a pseudo filename) so that not only local MicroSD card file access can be supported, but simultaenous access to a backend PC-based file storage server can happen.
+
+Don
