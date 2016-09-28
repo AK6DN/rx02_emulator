@@ -124,7 +124,7 @@ Refer to:  http://playground.arduino.cc/Main/Printf  for instructions on how to 
 
 (2) Right now there is a lot of 'extraneous' code (ie, the TU58 driver interface) that is included by default but not currently used. A future plan is to add support to map a backend TU58 server to a file connection (ie, by using a pseudo filename) so that not only local MicroSD card file access can be supported, but simultaenous access to a backend PC-based file storage server can happen.
 
-(3) EEPROM support for saving the default RX02 drive file mapping as user-supplied filenames (rather than RX0.DSK and RX1.DSK) is planned.
+(3) Support for saving the default RX02 drive file mapping and emulation type as user-supplied filenames (rather than RX0.DSK and RX1.DSK) is planned but not yet implemented.
 
 (4) This code was written with tap stops set at 4 (versus the default of 2). Manually edit the Arduino <B>preferences.txt</B> file tab size line to be: <B>editor.tabs.size=4</B> if desired.
 
