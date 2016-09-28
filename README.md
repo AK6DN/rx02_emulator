@@ -1,23 +1,37 @@
-<B>rx02_emulator</B> is a hardware/software emulation of a DEC RX02 dual 8" floppy disk drive. The software code runs on an Arduino Mega2560 processor board with a custom hardware interface shield that maps a dozen or so port bits to the custom DEC RX02 interface protocol.
+<B>rx02_emulator</B> is a hardware/software emulation of a DEC RX02 dual 8" floppy disk drive.The software code runs on an Arduino Mega2560 processor board with a custom hardware interface shield that maps a dozen or so digital port bits to the custom DEC RX02 interface protocol hardware.
 
 The emulator simulates two RX02 drives mapped to files on an attached MicroSD card.
 
-This implementation was originally based on the design at:  http://www.chdickman.com/rx02/ but has been extensively modified for the Arduino and to correct issues regarding to hardware functionality.
+This implementation was originally based on the design at:  http://www.chdickman.com/rx02/ but has been extensively modified for the Arduino and to provide the functionality necessary to pass the DEC RX02 hardware diagnostics.
 
-As it currently stands this implementation boots/runs on the XXDP and RT-11 operating systems, and passes the DEC RX02 hardware diagnostics ZRXDC0 Performance Exerciser, ZRXEA0 Formatter, and ZRXFB0 RX02/RX211 Logic/Function Test.
+As it currently stands this implementation boots/runs under the XXDP and RT-11 operating systems, and passes the DEC RX02 hardware diagnostics ZRXDC0 Performance Exerciser, ZRXEA0 Formatter, and ZRXFB0 RX02/RX211 Logic/Function Test.
 
 <B>More detailed information to be provided ...</B>
 
 The MicroSD card in the emulator is a FAT32 formatted filesystem, and it can be inserted (offline) into a WindowsPC to copy files to/from the device. By default, the files 'RX0.DSK' and 'RX1.DSK' are mapped to drive 0 and 1 on initialization.
 
-The emulator interfaces thru a simple ASCII termianl command line via the USB port on the Arduino device. After booting, typing:  H<cr>  types out the available commands.
+The emulator interfaces thru a simple ASCII terminal command line via the USB port on the Arduino device. After booting, typing:  H<cr>  types out the available commands. Here is a sample interaction showing the use of the H, L, S and 0 commands, and the debug level 1 log of what happens when 'b dy0' is typed on the attached PDP-11/44 console terminal.
 
 ```
-RX02 Emulator v1.0 - Sep 26 2016 - 14:51:21
-No valid MicroSD card detected.
-RX: waiting for INIT to clear ... t=1100ms
-RX: INIT has cleared t=1101ms
-RX: INIT rx_xmit_es(0004)
+RX02 Emulator v1.0 - Sep 27 2016 - 23:47:10
+
+SD: cardType=SD3
+SD: cardSize=3781MB
+SD: volType=FAT32
+SD: volBytesPerCluster=4096
+SD: volClusterCount=964992
+SD: volSizeBytes=3768MB
+
+2016-09-24 18:02:14     512512 RX0.DSK
+2016-09-24 18:02:14     512512 RX1.DSK
+2016-09-24 18:36:02     512512 XXDP.DSK
+2016-09-26 15:37:38     512512 RT11.DSK
+
+Valid MicroSD card detected.
+
+RX: waiting for INIT to clear ... t=1132ms
+RX: INIT has cleared t=1206ms
+RX: INIT rx_xmit_es(0244)
 
 Initialization complete.
 H
@@ -39,5 +53,67 @@ Commands available:
   h(elp)            -- display this text
 
 Note: chars in () are optional
+L
+2016-09-24 18:02:14     512512 RX0.DSK
+2016-09-24 18:02:14     512512 RX1.DSK
+2016-09-24 18:36:02     512512 XXDP.DSK
+2016-09-26 15:37:38     512512 RT11.DSK
+S
+Current file[0]: 'RX0.DSK'
+Current file[1]: 'RX1.DSK'
+0 XXDP.DSK
+Setting file[0]: 'XXDP.DSK'
+
+RX: waiting for INIT to clear ... t=49342ms
+RX: INIT has cleared t=49438ms
+RX: INIT rx_xmit_es(0244)
+
+RX: cmd=0007
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=001
+RX: RDSECT ta=001
+RX: RDSECT rx_xmit_es(0060)
+
+RX: waiting for INIT to clear ... t=49462ms
+RX: INIT has cleared t=49557ms
+RX: INIT rx_xmit_es(0244)
+
+RX: cmd=0407
+RX: RDSECT unit=0 den=D
+RX: RDSECT sa=001
+RX: RDSECT ta=001
+RX: RDSECT pos=6656. len=256.
+RX: RDSECT rx_xmit_es(0040)
+
+RX: cmd=0403
+RX: EMPBUF unit=0 den=D
+RX: EMPBUF wc=200
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=0407
+RX: RDSECT unit=0 den=D
+RX: RDSECT sa=003
+RX: RDSECT ta=001
+RX: RDSECT pos=7168. len=256.
+RX: RDSECT rx_xmit_es(0040)
+
+RX: cmd=0403
+RX: EMPBUF unit=0 den=D
+RX: EMPBUF wc=200
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=0407
+RX: RDSECT unit=0 den=D
+RX: RDSECT sa=005
+RX: RDSECT ta=001
+RX: RDSECT pos=7680. len=256.
+RX: RDSECT rx_xmit_es(0040)
+
+RX: cmd=0403
+RX: EMPBUF unit=0 den=D
+RX: EMPBUF wc=200
+RX: EMPBUF rx_xmit_es(0000)
+
+...
 ```
 
