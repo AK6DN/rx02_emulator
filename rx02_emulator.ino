@@ -1,12 +1,31 @@
 //
 // RX8E/RX28/RX11/RX211/RXV11/RXV21 to TU58/serial or SDcard Interface
 //
-// (C) 2016 Don North <ak6dn_at_mindspring_dot_com>
-// 
+// Copyright (c) 2015-2016, Donald N North
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+// DONALD N NORTH BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+// IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+// CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+//
+// Except as contained in this notice, the name of Donald N North shall not be
+// used in advertising or otherwise to promote the sale, use or other dealings
+// in this Software without prior written authorization from Donald N North.
+//
 // 22-Aug-2015 donorth Initial version
-// 
-
-
+//
 
 //
 // definitions
@@ -150,7 +169,7 @@ void run_command (char *cmd)
             }
             break;
 
-        //  "mode rx0N" set emulation mode, RX01 or RX02
+        //  "mode N" or "mode rx0N" set emulation mode, 1/2/3 as RX01/RX02/RX03
         case 'M':
             if (arg) {
                 c = arg[strlen(arg)-1];
@@ -161,7 +180,7 @@ void run_command (char *cmd)
             }
             break;
 
-        // "debug" mode set
+        // "debug N" debug level set, 0/1/2
         case 'D':
             if (arg) {
                 c = arg[strlen(arg)-1];
@@ -172,7 +191,7 @@ void run_command (char *cmd)
             }
             break;
 
-        // "timing" mode set
+        // "timing" timing mode set, 0/1/2 as fast/medium/slow
         case 'T':
             if (arg) {
                 c = arg[strlen(arg)-1];
@@ -379,8 +398,8 @@ void setup_write (char *name)
 {
     File init;
 
-    // remove current file
-    sdcard.remove(name);
+    // remove current file, if exists
+    if (sdcard.exists(name)) sdcard.remove(name);
 
     // indicate generating file
     tty->printf(F("Generating setup file '%s'\n"), name);
