@@ -24,6 +24,7 @@ SD: volSizeBytes=3768MB
 
 2016-09-24 18:02:14     512512 RX0.DSK
 2016-09-24 18:02:14     512512 RX1.DSK
+2016-09-24 17:02:12         38 SETUP.INI
 2016-09-24 18:36:02     512512 XXDP.DSK
 2016-09-26 15:37:38     512512 RT11.DSK
 
@@ -32,6 +33,19 @@ Valid MicroSD card detected.
 RX: waiting for INIT to clear ... t=1132ms
 RX: INIT has cleared t=1206ms
 RX: INIT rx_xmit_es(0244)
+
+Processing setup file 'SETUP.INI' ...
+0 RX0.DSK
+Setting file[0]: 'RX0.DSK'
+1 RX1.DSK
+Setting file[1]: 'RX1.DSK'
+d 0
+Setting debug mode: 0
+m 2
+Setting emulation type: RX02
+t 2
+Setting timing mode: 2
+... setup file processing complete!
 
 Initialization complete.
 H
@@ -42,7 +56,7 @@ Commands available:
                        filename 'none' (any case) for no disk present
   1 filename.dsk    -- set unit 1 file name; default RX1.DSK
                        filename 'none' (any case) for no disk present
-  m(ode) (RX0)N     -- set emulation mode RX01/RX02; default RX02
+  m(ode) N          -- set emulation mode, 1=RX01, 2=RX02, 3=RX03; default 2
   d(ebug) N         -- debug level, 0=none, 2=max; default 1
   t(iming) N        -- timing mode, 0=fast, 1=medium, 2=normal; default 0
                        0 is as fast as possible; 2 simulates real RX02 drive
@@ -50,12 +64,14 @@ Commands available:
   s(how)            -- show current unit filename assignments
   p(rint)           -- print full emulation state
   i(nit)            -- initialize emulator (like unibus INIT)
+  w(rite)           -- write current configuration into the SETUP.INI file
   h(elp)            -- display this text
 
 Note: chars in () are optional
 L
 2016-09-24 18:02:14     512512 RX0.DSK
 2016-09-24 18:02:14     512512 RX1.DSK
+2016-09-24 17:02:12         38 SETUP.INI
 2016-09-24 18:36:02     512512 XXDP.DSK
 2016-09-26 15:37:38     512512 RT11.DSK
 S
@@ -63,6 +79,8 @@ Current file[0]: 'RX0.DSK'
 Current file[1]: 'RX1.DSK'
 0 XXDP.DSK
 Setting file[0]: 'XXDP.DSK'
+w
+Generating setup file 'SETUP.INI'
 
 RX: waiting for INIT to clear ... t=49342ms
 RX: INIT has cleared t=49438ms
@@ -102,18 +120,6 @@ RX: EMPBUF unit=0 den=D
 RX: EMPBUF wc=200
 RX: EMPBUF rx_xmit_es(0000)
 
-RX: cmd=0407
-RX: RDSECT unit=0 den=D
-RX: RDSECT sa=005
-RX: RDSECT ta=001
-RX: RDSECT pos=7680. len=256.
-RX: RDSECT rx_xmit_es(0040)
-
-RX: cmd=0403
-RX: EMPBUF unit=0 den=D
-RX: EMPBUF wc=200
-RX: EMPBUF rx_xmit_es(0000)
-
 ...
 ```
 
@@ -124,8 +130,6 @@ Refer to:  http://playground.arduino.cc/Main/Printf  for instructions on how to 
 
 (2) Right now there is a lot of 'extraneous' code (ie, the TU58 driver interface) that is included by default but not currently used. A future plan is to add support to map a backend TU58 server to a file connection (ie, by using a pseudo filename) so that not only local MicroSD card file access can be supported, but simultaenous access to a backend PC-based file storage server can happen.
 
-(3) Support for saving the default RX02 drive file mapping and emulation type as user-supplied filenames (rather than RX0.DSK and RX1.DSK) is planned but not yet implemented.
-
-(4) This code was written with tap stops set at 4 (versus the default of 2). Manually edit the Arduino <B>preferences.txt</B> file tab size line to be: <B>editor.tabs.size=4</B> if desired.
+(3) This code was written with tap stops set at 4 (versus the default of 2). Manually edit the Arduino <B>preferences.txt</B> file tab size line to be: <B>editor.tabs.size=4</B> if desired.
 
 Don

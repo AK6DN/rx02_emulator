@@ -28,8 +28,7 @@
 static HardwareSerial *debugPort = NULL; // debug serial output
 static uint8_t debugLevel = 0; // debug level, 0=NONE, higher for more
 
-static SdFat card; // SD card filesystem data structure
-static File file; // SD card file data structure
+static File sdfile; // SD card file data structure
 static uint8_t initOk = FALSE; // set to TRUE on initialize OK
 
 
@@ -37,6 +36,14 @@ static uint8_t initOk = FALSE; // set to TRUE on initialize OK
 // PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC
 // PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC
 // PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC
+
+
+
+//
+// public data
+//
+
+SdFat sdcard; // SD card filesystem data structure
 
 
 
@@ -64,24 +71,24 @@ uint8_t sd_initialize (void)
     if (!digitalRead(PIN_SD_CD)) return initOk;
 
     // init card, check for success
-    if (!card.begin(PIN_SD_CS_L, SPI_FULL_SPEED)) { card.initErrorHalt(); return initOk; }
+    if (!sdcard.begin(PIN_SD_CS_L, SPI_FULL_SPEED)) { sdcard.initErrorHalt(); return initOk; }
 
     // some card parameters
-    uint8_t ctype = card.card()->type();
-    uint32_t csize = ((card.card()->cardSize()/1024L)*512L)/1024L;
+    uint8_t ctype = sdcard.card()->type();
+    uint32_t csize = ((sdcard.card()->cardSize()/1024L)*512L)/1024L;
     if (debugLevel) {
         debugPort->printf(F("SD: cardType=SD%d\n"), ctype);
         debugPort->printf(F("SD: cardSize=%luMB\n"), csize);
     }
 
     // open the card - it should be FAT16 or FAT32
-    if (!card.vwd()->isOpen()) return initOk;
+    if (!sdcard.vwd()->isOpen()) return initOk;
 
     // some volume parameters
-    uint8_t vtype = card.vol()->fatType();
-    uint32_t vbpc = card.vol()->blocksPerCluster()*512L;
-    uint32_t vcss = card.vol()->clusterSizeShift();
-    uint32_t vucc = card.vol()->clusterCount();
+    uint8_t vtype = sdcard.vol()->fatType();
+    uint32_t vbpc = sdcard.vol()->blocksPerCluster()*512L;
+    uint32_t vcss = sdcard.vol()->clusterSizeShift();
+    uint32_t vucc = sdcard.vol()->clusterCount();
     uint32_t vsize = (vbpc/1024L)*(vucc/1024L);
     if (debugLevel) {
         debugPort->printf(F("SD: volType=FAT%d\n"), vtype);
@@ -124,7 +131,7 @@ void sd_debug (HardwareSerial *serialPort, uint8_t level)
 //
 void sd_list_files (HardwareSerial *port)
 {
-    if (initOk) card.ls(port, LS_DATE | LS_SIZE | LS_R);
+    if (initOk) sdcard.ls(port, LS_DATE | LS_SIZE | LS_R);
     return;
 }
 
@@ -135,7 +142,7 @@ void sd_list_files (HardwareSerial *port)
 //
 void sd_remove_file (char *name)
 {
-    if (initOk) card.remove(name);
+    if (initOk) sdcard.remove(name);
     return;
 }
 
@@ -152,19 +159,19 @@ uint16_t sd_read_bytes (char *name, uint32_t pos, uint8_t *buf, uint16_t len)
     if (!initOk) return 0;
 
     // close existing file, if open
-    if (file.isOpen()) file.close();
+    if (sdfile.isOpen()) sdfile.close();
 
     // open current file
-    file = card.open(name, FILE_READ);
+    sdfile = sdcard.open(name, FILE_READ);
 
     // seek to required position
-    if (file.seek(pos) == false) { file.close(); return 0; }
+    if (sdfile.seek(pos) == false) { sdfile.close(); return 0; }
 
     // read requested number of bytes
-    num = num = file.read(buf, len);
+    num = sdfile.read(buf, len);
 
     // close the file, done for now
-    file.close();
+    sdfile.close();
 
     // and return number of bytes read
     return num;
@@ -183,19 +190,19 @@ uint16_t sd_write_bytes (char *name, uint32_t pos, uint8_t *buf, uint16_t len)
     if (!initOk) return 0;
 
     // close existing file, if open
-    if (file.isOpen()) file.close();
+    if (sdfile.isOpen()) sdfile.close();
 
     // open current file
-    file = card.open(name, FILE_WRITE);
+    sdfile = sdcard.open(name, FILE_WRITE);
 
     // seek to required position
-    if (file.seek(pos) == false) { file.close(); return 0; }
+    if (sdfile.seek(pos) == false) { sdfile.close(); return 0; }
 
     // write requested number of bytes
-    num = file.write(buf, len);
+    num = sdfile.write(buf, len);
 
     // close the file, done for now
-    file.close();
+    sdfile.close();
 
     // and return number of bytes written
     return num;
@@ -214,16 +221,16 @@ uint32_t sd_get_file_size (char *name)
     if (!initOk) return 0;
 
     // close existing file, if open
-    if (file.isOpen()) file.close();
+    if (sdfile.isOpen()) sdfile.close();
 
     // open current file
-    file = card.open(name, FILE_WRITE);
+    sdfile = sdcard.open(name, FILE_WRITE);
 
     // get file size
-    size = file.size();
+    size = sdfile.size();
 
     // close the file, done for now
-    file.close();
+    sdfile.close();
 
     // return the size
     return size;
@@ -244,7 +251,7 @@ uint32_t sd_set_file_size (char *name, uint32_t size)
     if (!initOk) return 0;
 
     // close existing file, if open
-    if (file.isOpen()) file.close();
+    if (sdfile.isOpen()) sdfile.close();
 
     // get a buffer
     for (len = 1024; len > 0; len >>= 1) { if ((buf = malloc(len)) != NULL) break; }
@@ -256,19 +263,19 @@ uint32_t sd_set_file_size (char *name, uint32_t size)
     memset(buf, 0x00, len);
 
     // open current file
-    file = card.open(name, FILE_WRITE);
+    sdfile = sdcard.open(name, FILE_WRITE);
 
     // fill file with data
-    for (pos = 0; pos < size; pos += len) { file.write(buf, len); }
+    for (pos = 0; pos < size; pos += len) { sdfile.write(buf, len); }
 
     // free buffer
     free(buf);
 
     // close the file, done for now
-    file.close();
+    sdfile.close();
 
     // truncate file if too large
-    card.truncate(name, size);
+    sdcard.truncate(name, size);
 
     // return the size
     return sd_get_file_size(name);

@@ -41,6 +41,8 @@
 //
 HardwareSerial *tty = &Serial;
 
+char setup_filename[] = "SETUP.INI";
+
 #if TEST_TU58
 uint8_t c_run;
 uint8_t c_nop;
@@ -114,66 +116,6 @@ void sd_test (void)
     return;
 }
 #endif // TEST_SD
-
-
-
-//
-// setup routine runs once at power up
-//
-void setup (void)
-{
-    // control/status input/output
-    tty->begin(250000, SERIAL_8N2);
-
-    // init LED drivers
-    led_initialize();
-
-    // say hello
-    tty->printf(F("RX02 Emulator %s - %s - %s\n"), "v1.0", __DATE__, __TIME__);
-    delay(1000);
-
-#if USE_SD
-    // check for SD card
-    if (DEBUG_SD) sd_debug(tty, DEBUG_SD);
-    if (sd_initialize()) {
-        tty->printf(F("Valid MicroSD card detected.\n"));
-  #if TEST_SD
-        sd_test();
-  #endif // TEST_SD
-    } else {
-        tty->printf(F("No valid MicroSD card detected.\n"));
-    }
-#endif // USE_SD
-
-#if TEST_TU58
-    // init globals
-    number = 1;
-    block = 0;
-    value = 0;
-    c_write = 0;
-    c_read = 0;
-    c_seek = 0;
-    c_diag = 0;
-    c_init = 0;
-    c_nop = 0;
-#endif // TEST_TU58
-
-#if USE_TU58
-    // init tu58 interface
-    if (DEBUG_TU58) tu_debug(tty, DEBUG_TU58);
-    tu_initialize(1000000L, &Serial1);
-#endif // USE_TU58
-
-#if USE_RX02
-    // init rx11/211/8e interface
-    if (DEBUG_RX02) rx_debug(tty, DEBUG_RX02);
-    rx_initialize(true);
-#endif // USE_RX02
-
-    // done
-    tty->printf(F("Initialization complete.\n"));
-    return;
-}
 
 
 
@@ -263,6 +205,11 @@ void run_command (char *cmd)
             tty->printf(F("... INIT complete\n"));
             break;
 
+        // "write" the setup file from the current configuration
+        case 'W':
+            setup_write(setup_filename);
+            break;
+
         // "help" or "?"
         case 'H':
         case '?':
@@ -271,7 +218,7 @@ void run_command (char *cmd)
             tty->printf(F("                       filename 'none' (any case) for no disk present\n"));
             tty->printf(F("  1 filename.dsk    -- set unit 1 file name; default RX1.DSK\n"));
             tty->printf(F("                       filename 'none' (any case) for no disk present\n"));
-            tty->printf(F("  m(ode) (RX0)N     -- set emulation mode RX01/RX02; default RX02\n"));
+            tty->printf(F("  m(ode) N          -- set emulation mode, 1=RX01, 2=RX02, 3=RX03; default 2\n"));
             tty->printf(F("  d(ebug) N         -- debug level, 0=none, 2=max; default 1\n"));
             tty->printf(F("  t(iming) N        -- timing mode, 0=fast, 1=medium, 2=normal; default 0\n"));
             tty->printf(F("                       0 is as fast as possible; 2 simulates real RX02 drive\n"));
@@ -279,6 +226,7 @@ void run_command (char *cmd)
             tty->printf(F("  s(how)            -- show current unit filename assignments\n"));
             tty->printf(F("  p(rint)           -- print full emulation state\n"));
             tty->printf(F("  i(nit)            -- initialize emulator (like unibus INIT)\n"));
+            tty->printf(F("  w(rite)           -- write current configuration into the SETUP.INI file\n"));
             tty->printf(F("  h(elp)            -- display this text\n"));
             tty->printf(F("\nNote: chars in () are optional\n"));
             break;
@@ -298,17 +246,13 @@ void run_command (char *cmd)
 //
 // process user input
 //
-void run_user (void)
+void run_user (char c)
 {
-    char c;
     static char cmd[40];
     static uint8_t i = 0;
 
-    // nothing available, just return
-    if (tty->available() == 0) return;
-
-    // get a character and echo if not control
-    if (!iscntrl(c = tty->read())) tty->write(c);
+    // echo non-control characters
+    if (!isControl(c)) tty->write(c);
 
     // dispatch on index
     if (i == 0) {
@@ -320,8 +264,8 @@ void run_user (void)
             // ^U delete/ignore input
             tty->printf(F("^U\n"));
             i = 0;
-        } else if (c == 'M'-'@') {
-            // CR executes command
+        } else if (c == 'M'-'@' || c == 'J'-'@') {
+            // CR or LF executes command
             cmd[i] = NULL;
             run_command(cmd);
             i = 0;
@@ -429,12 +373,135 @@ void run_tu58 (void)
 
 
 //
+// write setup file from current configuration
+//
+void setup_write (char *name)
+{
+    File init;
+
+    // remove current file
+    sdcard.remove(name);
+
+    // indicate generating file
+    tty->printf(F("Generating setup file '%s'\n"), name);
+
+    // open file and write config commands
+    init = sdcard.open(name, FILE_WRITE);
+    init.printf(F("%d %s\n"), 0, rx_unit_file(0));
+    init.printf(F("%d %s\n"), 1, rx_unit_file(1));
+    init.printf(F("d %d\n"), rx_debug());
+    init.printf(F("m %d\n"), rx_emulation_type());
+    init.printf(F("t %d\n"), rx_timing_type());
+    init.close();
+
+    return;
+}
+
+
+
+//
+// read setup file and set into current configuration
+//
+void setup_read (char *name)
+{
+    File init;
+
+    // check file exists
+    if (!sdcard.exists(name)) return;
+
+    // indicate processing file
+    tty->printf(F("Processing setup file '%s' ...\n"), name);
+
+    // open file and read config commands
+    init = sdcard.open(name, FILE_READ);
+    while (init.available()) run_user(init.read());
+    init.close();
+
+    // and done
+    tty->printf(F("... setup file processing complete!\n\n"));
+    return;
+}
+
+
+
+//
+// setup routine runs once at power up
+//
+void setup (void)
+{
+    // control/status input/output
+    tty->begin(250000, SERIAL_8N2);
+
+    // init LED drivers
+    led_initialize();
+
+    // say hello
+    tty->printf(F("RX02 Emulator %s - %s - %s\n"), "v1.0", __DATE__, __TIME__);
+    delay(1000);
+
+#if USE_SD
+    // check for SD card
+    if (DEBUG_SD) sd_debug(tty, DEBUG_SD);
+    if (sd_initialize()) {
+        tty->printf(F("Valid MicroSD card detected.\n"));
+  #if TEST_SD
+        sd_test();
+  #endif // TEST_SD
+    } else {
+        tty->printf(F("No valid MicroSD card detected.\n"));
+    }
+#endif // USE_SD
+
+#if TEST_TU58
+    // init globals
+    number = 1;
+    block = 0;
+    value = 0;
+    c_write = 0;
+    c_read = 0;
+    c_seek = 0;
+    c_diag = 0;
+    c_init = 0;
+    c_nop = 0;
+#endif // TEST_TU58
+
+#if USE_TU58
+    // init tu58 interface
+    if (DEBUG_TU58) tu_debug(tty, DEBUG_TU58);
+    tu_initialize(1000000L, &Serial1);
+#endif // USE_TU58
+
+#if USE_RX02
+    // init rx11/211/8e interface
+    if (DEBUG_RX02) rx_debug(tty, DEBUG_RX02);
+    rx_initialize(true);
+#endif // USE_RX02
+
+#if USE_SD
+    // initial configuration file ?
+    if (sdcard.exists(setup_filename)) {
+        // exists, process it
+        setup_read(setup_filename);
+    } else {
+        // does not exist, create it
+        setup_write(setup_filename);
+    }
+#endif // USE_SD
+
+    // done
+    tty->printf(F("Initialization complete.\n"));
+    return;
+}
+
+
+
+//
 // loop routine runs continuously
 //
 void loop (void)
 {
-    // user interface
-    run_user();
+    // check if user typed a character
+    if (tty->available()) run_user(tty->read());
 
 #if USE_TU58
   #if TEST_TU58

@@ -12,6 +12,13 @@
 
 
 //
+// public data
+//
+extern SdFat sdcard;
+
+
+
+//
 // public prototypes
 //
 uint8_t  sd_initialize (void);
