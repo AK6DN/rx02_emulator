@@ -40,7 +40,9 @@
 //
 #define USE_TU58   0
 #define TEST_TU58  0
-#define DEBUG_TU58 0
+#define DEBUG_TU58 
+
+#define VERSION  "v1.1"
 
 
 
@@ -146,6 +148,8 @@ void run_command (char *cmd)
     char c;
     uint8_t i;
     char *arg;
+    static const char timing_mode[][9] = { "Fastest", "Medium", "RealRX02" };
+    static const char  debug_mode[][8] = { "Off", "Low", "High", "Extreme" };
 
     // get pointer to next char after 1st space (else NULL if no spaces)
     if ((arg = strchr(cmd, ' ')) != NULL) arg++;
@@ -169,36 +173,36 @@ void run_command (char *cmd)
             }
             break;
 
-        //  "mode N" or "mode rx0N" set emulation mode, 1/2/3 as RX01/RX02/RX03
+        //  "mode N" set emulation mode, 1/2/3 as RX01/RX02/RX03
         case 'M':
-            if (arg) {
-                c = arg[strlen(arg)-1];
-                if (isdigit(c))
-                    tty->printf(F("Setting emulation type: RX0%d\n"), rx_emulation_type(c-'0'));
+            if (arg && isdigit(c = *arg)) {
+                i = rx_emulation_type(c-'0');
+                tty->printf(F("Setting emulation mode: %d (RX0%d)\n"), i, i);
             } else {
-                tty->printf(F("Current emulation type: RX0%d\n"), rx_emulation_type());
+                i = rx_emulation_type();
+                tty->printf(F("Current emulation type: %d (RX0%d)\n"), i, i);
             }
             break;
 
-        // "debug N" debug level set, 0/1/2
+        // "debug N" debug level set, 0/1/2/3
         case 'D':
-            if (arg) {
-                c = arg[strlen(arg)-1];
-                if (isdigit(c))
-                    tty->printf(F("Setting debug mode: %d\n"), rx_debug(tty, c-'0'));
+            if (arg && isdigit(c = *arg)) {
+                i = rx_debug(tty, c-'0');
+                tty->printf(F("Setting debug mode: %d (%s)\n"), i, debug_mode[i]);
             } else {
-                tty->printf(F("Current debug mode: %d\n"), rx_debug());
+                i = rx_debug();
+                tty->printf(F("Current debug mode: %d (%s)\n"), i, debug_mode[i]);
             }
             break;
 
-        // "timing" timing mode set, 0/1/2 as fast/medium/slow
+        // "timing N" timing mode set, 0/1/2 as fast/medium/slow
         case 'T':
-            if (arg) {
-                c = arg[strlen(arg)-1];
-                if (isdigit(c))
-                    tty->printf(F("Setting timing mode: %d\n"), rx_timing_type(c-'0'));
+            if (arg && isdigit(c = *arg)) {
+                i = rx_timing_type(c-'0');
+                tty->printf(F("Setting timing mode: %d (%s)\n"), i, timing_mode[i]);
             } else {
-                tty->printf(F("Current timing mode: %d\n"), rx_timing_type());
+                i = rx_timing_type();
+                tty->printf(F("Current timing mode: %d (%s)\n"), i, timing_mode[i]);
             }
             break;
 
@@ -237,8 +241,8 @@ void run_command (char *cmd)
             tty->printf(F("                       filename 'none' (any case) for no disk present\n"));
             tty->printf(F("  1 filename.dsk    -- set unit 1 file name; default RX1.DSK\n"));
             tty->printf(F("                       filename 'none' (any case) for no disk present\n"));
-            tty->printf(F("  m(ode) N          -- set emulation mode, 1=RX01, 2=RX02, 3=RX03; default 2\n"));
-            tty->printf(F("  d(ebug) N         -- debug level, 0=none, 2=max; default 1\n"));
+            tty->printf(F("  m(ode) N          -- set emulation mode, 0=NONE, 1=RX01, 2=RX02, 3=RX03; default 2\n"));
+            tty->printf(F("  d(ebug) N         -- debug level, 0=none, 3=max; default 1\n"));
             tty->printf(F("  t(iming) N        -- timing mode, 0=fast, 1=medium, 2=normal; default 0\n"));
             tty->printf(F("                       0 is as fast as possible; 2 simulates real RX02 drive\n"));
             tty->printf(F("  l(ist)            -- list all files on the SD card\n"));
@@ -455,7 +459,7 @@ void setup (void)
     led_initialize();
 
     // say hello
-    tty->printf(F("RX02 Emulator %s - %s - %s\n"), "v1.0", __DATE__, __TIME__);
+    tty->printf(F("RX02 Emulator %s - %s - %s\n"), VERSION, __DATE__, __TIME__);
     delay(1000);
 
 #if USE_SD

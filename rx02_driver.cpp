@@ -907,7 +907,7 @@ char * rx_unit_file (uint8_t unit)
 //
 uint8_t rx_emulation_type (uint8_t type)
 {
-    rx.type = rx_type = type;
+    rx.type = rx_type = constrain(type, RX_TYPE_RX01, RX_TYPE_RX03);
 
     return rx.type;
 }
@@ -924,7 +924,7 @@ uint8_t rx_emulation_type (void)
 //
 uint8_t rx_timing_type (uint8_t type)
 {
-    rx.timing = type;
+    rx.timing = constrain(type, RX_TIMING_FAST, RX_TIMING_NORMAL);
 
     return rx.timing;
 }
@@ -945,7 +945,7 @@ uint8_t rx_debug (HardwareSerial *serialPort, uint8_t level)
     debugPort = serialPort;
 
     // and the debug level
-    debugLevel = level;
+    debugLevel = constrain(level, 0, 3);
 
     // and done
     return debugLevel;
