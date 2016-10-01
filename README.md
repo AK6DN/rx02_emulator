@@ -1,16 +1,20 @@
-<B>rx02_emulator</B> is a hardware/software emulation of a DEC RX02 dual 8" floppy disk drive.The software code runs on an Arduino Mega2560 processor board with a custom hardware interface shield that maps a dozen or so digital port bits to the custom DEC RX02 interface hardware protocol.
+<B>rx02_emulator</B> is a hardware/software emulation of a DEC RX02 dual 8" floppy disk drive. The software runs on an Arduino Mega2560 processor board with a custom hardware interface shield that maps a dozen or so digital port bits to the custom DEC RX02 interface hardware protocol.
 
 The emulator simulates two RX02 drives mapped to files on an attached MicroSD card.
 
 This implementation was originally based on the design at:  http://www.chdickman.com/rx02/ but has been extensively modified for the Arduino and to provide the functionality necessary to pass the DEC RX02 hardware diagnostics.
 
-As it currently stands this implementation boots/runs under the XXDP and RT-11 operating systems, and passes the DEC RX02 hardware diagnostics ZRXDC0 Performance Exerciser, ZRXEA0 Formatter, and ZRXFB0 RX02/RX211 Logic/Function Test.
+As it currently stands this design boots/runs under the XXDP and RT-11 operating systems, and passes the DEC RX02 hardware diagnostics ZRXDC0 Performance Exerciser, ZRXEA0 Formatter, and ZRXFB0 RX02/RX211 Logic/Function tests error free.
 
 <I>More detailed information to be provided ...</I>
+
+Testing to date has only been performed as an RX02/RX211 interface combo in a UNIBUS PDP-11/44. Shortly testing will begin in a PDP-8m with an RX8E/RX28 interface so RX01/RX8E and RX02/RX28 configurations can be tested. I do not have access to RX11, RXV11, or RXV21 boards for testing.
 
 The MicroSD card in the emulator is a FAT32 formatted filesystem, and it can be inserted (offline) into a WindowsPC to copy files to/from the device. By default, the files 'RX0.DSK' and 'RX1.DSK' are mapped to drive 0 and 1 on initialization.
 
 The emulator interfaces thru a simple ASCII terminal command line via the USB port on the Arduino device. After booting, typing:  H<cr>  types out the available commands. Here is a sample interaction showing the use of the H, L, S and 0 commands, and the debug level 1 log of what happens when 'b dy0' is typed on the attached PDP-11/44 console terminal.
+
+Startup configuration is saved in an ASCII text file SETUP.INI that contains user interface commands that are replayed on startup. The SETUP.INI file is written using the W command, and the current 0/1/D/M/T options are saved in the file.
 
 ```
 RX02 Emulator v1.0 - Sep 27 2016 - 23:47:10
@@ -39,12 +43,12 @@ Processing setup file 'SETUP.INI' ...
 Setting file[0]: 'RX0.DSK'
 1 RX1.DSK
 Setting file[1]: 'RX1.DSK'
-d 0
-Setting debug mode: 0
+d 1
+Setting debug mode: 1 (Low)
 m 2
-Setting emulation type: RX02
-t 2
-Setting timing mode: 2
+Setting emulation type: 2 (RX02)
+t 0
+Setting timing mode: 0 (Fastest)
 ... setup file processing complete!
 
 Initialization complete.
@@ -79,7 +83,7 @@ Current file[0]: 'RX0.DSK'
 Current file[1]: 'RX1.DSK'
 0 XXDP.DSK
 Setting file[0]: 'XXDP.DSK'
-w
+W
 Generating setup file 'SETUP.INI'
 
 RX: waiting for INIT to clear ... t=49342ms
@@ -125,11 +129,13 @@ RX: EMPBUF rx_xmit_es(0000)
 
 Notes:
 
-(1) This code has been written with the assumption that <B>xxprintf</B> support has been added to the PRINT class in the Arduino development environment.
+(1) This code has been written with the assumption that <B>Xprintf</B> support has been added to the PRINT class in the Arduino development environment.
 Refer to:  http://playground.arduino.cc/Main/Printf  for instructions on how to do this.
 
-(2) Right now there is a lot of 'extraneous' code (ie, the TU58 driver interface) that is included by default but not currently used. A future plan is to add support to map a backend TU58 server to a file connection (ie, by using a pseudo filename) so that not only local MicroSD card file access can be supported, but simultaenous access to a backend PC-based file storage server can happen.
+(2) This code uses the SDfat library available at:  https://github.com/greiman/SdFat . It must be installed as an accessible library in your Arduino environment.
 
 (3) This code was written with tap stops set at 4 (versus the default of 2). Manually edit the Arduino <B>preferences.txt</B> file tab size line to be: <B>editor.tabs.size=4</B> if desired.
+
+(4) Right now there is a lot of 'extraneous' code (ie, the TU58 driver interface) that is included by default but not currently used. A future plan is to add support to map a backend TU58 server to a file connection (ie, by using a pseudo filename) so that not only local MicroSD card file access can be supported, but simultaenous access to a backend PC-based file storage server can happen.
 
 Don
