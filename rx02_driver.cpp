@@ -28,6 +28,7 @@
 // 27 Mar 2016 - donorth - Ported to Arduino from CCS/Microchip
 // 23 Sep 2016 - donorth - Added clr_request to end of rx_xmit_es()
 // 25 Sep 2016 - donorth - Reworked rx_init_es() to set status function dependent
+// 02 Oct 2016 - donorth - RX8E/RX28 mode debug...
 //
 
 
@@ -641,13 +642,13 @@ static void rx_xmit_es (void)
 {
     if (debugLevel) debugPort->printf(F("RX: %s rx_xmit_es(%04o)\n\n"), rx.fcn.name, rx.es);
 
-    if (rx_tst_dma() || rx_tst_12b() && rx.type == RX_TYPE_RX02) {
-        
-        // RX211/RXV21 or RX28 attached
+    // clear TR, set OUT
+    rx_clr_request();
+    rx_set_out();
 
-        // clear TR, set DONE
-        rx_clr_request();
-        rx_set_out();
+    if (rx_tst_dma()) { // RX211/RXV21 attached
+
+        // set DONE
         rx_set_done();
 
         // send the 12b status word
@@ -657,16 +658,12 @@ static void rx_xmit_es (void)
         rx_set_request();
         rx_clr_request();
 
-    } else if (rx_tst_12b()) {
-
-        // RX8E attached
+    } else if (rx_tst_12b()) { // RX8E/RX28 attached
 
         // send the 12b status word
         rx_xmit(rx.es, 12);
 
-     } else {
-
-        // RX11/RXV11 attached
+     } else { // RX11/RXV11 attached
 
         // send the 8b status word
         rx_xmit(rx.es, 8);
@@ -1037,7 +1034,15 @@ void rx_function (void)
     // RUN seen, process command ...
 
     // receive a command word: 12b on RX211 or RX8E/28 in 12b mode; 8b otherwise
-    rx.cs = rx_recv(rx_tst_dma() || rx_tst_12b() ? 12 : 8);
+    if (rx_tst_dma() || rx_tst_12b()) {
+        // RX211/RXV21 or RX8E/RX28 in 12b mode: 12b command
+        rx.cs = rx_recv(12);
+    } else {
+        // RX11/RXV11 or RX8E/RX28 in 8b mode: 8b command
+        rx.cs = rx_recv(8);
+        // RX28 in 8b mode: 8b command extension
+        if (rx.type == RX_TYPE_RX02) rx.cs |= rx_recv_hs(8)<<8;
+    }
     if (debugLevel) debugPort->printf(F("RX: cmd=%04o\n"), rx.cs);
 
     // led status
@@ -1055,8 +1060,8 @@ void rx_function (void)
     // separate out the density flag in the command
     rx.den = (rx.cs & RXCS_DENSEL) ? RX_DEN_DD : RX_DEN_SD;
 
-	// initial error code: success!
-	rx.ec = RXERR_SUCCESS;
+    // initial error code: success!
+    rx.ec = RXERR_SUCCESS;
 
     // initial error status
     rx_init_es();
