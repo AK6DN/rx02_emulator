@@ -236,15 +236,16 @@ void run_command (char *cmd)
         // "help" or "?"
         case 'H':
         case '?':
+            // Note keep any single printf command string at 80 characters maximum
             tty->printf(F("\nCommands available:\n\n"));
             tty->printf(F("  0 filename.dsk    -- set unit 0 file name; default RX0.DSK\n"));
             tty->printf(F("                       filename 'none' (any case) for no disk present\n"));
             tty->printf(F("  1 filename.dsk    -- set unit 1 file name; default RX1.DSK\n"));
             tty->printf(F("                       filename 'none' (any case) for no disk present\n"));
-            tty->printf(F("  m(ode) N          -- set emulation mode, 0=NONE, 1=RX01, 2=RX02, 3=RX03; default 2\n"));
+            tty->printf(F("  m(ode) N          -- set emulation mode, 0=NONE, n=RX0n; default 2\n"));
             tty->printf(F("  d(ebug) N         -- debug level, 0=none, 3=max; default 1\n"));
             tty->printf(F("  t(iming) N        -- timing mode, 0=fast, 1=medium, 2=normal; default 0\n"));
-            tty->printf(F("                       0 is as fast as possible; 2 simulates real RX02 drive\n"));
+            tty->printf(F("                       0 as fast as possible; 2 simulates real RX02 drive\n"));
             tty->printf(F("  l(ist)            -- list all files on the SD card\n"));
             tty->printf(F("  s(how)            -- show current unit filename assignments\n"));
             tty->printf(F("  p(rint)           -- print full emulation state\n"));
