@@ -1212,10 +1212,9 @@ void rx_function (void)
         // check drive is not write-only
         if (rx.drv[rx.unit].mode == RX_FILE_READ_ONLY) {
             // yup, error
-            if (rx.type == RX_TYPE_RX01) {
-                rx.ec = RXERR_WRITEWP;
+            rx.ec = RXERR_WRITEWP;
+            if (rx.type == RX_TYPE_RX01)
                 rx.es |= RXES_WPERR;
-            }
             goto error;
         }
 

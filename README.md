@@ -41,11 +41,11 @@ RX: INIT rx_xmit_es(0244)
 Processing setup file 'SETUP.INI' ...
 0 RX0.DSK
 Setting file[0]: 'RX0.DSK'
-Y 0
+y 0
 Setting file[0] mode: RW
 1 RX1.DSK
 Setting file[1]: 'RX1.DSK'
-Y 1
+y 1
 Setting file[0] mode: RW
 d 1
 Setting debug mode: 1 (Low)

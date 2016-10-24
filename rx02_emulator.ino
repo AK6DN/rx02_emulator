@@ -272,7 +272,7 @@ void run_command (char *cmd)
             tty->printf(F("  i(nit)            -- initialize emulator (like unibus INIT)\n"));
             tty->printf(F("  w(rite)           -- write current configuration into the SETUP.INI file\n"));
             tty->printf(F("  h(elp)            -- display this text\n"));
-            tty->printf(F("\nNote: chars in () are optional\n"));
+            tty->printf(F("\nNote: chars in () are optional. Case does not matter.\n"));
             break;
 
         // unknown command
@@ -436,10 +436,10 @@ void setup_write (char *name)
         init.printf(F("%d %s\n"), i, rx_unit_file(i));
         init.printf(F("%c %d\n"), rx_unit_mode(i) == RX_FILE_READ_ONLY ? 'N' : 'Y', i);
     }
-    init.printf(F("d %d\n"), rx_debug());
-    init.printf(F("m %d\n"), rx_emulation_type());
-    init.printf(F("t %d\n"), rx_timing_type());
-    init.printf(F("s\n"));
+    init.printf(F("D %d\n"), rx_debug());
+    init.printf(F("M %d\n"), rx_emulation_type());
+    init.printf(F("T %d\n"), rx_timing_type());
+    init.printf(F("S\n"));
     init.close();
 
     return;
