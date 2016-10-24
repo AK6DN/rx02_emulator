@@ -6,9 +6,7 @@ This implementation was originally based on the design at:  http://www.chdickman
 
 As it currently stands this design boots/runs under the XXDP and RT-11 operating systems, and passes the DEC RX02 hardware diagnostics ZRXDC0 Performance Exerciser, ZRXEA0 Formatter, and ZRXFB0 RX02/RX211 Logic/Function tests error free.
 
-<I>More detailed information to be provided ...</I>
-
-Testing to date has only been performed as an RX02/RX211 interface combo in a UNIBUS PDP-11/44. Shortly testing will begin in a PDP-8m with an RX8E/RX28 interface so RX01/RX8E and RX02/RX28 configurations can be tested. I do not have access to RX11, RXV11, or RXV21 boards for testing.
+Testing to date has been performed as an RX02/RX211 interface combo in a UNIBUS PDP-11/44, and in a PDP-8m with an RX8E/RX28 interface so RX01/RX8E and RX02/RX28 configurations can be tested. I do not have access to RX11, RXV11, or RXV21 boards for testing.
 
 The MicroSD card in the emulator is a FAT32 formatted filesystem, and it can be inserted (offline) into a WindowsPC to copy files to/from the device. By default, the files 'RX0.DSK' and 'RX1.DSK' are mapped to drive 0 and 1 on initialization.
 
@@ -17,7 +15,7 @@ The emulator interfaces thru a simple ASCII terminal command line via the USB po
 Startup configuration is saved in an ASCII text file SETUP.INI that contains user interface commands that are replayed on startup. The SETUP.INI file is written using the W command, and the current 0/1/D/M/T options are saved in the file.
 
 ```
-RX02 Emulator v1.0 - Sep 27 2016 - 23:47:10
+RX02 Emulator v1.3 - Oct 23 2016 - 23:47:10
 
 SD: cardType=SD3
 SD: cardSize=3781MB
@@ -83,8 +81,8 @@ Commands available:
 Note: chars in () are optional
 
 S
-Current file[0]: 'RX0.DSK' (RW)
-Current file[1]: 'RX1.DSK' (RW)
+Current file[0]: 'RX0.DSK' (R/W)
+Current file[1]: 'RX1.DSK' (R/W)
 0 XXDP.DSK
 Setting file[0]: 'XXDP.DSK'
 W
