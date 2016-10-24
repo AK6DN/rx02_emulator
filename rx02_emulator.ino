@@ -146,10 +146,11 @@ void sd_test (void)
 void run_command (char *cmd)
 {
     char c;
-    uint8_t i;
+    uint8_t i, j;
     char *arg;
     static const char timing_mode[][9] = { "Fastest", "Medium", "RealRX02" };
     static const char  debug_mode[][8] = { "Off", "Low", "High", "Extreme" };
+    static const char access_mode[][4] = { "R/W", "R/O" };
 
     // get pointer to next char after 1st space (else NULL if no spaces)
     if ((arg = strchr(cmd, ' ')) != NULL) arg++;
@@ -176,16 +177,18 @@ void run_command (char *cmd)
         //  "yes N" set unit N as read-write mode
         case 'Y':
             if (arg && isdigit(c = *arg)) {
-                i = rx_unit_mode(c-'0', RX_FILE_READ_WRITE);
-                tty->printf(F("Setting file[%d] mode: RW\n"), i);
+                i = c-'0';
+                j = rx_unit_mode(i, RX_FILE_READ_WRITE);
+                tty->printf(F("Setting file[%d] mode: %s\n"), i, access_mode[j]);
             }
             break;
 
         //  "no N" set unit N as read-only mode
         case 'N':
             if (arg && isdigit(c = *arg)) {
-                i = rx_unit_mode(c-'0', RX_FILE_READ_ONLY);
-                tty->printf(F("Setting file[%d] mode: RO\n"), i);
+                i = c-'0';
+                j = rx_unit_mode(i, RX_FILE_READ_ONLY);
+                tty->printf(F("Setting file[%d] mode: %s\n"), i, access_mode[j]);
             }
             break;
 
@@ -225,8 +228,7 @@ void run_command (char *cmd)
         // "show" show filename assignments
         case 'S':
             for (i = RX_UNIT_MIN; i <= RX_UNIT_MAX; ++i)
-                tty->printf(F("Current file[%d]: '%s' (R%c)\n"), i, rx_unit_file(i),
-                                rx_unit_mode(i) == RX_FILE_READ_WRITE ? 'W' : 'O');
+                tty->printf(F("Current file[%d]: '%s' (%s)\n"), i, rx_unit_file(i), access_mode[rx_unit_mode(i)]);
             break;
 
         // "print" print emulation state

@@ -41,21 +41,21 @@ RX: INIT rx_xmit_es(0244)
 Processing setup file 'SETUP.INI' ...
 0 RX0.DSK
 Setting file[0]: 'RX0.DSK'
-y 0
-Setting file[0] mode: RW
+Y 0
+Setting file[0] mode: R/W
 1 RX1.DSK
 Setting file[1]: 'RX1.DSK'
-y 1
-Setting file[0] mode: RW
-d 1
+Y 1
+Setting file[1] mode: R/W
+D 1
 Setting debug mode: 1 (Low)
-m 2
+M 2
 Setting emulation mode: 2 (RX02)
-t 0
+T 0
 Setting timing mode: 0 (Fastest)
-s
-Current file[0]: 'RX0.DSK' (RW)
-Current file[1]: 'RX1.DSK' (RW)
+S
+Current file[0]: 'RX0.DSK' (R/W)
+Current file[1]: 'RX1.DSK' (R/W)
 ... setup file processing complete!
 
 Initialization complete.
