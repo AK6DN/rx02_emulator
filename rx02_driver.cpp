@@ -1010,7 +1010,7 @@ void rx_print_state (HardwareSerial *prt)
     for (i = RX_UNIT_MIN; i <= RX_UNIT_MAX; ++i) {
         prt->printf(F("\n"));
         prt->printf(F("    rx.drv[%d].name = '%s'\n"), i, rx.drv[i].name);
-        prt->printf(F("    rx.drv[%d].mode = R%c\n"),   i, rx.drv[i].mode == RX_FILE_READ_WRITE ? 'W' : 'O');
+        prt->printf(F("    rx.drv[%d].mode = R%c\n"),  i, rx.drv[i].mode == RX_FILE_READ_WRITE ? 'W' : 'O');
         prt->printf(F("     rx.drv[%d].rdy = %c\n"),   i, rx.drv[i].rdy ? 'Y' : 'N');
         prt->printf(F("     rx.drv[%d].den = %c\n"),   i, den_list[rx.drv[i].den]);
         prt->printf(F("      rx.drv[%d].ta = %03o\n"), i, rx.drv[i].ta);
@@ -1209,7 +1209,7 @@ void rx_function (void)
             goto error;
         }
 
-        // check drive is not write-only
+        // check drive is not write-only and we are writing
         if (rx.fcn.code != RXFCN_RDSECT && rx.drv[rx.unit].mode == RX_FILE_READ_ONLY) {
             // yup, error
             rx.ec = RXERR_WRITEWP;
@@ -1314,6 +1314,7 @@ void rx_function (void)
         // check drive is not write-only
         if (rx.drv[rx.unit].mode == RX_FILE_READ_ONLY) {
             // yup, error
+            rx.ec = RXERR_WRITEWP;
             goto error;
         }
 
