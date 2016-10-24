@@ -28,9 +28,9 @@ SD: volSizeBytes=3768MB
 
 2016-09-24 18:02:14     512512 RX0.DSK
 2016-09-24 18:02:14     512512 RX1.DSK
-2016-09-24 17:02:12         38 SETUP.INI
 2016-09-24 18:36:02     512512 XXDP.DSK
 2016-09-26 15:37:38     512512 RT11.DSK
+2016-09-24 17:02:12         50 SETUP.INI
 
 Valid MicroSD card detected.
 
@@ -41,14 +41,21 @@ RX: INIT rx_xmit_es(0244)
 Processing setup file 'SETUP.INI' ...
 0 RX0.DSK
 Setting file[0]: 'RX0.DSK'
+Y 0
+Setting file[0] mode: RW
 1 RX1.DSK
 Setting file[1]: 'RX1.DSK'
+Y 1
+Setting file[0] mode: RW
 d 1
 Setting debug mode: 1 (Low)
 m 2
-Setting emulation type: 2 (RX02)
+Setting emulation mode: 2 (RX02)
 t 0
 Setting timing mode: 0 (Fastest)
+s
+Current file[0]: 'RX0.DSK' (RW)
+Current file[1]: 'RX1.DSK' (RW)
 ... setup file processing complete!
 
 Initialization complete.
@@ -60,10 +67,12 @@ Commands available:
                        filename 'none' (any case) for no disk present
   1 filename.dsk    -- set unit 1 file name; default RX1.DSK
                        filename 'none' (any case) for no disk present
-  m(ode) N          -- set emulation mode, 1=RX01, 2=RX02, 3=RX03; default 2
-  d(ebug) N         -- debug level, 0=none, 2=max; default 1
+  y(es) N           -- set unit N file read-write (default)
+  n(o) N            -- set unit N file read-only
+  m(ode) N          -- set emulation mode, 0=NONE, n=RX0n; default 2
+  d(ebug) N         -- debug level, 0=none, 3=max; default 1
   t(iming) N        -- timing mode, 0=fast, 1=medium, 2=normal; default 0
-                       0 is as fast as possible; 2 simulates real RX02 drive
+                       0 as fast as possible; 2 simulates real RX02 drive
   l(ist)            -- list all files on the SD card
   s(how)            -- show current unit filename assignments
   p(rint)           -- print full emulation state
@@ -72,15 +81,10 @@ Commands available:
   h(elp)            -- display this text
 
 Note: chars in () are optional
-L
-2016-09-24 18:02:14     512512 RX0.DSK
-2016-09-24 18:02:14     512512 RX1.DSK
-2016-09-24 17:02:12         38 SETUP.INI
-2016-09-24 18:36:02     512512 XXDP.DSK
-2016-09-26 15:37:38     512512 RT11.DSK
+
 S
-Current file[0]: 'RX0.DSK'
-Current file[1]: 'RX1.DSK'
+Current file[0]: 'RX0.DSK' (RW)
+Current file[1]: 'RX1.DSK' (RW)
 0 XXDP.DSK
 Setting file[0]: 'XXDP.DSK'
 W
