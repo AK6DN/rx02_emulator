@@ -12,7 +12,7 @@ The MicroSD card in the emulator is a FAT32 formatted filesystem, and it can be 
 
 The emulator interfaces thru a simple ASCII terminal command line via the USB port on the Arduino device. After booting, typing:  H<cr>  types out the available commands. Here is a sample interaction showing the use of the H, L, S and 0 commands, and the debug level 1 log of what happens when 'b dy0' is typed on the attached PDP-11/44 console terminal.
 
-Startup configuration is saved in an ASCII text file SETUP.INI that contains user interface commands that are replayed on startup. The SETUP.INI file is written using the W command, and the current 0/1/D/M/T options are saved in the file.
+Startup configuration is saved in an ASCII text file SETUP.INI that contains user interface commands that are replayed on startup. The SETUP.INI file is written using the W command, and the current 0/1/Y/N/D/M/T options are saved in the file.
 
 ```
 RX02 Emulator v1.3 - Oct 23 2016 - 23:47:10
