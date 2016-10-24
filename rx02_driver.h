@@ -33,6 +33,35 @@
 
 
 //
+// public constants
+//
+
+// emulation type
+//
+#define RX_TYPE_NONE            0       // no type defined
+#define RX_TYPE_RX01            1       // RX02 in RX01 mode
+#define RX_TYPE_RX02            2       // RX02 in native mode
+#define RX_TYPE_RX03            3       // RX02 in dual-sided RX03 mode (***UNSUPPORTED***)
+
+// unit numbers
+//
+#define RX_UNIT_MIN             0       // min unit number
+#define RX_UNIT_MAX             1       // max unit number
+
+// timing mode
+//
+#define RX_TIMING_FAST          0       // fastest timing, no delays
+#define RX_TIMING_MEDIUM        1       // medium timing, 10% of normal
+#define RX_TIMING_NORMAL        2       // normal timing, approximates a real RX02 drive
+
+// file access mode
+//
+#define RX_FILE_READ_WRITE      0       // file is read write (default)
+#define RX_FILE_READ_ONLY       1       // file is read only
+
+
+
+//
 // public prototypes
 //
 void    rx_initialize (uint8_t flag);
@@ -41,6 +70,8 @@ uint8_t rx_debug (void);
 void    rx_print_state (HardwareSerial *serialPort);
 char *  rx_unit_file (uint8_t unit, char *name);
 char *  rx_unit_file (uint8_t unit);
+uint8_t rx_unit_mode (uint8_t unit, uint8_t mode);
+uint8_t rx_unit_mode (uint8_t unit);
 uint8_t rx_emulation_type (uint8_t type);
 uint8_t rx_emulation_type (void);
 uint8_t rx_timing_type (uint8_t type);

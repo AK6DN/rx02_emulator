@@ -42,7 +42,7 @@
 #define TEST_TU58  0
 #define DEBUG_TU58 
 
-#define VERSION  "v1.2"
+#define VERSION  "v1.3"
 
 
 
@@ -173,6 +173,22 @@ void run_command (char *cmd)
             }
             break;
 
+        //  "yes N" set unit N as read-write mode
+        case 'Y':
+            if (arg && isdigit(c = *arg)) {
+                i = rx_unit_mode(c-'0', RX_FILE_READ_WRITE);
+                tty->printf(F("Setting file[%d] mode: RW\n"), i);
+            }
+            break;
+
+        //  "no N" set unit N as read-only mode
+        case 'N':
+            if (arg && isdigit(c = *arg)) {
+                i = rx_unit_mode(c-'0', RX_FILE_READ_ONLY);
+                tty->printf(F("Setting file[%d] mode: RO\n"), i);
+            }
+            break;
+
         //  "mode N" set emulation mode, 1/2/3 as RX01/RX02/RX03
         case 'M':
             if (arg && isdigit(c = *arg)) {
@@ -208,7 +224,9 @@ void run_command (char *cmd)
 
         // "show" show filename assignments
         case 'S':
-            for (i = 0; i < 2; ++i) tty->printf(F("Current file[%d]: '%s'\n"), i, rx_unit_file(i));
+            for (i = RX_UNIT_MIN; i <= RX_UNIT_MAX; ++i)
+                tty->printf(F("Current file[%d]: '%s' (R%c)\n"), i, rx_unit_file(i),
+                                rx_unit_mode(i) == RX_FILE_READ_WRITE ? 'W' : 'O');
             break;
 
         // "print" print emulation state
@@ -242,6 +260,8 @@ void run_command (char *cmd)
             tty->printf(F("                       filename 'none' (any case) for no disk present\n"));
             tty->printf(F("  1 filename.dsk    -- set unit 1 file name; default RX1.DSK\n"));
             tty->printf(F("                       filename 'none' (any case) for no disk present\n"));
+            tty->printf(F("  y(es) N           -- set unit N file read-write (default)\n"));
+            tty->printf(F("  n(o) N            -- set unit N file read-only\n"));
             tty->printf(F("  m(ode) N          -- set emulation mode, 0=NONE, n=RX0n; default 2\n"));
             tty->printf(F("  d(ebug) N         -- debug level, 0=none, 3=max; default 1\n"));
             tty->printf(F("  t(iming) N        -- timing mode, 0=fast, 1=medium, 2=normal; default 0\n"));
@@ -402,6 +422,7 @@ void run_tu58 (void)
 void setup_write (char *name)
 {
     File init;
+    uint8_t i;
 
     // remove current file, if exists
     if (sdcard.exists(name)) sdcard.remove(name);
@@ -411,11 +432,14 @@ void setup_write (char *name)
 
     // open file and write config commands
     init = sdcard.open(name, FILE_WRITE);
-    init.printf(F("%d %s\n"), 0, rx_unit_file(0));
-    init.printf(F("%d %s\n"), 1, rx_unit_file(1));
+    for (i = RX_UNIT_MIN; i <= RX_UNIT_MAX; ++i) {
+        init.printf(F("%d %s\n"), i, rx_unit_file(i));
+        init.printf(F("%c %d\n"), rx_unit_mode(i) == RX_FILE_READ_ONLY ? 'N' : 'Y', i);
+    }
     init.printf(F("d %d\n"), rx_debug());
     init.printf(F("m %d\n"), rx_emulation_type());
     init.printf(F("t %d\n"), rx_timing_type());
+    init.printf(F("s\n"));
     init.close();
 
     return;

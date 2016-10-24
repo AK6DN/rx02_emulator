@@ -87,7 +87,7 @@
 #define RXES_INIT		(1<<2)		// controller init done
 #define RXES_RX02       (1<<3)      // set for RX02 drive           (RX28 w/ RX02 ONLY)
 //efine RXES_ACLO	    (1<<3)		// set for AC low               (RX211 w/RX02 ONLY)
-//efine RXES_WPERR      (1<<3)      // set for write to WP drive    (RX11/RX8E w/RX01 ONLY)
+#define RXES_WPERR      (1<<3)      // set for write to WP drive    (RX11/RX8E w/RX01 ONLY)
 #define RXES_DENERR	    (1<<4)		// density error
 #define RXES_DRVDEN	    (1<<5)		// diskette double density
 #define RXES_DELDATA    (1<<6)		// deleted data detected 
@@ -107,7 +107,7 @@
 #define RXERR_TRKFAIL	 0050		// track not found
 //efine RXERR_SELFDIAG   0060       // self diagnostic fail (RX01 ONLY)
 #define RXERR_SECFAIL	 0070		// sector not found
-//efine RXERR_WRITEWP    0100       // write to a WP drive (RX01 ONLY)
+#define RXERR_WRITEWP    0100       // write to a WP drive (RX01 ONLY)
 //efine RXERR_SEPFAIL	 0110		// no SEP clock in 40us
 //efine RXERR_PREFAIL	 0120		// preamble not found
 #define RXERR_IDMFAIL	 0130		// ID mark not found
@@ -179,13 +179,6 @@
 #define RX_SAW_NONE     0               // saw neither RUN or INIT
 #define RX_SAW_RUN      1               // saw RUN and not INIT
 
-// emulation type
-
-#define RX_TYPE_NONE    0               // no type defined
-#define RX_TYPE_RX01	1               // RX02 in RX01 mode
-#define RX_TYPE_RX02    2               // RX02 in native mode
-#define RX_TYPE_RX03    3               // RX02 in dual-sided RX03 mode (***UNSUPPORTED***)
-
 // drive density
 
 #define RX_DEN_SD       0		        // single density mode (128B/sector)
@@ -205,18 +198,11 @@
 #define RX_TIME_RDERROR   3             // read error registers
 #define RX_TIME_SETMEDIA  4             // set media density
 
-// timing mode
-
-#define RX_TIMING_FAST    0             // fastest timing, no delays
-#define RX_TIMING_MEDIUM  1             // medium timing, 10% of normal
-#define RX_TIMING_NORMAL  2             // normal timing, approximates a real RX02 drive
-
 // disk definitions
 
 #define RX_NTRKS        77L             // number of tracks per disk
 #define RX_NSECS        26L             // number of sectors per track
 #define RX_NBPS         128L            // bytes per sector, single density
-#define RX_NUNITS       2               // number if units
 
 // convenience macros
 
@@ -254,6 +240,7 @@ struct drv_t {
     uint32_t dd[RX_NTRKS];  // normal or deleted data per track per sector (1 bit per sector 0..31)
     char     name[32];      // associated file name
     uint8_t  rdy;           // drive ready
+    uint8_t  mode;          // file access read-only vs read-write
     uint8_t  den;           // density
     uint8_t  ta;		    // track address
     uint8_t  sa;            // sector address
@@ -281,7 +268,7 @@ static struct rx_t {
         uint8_t code;  // function selected (numeric 0..7)
         char *  name;  // function selected, ascii name id
     } fcn;
-    struct drv_t drv[RX_NUNITS]; // drive specific parameters
+    struct drv_t drv[RX_UNIT_MAX-RX_UNIT_MIN+1]; // drive specific parameters
     uint8_t buffer[RX_BUFFER_SIZE]; // sector buffer
 } rx;
 
@@ -804,7 +791,7 @@ void rx_initialize (uint8_t flag)
     rx.timing = 0;
 
     // setup drive state
-    for (i = 0; i < RX_NUNITS; ++i) {
+    for (i = RX_UNIT_MIN; i <= RX_UNIT_MAX; ++i) {
         if (flag) sprintf(rx.drv[i].name, "RX%d.DSK", i);
         rx_unit_file(i);
     }
@@ -847,8 +834,16 @@ char *rx_unit_file (uint8_t unit, char *name)
 {
     uint32_t size;
 
+    // check unit number
+    unit = constrain(unit, RX_UNIT_MIN, RX_UNIT_MAX);
+
     // setup file name if provided
-    if (name) strcpy(rx.drv[unit].name, name);
+    if (name) {
+        // copy file name
+        strcpy(rx.drv[unit].name, name);
+        // default to read-write
+        rx.drv[unit].mode = RX_FILE_READ_WRITE;
+    }
 
     // set initial state from common block
     rx.drv[unit].ta  = rx.ta;
@@ -864,6 +859,7 @@ char *rx_unit_file (uint8_t unit, char *name)
         // no online disk
         rx.drv[unit].rdy = FALSE;
         rx.drv[unit].den = RX_DEN_SD;
+        rx.drv[unit].mode = RX_FILE_READ_ONLY;
         // return the name
         return rx.drv[unit].name;
     }
@@ -895,6 +891,27 @@ char *rx_unit_file (uint8_t unit, char *name)
 char * rx_unit_file (uint8_t unit)
 {
     return rx_unit_file(unit, NULL);
+}
+
+
+
+//
+// setup the file access mode: read-only vs read-write
+//
+uint8_t rx_unit_mode (uint8_t unit, uint8_t mode)
+{
+    unit = constrain(unit, RX_UNIT_MIN, RX_UNIT_MAX);
+
+    rx.drv[unit].mode = constrain(mode, RX_FILE_READ_WRITE, RX_FILE_READ_ONLY);
+
+    return rx.drv[unit].mode;
+}
+
+uint8_t rx_unit_mode (uint8_t unit)
+{
+    unit = constrain(unit, RX_UNIT_MIN, RX_UNIT_MAX);
+
+    return rx.drv[unit].mode;
 }
 
 
@@ -990,9 +1007,10 @@ void rx_print_state (HardwareSerial *prt)
     prt->printf(F("    rx.timing = %o\n"),    rx.timing);
     prt->printf(F("  rx.fcn.code = %o\n"),    rx.fcn.code);
     prt->printf(F("  rx.fcn.name = %s\n"),    rx.fcn.name);
-    for (i = 0; i < RX_NUNITS; ++i) {
+    for (i = RX_UNIT_MIN; i <= RX_UNIT_MAX; ++i) {
         prt->printf(F("\n"));
         prt->printf(F("    rx.drv[%d].name = '%s'\n"), i, rx.drv[i].name);
+        prt->printf(F("    rx.drv[%d].mode = R%c\n"),   i, rx.drv[i].mode == RX_FILE_READ_WRITE ? 'W' : 'O');
         prt->printf(F("     rx.drv[%d].rdy = %c\n"),   i, rx.drv[i].rdy ? 'Y' : 'N');
         prt->printf(F("     rx.drv[%d].den = %c\n"),   i, den_list[rx.drv[i].den]);
         prt->printf(F("      rx.drv[%d].ta = %03o\n"), i, rx.drv[i].ta);
@@ -1055,7 +1073,7 @@ void rx_function (void)
     rx.fcn.name = fcn_list[rx.fcn.code];
 
     // separate out the unit number in the command
-    rx.unit = (rx.cs & RXCS_UNITSEL) ? 1 : 0;
+    rx.unit = (rx.cs & RXCS_UNITSEL) ? RX_UNIT_MAX : RX_UNIT_MIN;
 
     // separate out the density flag in the command
     rx.den = (rx.cs & RXCS_DENSEL) ? RX_DEN_DD : RX_DEN_SD;
@@ -1191,6 +1209,16 @@ void rx_function (void)
             goto error;
         }
 
+        // check drive is not write-only
+        if (rx.drv[rx.unit].mode == RX_FILE_READ_ONLY) {
+            // yup, error
+            if (rx.type == RX_TYPE_RX01) {
+                rx.ec = RXERR_WRITEWP;
+                rx.es |= RXES_WPERR;
+            }
+            goto error;
+        }
+
         // check track access is valid
         if (rx.ta >= RX_NTRKS) {
             rx.ec = RXERR_TRKERR;
@@ -1284,6 +1312,12 @@ void rx_function (void)
             goto error;
         }
 
+        // check drive is not write-only
+        if (rx.drv[rx.unit].mode == RX_FILE_READ_ONLY) {
+            // yup, error
+            goto error;
+        }
+
         // simulate timing
         rx_timing(RX_TIME_SETMEDIA);
 
@@ -1337,18 +1371,18 @@ void rx_function (void)
             // rx.ba = rx_recv_hs(16); // done in RX211 hardware
 
             // generate status byte
-            value = (rx.unit == 1               ? (1<<7) : 0)
-                  | (rx.drv[1].den == RX_DEN_DD ? (1<<6) : 0)
-                  | (rx.drv[rx.unit].rdy        ? (1<<5) : 0)
-                  | (rx.drv[0].den == RX_DEN_DD ? (1<<4) : 0)
-                  | (rx.den == RX_DEN_DD        ? (1<<0) : 0);
+            value = (rx.unit == RX_UNIT_MAX               ? (1<<7) : 0)
+                  | (rx.drv[RX_UNIT_MAX].den == RX_DEN_DD ? (1<<6) : 0)
+                  | (rx.drv[rx.unit].rdy                  ? (1<<5) : 0)
+                  | (rx.drv[RX_UNIT_MIN].den == RX_DEN_DD ? (1<<4) : 0)
+                  | (rx.den == RX_DEN_DD                  ? (1<<0) : 0);
 
             // print error block
             if (debugLevel >= 2) {
-                debugPort->printf(F("RX: %s Word%d: %03o %03o\n"), rx.fcn.name, 1, rx.wc,              rx.ec);
-                debugPort->printf(F("RX: %s Word%d: %03o %03o\n"), rx.fcn.name, 2, rx.drv[1].ta,       rx.drv[0].ta);
-                debugPort->printf(F("RX: %s Word%d: %03o %03o\n"), rx.fcn.name, 3, rx.sa,              rx.ta);
-                debugPort->printf(F("RX: %s Word%d: %03o %03o\n"), rx.fcn.name, 4, rx.drv[rx.unit].ta, value);
+                debugPort->printf(F("RX: %s Word%d: %03o %03o\n"), rx.fcn.name, 1, rx.wc,                  rx.ec);
+                debugPort->printf(F("RX: %s Word%d: %03o %03o\n"), rx.fcn.name, 2, rx.drv[RX_UNIT_MAX].ta, rx.drv[RX_UNIT_MIN].ta);
+                debugPort->printf(F("RX: %s Word%d: %03o %03o\n"), rx.fcn.name, 3, rx.sa,                  rx.ta);
+                debugPort->printf(F("RX: %s Word%d: %03o %03o\n"), rx.fcn.name, 4, rx.drv[rx.unit].ta,     value);
             }
 
             // word 1
@@ -1356,8 +1390,8 @@ void rx_function (void)
             rx_xmit_hs(rx.wc, 8);
 
             // word 2
-            rx_xmit_hs(rx.drv[0].ta, 8);
-            rx_xmit_hs(rx.drv[1].ta, 8);
+            rx_xmit_hs(rx.drv[RX_UNIT_MIN].ta, 8);
+            rx_xmit_hs(rx.drv[RX_UNIT_MAX].ta, 8);
 
             // word 3
             rx_xmit_hs(rx.ta, 8);
