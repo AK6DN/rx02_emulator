@@ -16,7 +16,7 @@ Startup configuration is saved in an ASCII text file SETUP.INI that contains use
 
 The hardware shield has three indicator LEDs:
 <OL>
-<LI>(RED) ON when INIT is asserted from the host, and when an error is detected in the emulator. Turned OFF at the start of a new function.</LI>
+<LI>(RED) ON when INIT is asserted from the host or an error is detected in the emulator. OFF at function start.</LI>
 <LI>(YEL) ON when the emulator is actively accessing the microSD card storage. OFF otherwise.</LI>
 <LI>(GRN) ON when a command is inititated from the host, OFF when the command has completed (DONE set).</LI>
 </OL>
