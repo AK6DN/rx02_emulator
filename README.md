@@ -15,9 +15,11 @@ The emulator interfaces thru a simple ASCII terminal command line via the USB po
 Startup configuration is saved in an ASCII text file SETUP.INI that contains user interface commands that are replayed on startup. The SETUP.INI file is written using the W command, and the current 0/1/Y/N/D/M/T options are saved in the file.
 
 The hardware shield has three indicator LEDs:
-(RED) ON when INIT is asserted from the host, and when an error is detected in the emulator. Turned OFF at the start of a new function.
-(YEL) ON when the emulator is actively accessing the microSD card storage. OFF otherwise.
-(GRN) ON when a command is inititated from the host, OFF when the command has completed (DONE set).
+<OL>
+<LI>(RED) ON when INIT is asserted from the host, and when an error is detected in the emulator. Turned OFF at the start of a new function.</LI>
+<LI>(YEL) ON when the emulator is actively accessing the microSD card storage. OFF otherwise.</LI>
+<LI>(GRN) ON when a command is inititated from the host, OFF when the command has completed (DONE set).</LI>
+</OL>
 
 Normal operation will see the GRN/YEL LEDs blinking rapidly or mostly ON. For non-storage commands (eg, buffer fill/empty) only GRN will be ON.
 
