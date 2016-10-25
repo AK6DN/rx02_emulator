@@ -4,7 +4,7 @@ The emulator simulates two RX02 drives mapped to files on an attached MicroSD ca
 
 This implementation was originally based on the design at:  http://www.chdickman.com/rx02/ but has been extensively modified for the Arduino and to provide the functionality necessary to pass the DEC RX02 hardware diagnostics.
 
-As it currently stands this design boots/runs under the XXDP and RT-11 operating systems, and passes the DEC RX02 hardware diagnostics ZRXDC0 Performance Exerciser, ZRXEA0 Formatter, and ZRXFB0 RX02/RX211 Logic/Function tests error free.
+Currently this design boots/runs under the XXDP and RT-11 operating systems, and passes the DEC RX02 hardware diagnostics ZRXDC0 Performance Exerciser, ZRXEA0 Formatter, and ZRXFB0 RX02/RX211 Logic/Function tests error free.
 
 Testing to date has been performed as an RX02/RX211 interface combo in a UNIBUS PDP-11/44, and in a PDP-8m with an RX8E/RX28 interface so RX01/RX8E and RX02/RX28 configurations can be tested. I do not have access to RX11, RXV11, or RXV21 boards for testing.
 
@@ -14,6 +14,14 @@ The emulator interfaces thru a simple ASCII terminal command line via the USB po
 
 Startup configuration is saved in an ASCII text file SETUP.INI that contains user interface commands that are replayed on startup. The SETUP.INI file is written using the W command, and the current 0/1/Y/N/D/M/T options are saved in the file.
 
+The hardware shield has three indicator LEDs:
+(RED) ON when INIT is asserted from the host, and when an error is detected in the emulator. Turned OFF at the start of a new function.
+(YEL) ON when the emulator is actively accessing the microSD card storage. OFF otherwise.
+(GRN) ON when a command is inititated from the host, OFF when the command has completed (DONE set).
+
+Normal operation will see the GRN/YEL LEDs blinking rapidly or mostly ON. For non-storage commands (eg, buffer fill/empty) only GRN will be ON.
+
+Sample boot log in the Arduino USB serial monitor window:
 ```
 RX02 Emulator v1.3 - Oct 23 2016 - 23:47:10
 
@@ -78,7 +86,7 @@ Commands available:
   w(rite)           -- write current configuration into the SETUP.INI file
   h(elp)            -- display this text
 
-Note: chars in () are optional
+Note: chars in () are optional. Case does not matter.
 
 S
 Current file[0]: 'RX0.DSK' (R/W)
