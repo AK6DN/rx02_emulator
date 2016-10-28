@@ -42,7 +42,7 @@
 #define TEST_TU58  0
 #define DEBUG_TU58 
 
-#define VERSION  "v1.3"
+#define VERSION  "v1.4"
 
 
 

@@ -107,7 +107,7 @@
 #define RXERR_TRKFAIL	 0050		// track not found
 //efine RXERR_SELFDIAG   0060       // self diagnostic fail (RX01 ONLY)
 #define RXERR_SECFAIL	 0070		// sector not found
-#define RXERR_WRITEWP    0100       // write to a WP drive (RX01 ONLY)
+#define RXERR_WRITEWP    0100       // write to a WP drive
 //efine RXERR_SEPFAIL	 0110		// no SEP clock in 40us
 //efine RXERR_PREFAIL	 0120		// preamble not found
 #define RXERR_IDMFAIL	 0130		// ID mark not found
@@ -183,7 +183,6 @@
 
 #define RX_DEN_SD       0		        // single density mode (128B/sector)
 #define RX_DEN_DD       1		        // double density mode (256B/sector)
-#define RX_DEN_QD       2               //  quad  density mode (512B/sector) (***UNSUPPORTED***)
 
 // data type
 
@@ -224,15 +223,13 @@
 
 
 
-volatile static uint8_t rx_run_seen; // set when RX RUN asserted (rising edge)
-
 volatile static uint8_t rx_init_seen; // set when RX INIT asserted (rising edge)
 
 static jmp_buf rx_init_env; // environment to invoke when INIT is asserted (ie, reset/error condition)
 
 static char fcn_list[][8] = { "FILBUF", "EMPBUF", "WRSECT", "RDSECT", "SETMED", "RDSTAT", "WRDDSE", "RDERRC", "INIT" };
 
-static char den_list[] = { 'S', 'D', 'Q' }; // Single, Double, Quad density flag
+static char den_list[] = { 'S', 'D' }; // Single, Double density flag
 
 static uint8_t rx_type = RX_TYPE_RX02; // default drive emulation, can be overwritten
 
@@ -257,10 +254,10 @@ static struct rx_t {
     uint8_t  wc;       // word count
     uint8_t  ec;       // error code
     uint8_t  unit;     // active unit number
-    uint8_t  den;      // density selected, SD, DD, QD
+    uint8_t  den;      // density selected, SD, DD
     uint8_t  ta;       // track address
     uint8_t  sa;       // sector address
-    uint8_t  type;     // emulation type: RX01, RX02
+    uint8_t  type;     // emulation type: RX01, RX02, ...
     uint8_t  timing;   // timing mode: 0=fastest, 2=normal/real
     uint16_t len;      // read/write length
     uint32_t pos;      // read/write position
@@ -284,17 +281,6 @@ static uint8_t debugLevel = 0; // debug level, 0=NONE, higher is more
 static void rx_intr_init (void)
 {
     rx_init_seen = 1;
-    return;
-}
-
-
-
-//
-// RX02 RUN assertion interrupt
-//
-static void rx_intr_run (void)
-{
-    rx_run_seen = 1;
     return;
 }
 
@@ -380,27 +366,35 @@ static void rx_timing (uint8_t type)
 //
 // wait until the RX_RUN or RX_INIT signal is asserted, or timeout occurs
 //
-static uint8_t rx_wait_run_or_init (uint32_t expire)
+static uint8_t rx_check_run_or_init (uint32_t expire)
 {
     uint32_t start = millis();
 
     do {
-        if (rx_init_seen) { rx_init_seen = 0; longjmp(rx_init_env, 1); }
-        if (rx_run_seen) { rx_run_seen = 0; return RX_SAW_RUN; }
+        if (rx_init_seen) { longjmp(rx_init_env, 1); }
+        if (rx_tst_run()) { return RX_SAW_RUN; }
     } while (millis()-start <= expire);
 
     // count timed out with neither RUN or INIT
     return RX_SAW_NONE;
 }
 
-// wait forever until the RX_RUN or RX_INIT signal is asserted
 
-static uint8_t rx_wait_run_or_init (void)
+
+//
+// wait forever until the RX_RUN or RX_INIT signal is asserted, with request handshake
+//
+static void rx_wait_run_or_init (void)
 {
-    do {
-        if (rx_init_seen) { rx_init_seen = 0; longjmp(rx_init_env, 2); }
-        if (rx_run_seen) { rx_run_seen = 0; return RX_SAW_RUN; }
-    } while (TRUE);
+    // set request
+    rx_set_request();
+
+    // loop waiting for INIT seen or RUN seen
+    do { if (rx_init_seen) longjmp(rx_init_env, 2); } while (rx_tst_run() == 0);
+
+    // clear request (will also clear RUN)
+    rx_clr_request();
+    return;
 }
 
 
@@ -421,7 +415,7 @@ static uint16_t rx_recv12_hs (uint8_t handshake)
     rx_clr_error();
     rx_clr_shift();
 
-    if (handshake) { rx_set_request(); rx_wait_run_or_init(); rx_clr_request(); }
+    if (handshake) rx_wait_run_or_init();
 
     noInterrupts();
 
@@ -455,7 +449,7 @@ static uint16_t rx_recv8_hs (uint8_t handshake)
     rx_clr_error();
     rx_clr_shift();
 
-    if (handshake) { rx_set_request(); rx_wait_run_or_init(); rx_clr_request(); }
+    if (handshake) rx_wait_run_or_init();
 
     noInterrupts();
 
@@ -541,7 +535,7 @@ static void rx_xmit12_hs (uint16_t value, uint8_t handshake)
 
     interrupts();
 
-    if (handshake) { rx_set_request(); rx_wait_run_or_init(); rx_clr_request(); }
+    if (handshake) rx_wait_run_or_init();
 
     rx_clr_out();
 
@@ -576,7 +570,7 @@ static void rx_xmit8_hs (uint16_t value, uint8_t handshake)
 
     interrupts();
 
-    if (handshake) { rx_set_request(); rx_wait_run_or_init(); rx_clr_request(); }
+    if (handshake) rx_wait_run_or_init();
 
     rx_clr_out();
 
@@ -745,10 +739,6 @@ void rx_initialize (uint8_t flag)
         rx_init_seen = 0;
         attachInterrupt(digitalPinToInterrupt(PIN_CTLR_INIT_H), rx_intr_init, RISING);
 
-        // setup RX RUN interrupt
-        rx_run_seen = 0;
-        attachInterrupt(digitalPinToInterrupt(PIN_CTLR_RUN_H), rx_intr_run, RISING);
-
         // counters
         rx.cmdcnt = 0;
         rx.errcnt = 0;
@@ -802,12 +792,12 @@ void rx_initialize (uint8_t flag)
     // indicate SD card access in progress
     led_state(yellow, on);
 
-    // copy drive 0 boot sector into the buffer, if drive is ready
-    rx.drv[0].ta  = rx.ta = 1;
-    rx.drv[0].sa  = rx.sa = 1;
-    rx.drv[0].len = rx.len = rx_sec_size(rx.drv[0].den);
-    rx.drv[0].pos = rx.pos = (rx.ta*RX_NSECS + (rx.sa - 1)) * rx.len;
-    if (rx.drv[0].rdy) sd_read_bytes(rx.drv[0].name, rx.pos, rx.buffer, rx.len);
+    // copy drive RX_UNIT_MIN boot sector into the buffer, if drive is ready
+    rx.drv[RX_UNIT_MIN].ta  = rx.ta = 1;
+    rx.drv[RX_UNIT_MIN].sa  = rx.sa = 1;
+    rx.drv[RX_UNIT_MIN].len = rx.len = rx_sec_size(rx.drv[RX_UNIT_MIN].den);
+    rx.drv[RX_UNIT_MIN].pos = rx.pos = (rx.ta*RX_NSECS + (rx.sa - 1)) * rx.len;
+    if (rx.drv[RX_UNIT_MIN].rdy) sd_read_bytes(rx.drv[RX_UNIT_MIN].name, rx.pos, rx.buffer, rx.len);
 
     // indicate SD card access complete
     led_state(yellow, off);
@@ -1047,7 +1037,7 @@ void rx_function (void)
     }
 
     // wait for RUN or INIT; 25ms timeout if no RUN or INIT
-    if (rx_wait_run_or_init(25) == RX_SAW_NONE) return;
+    if (rx_check_run_or_init(25) == RX_SAW_NONE) return;
 
     // RUN seen, process command ...
 
