@@ -33,9 +33,21 @@
 
 
 //
+// public constants
+//
+
+// positioning for set file size
+//
+#define SD_POS_AT_BEGIN 0
+#define SD_POS_AT_END   1
+
+
+
+//
 // public data
 //
-extern SdFat sdcard;
+
+extern SdFat sdcard; // SDcard access state
 
 
 
@@ -49,7 +61,7 @@ void     sd_remove_file (char *name);
 uint16_t sd_read_bytes (char *name, uint32_t pos, uint8_t *buf, uint16_t len);
 uint16_t sd_write_bytes (char *name, uint32_t pos, uint8_t *buf, uint16_t len);
 uint32_t sd_get_file_size (char *name);
-uint32_t sd_set_file_size (char *name, uint32_t size);
+uint32_t sd_set_file_size (char *name, uint32_t size, uint8_t mode);
 
 
 

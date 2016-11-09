@@ -42,7 +42,7 @@
 #define TEST_TU58  0
 #define DEBUG_TU58 
 
-#define VERSION  "v1.4"
+#define VERSION  "v1.5"
 
 
 
@@ -107,7 +107,7 @@ void sd_test (void)
 
     pos = sizeof(wrorder)*sizeof(wrdata);
     tty->printf("\nSDtest setting file size to %lu.\n", pos);
-    tty->printf("  file size is %lu. bytes\n", sd_set_file_size(name, pos));
+    tty->printf("  file size is %lu. bytes\n", sd_set_file_size(name, pos, SD_POS_AT_BEGIN));
 
     for (cnt = 0; cnt < sizeof(wrorder); ++cnt) {
         len = sizeof(wrdata);

@@ -677,7 +677,7 @@ static void rx_init_es (void)
     }
 
     // certain bits for RX02/RX03
-    if (rx.type == RX_TYPE_RX02 || rx.type == RX_TYPE_RX03) {
+    if (rx.type >= RX_TYPE_RX02) {
         // insert drive type (RX28 only)
         if (rx_tst_12b()) rx.es |= RXES_RX02;
         if (!(rx.fcn.code == RXFCN_FILL || rx.fcn.code == RXFCN_EMPTY)) {
@@ -767,7 +767,7 @@ void rx_initialize (uint8_t flag)
     rx.type = rx_type;
     rx.fcn.code = RXFCN_INIT;
     rx.fcn.name = fcn_list[rx.fcn.code];
-    rx.den = (rx.type == RX_TYPE_RX02 ? RX_DEN_DD : RX_DEN_SD);
+    rx.den = (rx.type >= RX_TYPE_RX02 ? RX_DEN_DD : RX_DEN_SD);
     rx.cs = 0;
     rx.es = 0;
     rx.ec = 0;
@@ -854,20 +854,20 @@ char *rx_unit_file (uint8_t unit, char *name)
         return rx.drv[unit].name;
     }
 
-    // get size of (existing) file, check it for SD or DD or none; if not SD (RX01,RX02) or DD (RX02) then set it 
+    // get size of (existing) file, check it for SD or DD or zero; if not SD or DD then set it, but only
+    // if the current file is 'new' (ie, size == zero). Specifically do NOT modify nonzero length files
+    // that are not exactly of SD (256,256 bytes) or DD (512,512 bytes) size
     size = sd_get_file_size(rx.drv[unit].name);
     if (rx.type == RX_TYPE_RX01) {
         // RX01 only supports SD disks
-        if (size != rx_dsk_size(RX_DEN_SD))
-            size = sd_set_file_size(rx.drv[unit].name, rx_dsk_size(RX_DEN_SD));
-    } else {
+        if (size == 0) size = sd_set_file_size(rx.drv[unit].name, rx_dsk_size(RX_DEN_SD), SD_POS_AT_END);
+    } else if (rx.type >= RX_TYPE_RX02) {
         // RX02/RX03 supports SD or DD disks, default to DD
-        if (size != rx_dsk_size(RX_DEN_SD) && size != rx_dsk_size(RX_DEN_DD))
-            size = sd_set_file_size(rx.drv[unit].name, rx_dsk_size(RX_DEN_DD));
+        if (size == 0) size = sd_set_file_size(rx.drv[unit].name, rx_dsk_size(RX_DEN_DD), SD_POS_AT_END);
     }
 
-    // set drive ready if file exists and is a right size (SD or DD)
-    rx.drv[unit].rdy = (size == rx_dsk_size(RX_DEN_SD)) || (size == rx_dsk_size(RX_DEN_DD));
+    // set drive ready if file exists and is a right size (SD, or DD and RX02/3 mode)
+    rx.drv[unit].rdy = (size == rx_dsk_size(RX_DEN_SD)) || (size == rx_dsk_size(RX_DEN_DD) && rx.type >= RX_TYPE_RX02);
 
     // set drive density based on file size
     rx.drv[unit].den = (size == rx_dsk_size(RX_DEN_DD)) ? RX_DEN_DD : RX_DEN_SD;
@@ -1049,7 +1049,7 @@ void rx_function (void)
         // RX11/RXV11 or RX8E/RX28 in 8b mode: 8b command
         rx.cs = rx_recv(8);
         // RX28 in 8b mode: 8b command extension
-        if (rx.type == RX_TYPE_RX02) rx.cs |= rx_recv_hs(8)<<8;
+        if (rx.type >= RX_TYPE_RX02) rx.cs |= rx_recv_hs(8)<<8;
     }
     if (debugLevel) debugPort->printf(F("RX: cmd=%04o\n"), rx.cs);
 
@@ -1318,7 +1318,7 @@ void rx_function (void)
         led_state(yellow, on);
 
         // change density to requested value AND always zero the entire disk image
-        sd_set_file_size(rx.drv[rx.unit].name, rx_dsk_size(rx.den));
+        sd_set_file_size(rx.drv[rx.unit].name, rx_dsk_size(rx.den), SD_POS_AT_BEGIN);
 
         // update disk parameters to match new size
         rx_unit_file(rx.unit);

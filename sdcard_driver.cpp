@@ -262,9 +262,9 @@ uint32_t sd_get_file_size (char *name)
 
 
 //
-// set size of an sdcard file AND fill with zeroes
+// set size of an sdcard file AND fill with zeroes; start at begin (mode=0) or end (mode=1)
 //
-uint32_t sd_set_file_size (char *name, uint32_t size)
+uint32_t sd_set_file_size (char *name, uint32_t size, uint8_t mode)
 {
     void    *buf;
     uint16_t len;
@@ -288,8 +288,8 @@ uint32_t sd_set_file_size (char *name, uint32_t size)
     // open current file
     sdfile = sdcard.open(name, FILE_WRITE);
 
-    // fill file with data
-    for (pos = 0; pos < size; pos += len) { sdfile.write(buf, len); }
+    // fill file with data, start at begin (mode=0) or at end (mod=1)
+    for (pos = (mode == SD_POS_AT_END ? sdfile.size() : 0); pos < size; pos += len) { sdfile.write(buf, len); }
 
     // free buffer
     free(buf);
