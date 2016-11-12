@@ -25,7 +25,7 @@ Normal operation will see the GRN/YEL LEDs blinking rapidly or mostly ON. For no
 
 Sample boot log in the Arduino USB serial monitor window:
 ```
-RX02 Emulator v1.3 - Oct 23 2016 - 23:47:10
+RX02 Emulator v1.5 - Nov 11 2016 - 23:47:10
 
 SD: cardType=SD3
 SD: cardSize=3781MB
@@ -71,22 +71,25 @@ H
 
 Commands available:
 
-  0 filename.dsk    -- set unit 0 file name; default RX0.DSK
-                       filename 'none' (any case) for no disk present
-  1 filename.dsk    -- set unit 1 file name; default RX1.DSK
-                       filename 'none' (any case) for no disk present
-  y(es) N           -- set unit N file read-write (default)
-  n(o) N            -- set unit N file read-only
-  m(ode) N          -- set emulation mode, 0=NONE, n=RX0n; default 2
-  d(ebug) N         -- debug level, 0=none, 3=max; default 1
-  t(iming) N        -- timing mode, 0=fast, 1=medium, 2=normal; default 0
-                       0 as fast as possible; 2 simulates real RX02 drive
-  l(ist)            -- list all files on the SD card
-  s(how)            -- show current unit filename assignments
-  p(rint)           -- print full emulation state
-  i(nit)            -- initialize emulator (like unibus INIT)
-  w(rite)           -- write current configuration into the SETUP.INI file
-  h(elp)            -- display this text
+  0 FILENAME    -- set unit 0 file to FILENAME; default RX0.DSK
+                   file name 'none' (any case) for no disk present
+  1 FILENAME    -- set unit 1 file to FILENAME; default RX1.DSK
+                   file name 'none' (any case) for no disk present
+  y(es) N       -- set unit N file read-write (default)
+  n(o) N        -- set unit N file read-only
+  m(ode) N      -- set emulation mode, 0=NONE, n=RX0n; default 2
+  d(ebug) N     -- debug level, 0=none, 3=max; default 1
+  t(iming) N    -- timing mode, 0=fast, 1=medium, 2=normal; default 0
+                   0 as fast as possible; 2 simulates real RX02 drive
+  r FILENAME    -- remove file FILENAME
+  e FILENAME    -- extend/truncate file FILENAME to single density size
+  f FILENAME    -- extend/truncate file FILENAME to double density size
+  l(ist)        -- list all files on the SD card
+  s(how)        -- show current unit filename assignments
+  p(rint)       -- print full emulation state
+  i(nit)        -- initialize emulator (like unibus INIT)
+  w(rite)       -- write current configuration into the SETUP.INI file
+  h(elp)        -- display this text
 
 Note: chars in () are optional. Case does not matter.
 

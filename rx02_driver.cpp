@@ -179,11 +179,6 @@
 #define RX_SAW_NONE     0               // saw neither RUN or INIT
 #define RX_SAW_RUN      1               // saw RUN and not INIT
 
-// drive density
-
-#define RX_DEN_SD       0		        // single density mode (128B/sector)
-#define RX_DEN_DD       1		        // double density mode (256B/sector)
-
 // data type
 
 #define RX_DATA_NORMAL  0               // normal data
@@ -197,17 +192,7 @@
 #define RX_TIME_RDERROR   3             // read error registers
 #define RX_TIME_SETMEDIA  4             // set media density
 
-// disk definitions
-
-#define RX_NTRKS        77L             // number of tracks per disk
-#define RX_NSECS        26L             // number of sectors per track
-#define RX_NBPS         128L            // bytes per sector, single density
-
 // convenience macros
-
-#define rx_sec_size(den)    (RX_NBPS<<(den))             // bytes per sector at density
-#define rx_trk_size(den)    (RX_NSECS*rx_sec_size(den))  // bytes per track at density
-#define rx_dsk_size(den)    (RX_NTRKS*rx_trk_size(den))  // bytes per disk at density
 
 #define rx_get_bits(xxx)    (rx_tst_12b() ? 12 : 8)      // number of bits signaled by interface
 

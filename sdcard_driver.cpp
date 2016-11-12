@@ -163,10 +163,13 @@ void sd_list_files (HardwareSerial *port)
 //
 // remove a file on the SDcard
 //
-void sd_remove_file (char *name)
+uint8_t sd_remove_file (char *name)
 {
-    if (initOk) sdcard.remove(name);
-    return;
+    if (!initOk) return FALSE;
+
+    if (sdcard.exists(name)) return sdcard.remove(name);
+
+    return FALSE;
 }
 
 

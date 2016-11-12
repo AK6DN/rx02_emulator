@@ -59,6 +59,21 @@
 #define RX_FILE_READ_WRITE      0       // file is read write (default)
 #define RX_FILE_READ_ONLY       1       // file is read only
 
+// drive density
+//
+#define RX_DEN_SD               0       // single density mode (128B/sector)
+#define RX_DEN_DD               1       // double density mode (256B/sector)
+
+// disk definitions
+//
+#define RX_NTRKS                77L     // number of tracks per disk
+#define RX_NSECS                26L     // number of sectors per track
+#define RX_NBPS                 128L    // bytes per sector, single density
+//
+#define rx_sec_size(den)    (RX_NBPS<<(den))             // bytes per sector at density
+#define rx_trk_size(den)    (RX_NSECS*rx_sec_size(den))  // bytes per track at density
+#define rx_dsk_size(den)    (RX_NTRKS*rx_trk_size(den))  // bytes per disk at density
+
 
 
 //

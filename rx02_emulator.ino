@@ -148,6 +148,7 @@ void run_command (char *cmd)
     char c;
     uint8_t i, j;
     char *arg;
+    uint32_t size;
     static const char timing_mode[][9] = { "Fastest", "Medium", "RealRX02" };
     static const char  debug_mode[][8] = { "Off", "Low", "High", "Extreme" };
     static const char access_mode[][4] = { "R/W", "R/O" };
@@ -163,7 +164,7 @@ void run_command (char *cmd)
     // parse the command
     switch (toupper(*cmd)) {
 
-        // "0 filename.txt" set unit 0/1 file name
+        // "0 FILENAME" set unit 0/1 file name
         case '0':
         case '1':
             i = *cmd-'0';
@@ -171,6 +172,45 @@ void run_command (char *cmd)
                 tty->printf(F("Setting file[%d]: '%s'\n"), i, rx_unit_file(i, arg));
             } else {
                 tty->printf(F("Current file[%d]: '%s'\n"), i, rx_unit_file(i));
+            }
+            break;
+
+        // "r FILENAME" remove file name
+        case 'R':
+            if (arg && sd_remove_file(arg)) {
+                tty->printf(F("Removed file: '%s'\n"), arg);
+            } else {
+                if (arg) tty->printf(F("No such file\n"));
+            }
+            break;
+
+        // "e FILENAME" extend/create file name as single density sized
+        case 'E':
+            if (arg) {
+                if (sd_get_file_size(arg) == rx_dsk_size(RX_DEN_SD)) {
+                    tty->printf(F("Unchanged file: '%s' is %lu. bytes (SD)\n"), arg, size);
+                } else if (sd_get_file_size(arg) < rx_dsk_size(RX_DEN_SD)) {
+                    size = sd_set_file_size(arg, rx_dsk_size(RX_DEN_SD), SD_POS_AT_END);
+                    tty->printf(F("Extended file: '%s' to %lu. bytes (SD)\n"), arg, size);
+                } else {
+                    size = sd_set_file_size(arg, rx_dsk_size(RX_DEN_SD), SD_POS_AT_END);
+                    tty->printf(F("Truncated file: '%s' to %lu. bytes (SD)\n"), arg, size);
+                }
+            }
+            break;
+
+        // "f FILENAME" extend/create file name as double density sized
+        case 'F':
+            if (arg) {
+                if (sd_get_file_size(arg) == rx_dsk_size(RX_DEN_DD)) {
+                    tty->printf(F("Unchanged file: '%s' is %lu. bytes (DD)\n"), arg, size);
+                } else if (sd_get_file_size(arg) < rx_dsk_size(RX_DEN_DD)) {
+                    size = sd_set_file_size(arg, rx_dsk_size(RX_DEN_DD), SD_POS_AT_END);
+                    tty->printf(F("Extended file: '%s' to %lu. bytes (DD)\n"), arg, size);
+                } else {
+                    size = sd_set_file_size(arg, rx_dsk_size(RX_DEN_DD), SD_POS_AT_END);
+                    tty->printf(F("Truncated file: '%s' to %lu. bytes (DD)\n"), arg, size);
+                }
             }
             break;
 
@@ -258,22 +298,25 @@ void run_command (char *cmd)
         case '?':
             // Note keep any single printf command string at 80 characters maximum
             tty->printf(F("\nCommands available:\n\n"));
-            tty->printf(F("  0 filename.dsk    -- set unit 0 file name; default RX0.DSK\n"));
-            tty->printf(F("                       filename 'none' (any case) for no disk present\n"));
-            tty->printf(F("  1 filename.dsk    -- set unit 1 file name; default RX1.DSK\n"));
-            tty->printf(F("                       filename 'none' (any case) for no disk present\n"));
-            tty->printf(F("  y(es) N           -- set unit N file read-write (default)\n"));
-            tty->printf(F("  n(o) N            -- set unit N file read-only\n"));
-            tty->printf(F("  m(ode) N          -- set emulation mode, 0=NONE, n=RX0n; default 2\n"));
-            tty->printf(F("  d(ebug) N         -- debug level, 0=none, 3=max; default 1\n"));
-            tty->printf(F("  t(iming) N        -- timing mode, 0=fast, 1=medium, 2=normal; default 0\n"));
-            tty->printf(F("                       0 as fast as possible; 2 simulates real RX02 drive\n"));
-            tty->printf(F("  l(ist)            -- list all files on the SD card\n"));
-            tty->printf(F("  s(how)            -- show current unit filename assignments\n"));
-            tty->printf(F("  p(rint)           -- print full emulation state\n"));
-            tty->printf(F("  i(nit)            -- initialize emulator (like unibus INIT)\n"));
-            tty->printf(F("  w(rite)           -- write current configuration into the SETUP.INI file\n"));
-            tty->printf(F("  h(elp)            -- display this text\n"));
+            tty->printf(F("  0 FILENAME    -- set unit 0 file to FILENAME; default RX0.DSK\n"));
+            tty->printf(F("                   file name 'none' (any case) for no disk present\n"));
+            tty->printf(F("  1 FILENAME    -- set unit 1 file to FILENAME; default RX1.DSK\n"));
+            tty->printf(F("                   file name 'none' (any case) for no disk present\n"));
+            tty->printf(F("  y(es) N       -- set unit N file read-write (default)\n"));
+            tty->printf(F("  n(o) N        -- set unit N file read-only\n"));
+            tty->printf(F("  m(ode) N      -- set emulation mode, 0=NONE, n=RX0n; default 2\n"));
+            tty->printf(F("  d(ebug) N     -- debug level, 0=none, 3=max; default 1\n"));
+            tty->printf(F("  t(iming) N    -- timing mode, 0=fast, 1=medium, 2=normal; default 0\n"));
+            tty->printf(F("                   0 as fast as possible; 2 simulates real RX02 drive\n"));
+            tty->printf(F("  r FILENAME    -- remove file FILENAME\n"));
+            tty->printf(F("  e FILENAME    -- extend/truncate file FILENAME to single density size\n"));
+            tty->printf(F("  f FILENAME    -- extend/truncate file FILENAME to double density size\n"));
+            tty->printf(F("  l(ist)        -- list all files on the SD card\n"));
+            tty->printf(F("  s(how)        -- show current unit filename assignments\n"));
+            tty->printf(F("  p(rint)       -- print full emulation state\n"));
+            tty->printf(F("  i(nit)        -- initialize emulator (like unibus INIT)\n"));
+            tty->printf(F("  w(rite)       -- write current configuration into the SETUP.INI file\n"));
+            tty->printf(F("  h(elp)        -- display this text\n"));
             tty->printf(F("\nNote: chars in () are optional. Case does not matter.\n"));
             break;
 
