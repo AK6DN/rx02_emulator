@@ -42,7 +42,21 @@
 #define TEST_TU58  0
 #define DEBUG_TU58 
 
+// program version id
 #define VERSION  "v1.5"
+
+// baud rate for USB serial debug port
+//
+//   250Kb is highest that AVR Mega2560/16U2 combo can run at error free
+//
+//   All 'genuine' Arduino Mega2560s use this combo, so shpuld work ok.
+//
+//   Mega2560 'clone' boards NOT using the 16U2 as a USB/Serial interface
+//   may have issues running at this rate. Boards will have to be tested.
+//   On some of these boards 230.4K or 115.2K may be the highest possible
+//   rate possible. This will have an impact if using any 'debug' mode.
+//
+#define SERIAL_BAUD_RATE 250000
 
 
 
@@ -523,7 +537,7 @@ void setup_read (char *name)
 void setup (void)
 {
     // control/status input/output
-    tty->begin(250000, SERIAL_8N2);
+    tty->begin(SERIAL_BAUD_RATE, SERIAL_8N2);
 
     // init LED drivers
     led_initialize();
