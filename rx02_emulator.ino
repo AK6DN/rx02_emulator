@@ -184,6 +184,12 @@ void run_command (char *cmd)
             i = *cmd-'0';
             if (arg) {
                 tty->printf(F("Setting file[%d]: '%s'\n"), i, rx_unit_file(i, arg));
+                size = sd_get_file_size(arg);
+                if (size != rx_dsk_size(RX_DEN_SD) && size != rx_dsk_size(RX_DEN_DD)) {
+                    tty->printf(F("WARNING: file size not SD or DD ... use E/F command to correct!\n"));
+                } else if (size == rx_dsk_size(RX_DEN_DD) && rx_emulation_type() == RX_TYPE_RX01) {
+                    tty->printf(F("WARNING: file size DD mounted in mode RX01!\n"));
+                }
             } else {
                 tty->printf(F("Current file[%d]: '%s'\n"), i, rx_unit_file(i));
             }
