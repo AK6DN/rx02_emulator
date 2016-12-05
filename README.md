@@ -1,4 +1,4 @@
-<B>rx02_emulator</B> is a hardware/software emulation of a DEC RX02 dual 8" floppy disk drive. The software runs on an Arduino Mega2560 processor board with a custom hardware interface shield that maps a dozen or so digital port bits to the custom DEC RX02 interface hardware protocol.
+<B>rx02_emulator</B> is a hardware/software emulation of a DEC RX02 (or RX01) dual 8" floppy disk drive. The software runs on an Arduino Mega2560 processor board with a custom hardware interface shield that maps a dozen or so digital port bits to the custom DEC RX drive interface protocol.
 
 The emulator simulates two RX02 drives mapped to files on an attached MicroSD card.
 
@@ -9,6 +9,8 @@ Currently this design boots/runs under the XXDP and RT-11 operating systems, and
 Testing to date has been performed as an RX02/RX211 interface combo in a UNIBUS PDP-11/44, and in a PDP-8m with an RX8E/RX28 interface so RX01/RX8E and RX02/RX28 configurations can be tested. I do not have access to RX11, RXV11, or RXV21 boards for testing.
 
 The MicroSD card in the emulator is a FAT32 formatted filesystem, and it can be inserted (offline) into a WindowsPC to copy files to/from the device. By default, the files 'RX0.DSK' and 'RX1.DSK' are mapped to drive 0 and 1 on initialization.
+
+Detection of single density media (SD; 256,256 bytes total) and double density media (DD; 512,512 bytes total) is done thru two differrent mechanisms. Files with the extension .RX1 will be forced to be SD, and resized appropriately (zero padded at the end, and truncated to size if required). Similarly files with the extension .RX2 will be forced to DD, and resized if necessary. Files with any other extension (ie, like .DSK) will be detected as SD if they are EXACTLY 256,256 bytes in size; and detected as DD if they are EXACTLY 512,512 bytes in size. Files that are other sizes will NOT be capable of being mounted until they are resized appropriately (the E and F commands can do this).
 
 The emulator interfaces thru a simple ASCII terminal command line via the USB port on the Arduino device. After booting, typing:  H<cr>  types out the available commands. Here is a sample interaction showing the use of the H, L, S and 0 commands, and the debug level 1 log of what happens when 'b dy0' is typed on the attached PDP-11/44 console terminal.
 
@@ -25,7 +27,7 @@ Normal operation will see the GRN/YEL LEDs blinking rapidly or mostly ON. For no
 
 Sample boot log in the Arduino USB serial monitor window:
 ```
-RX02 Emulator v1.5 - Nov 11 2016 - 23:47:10
+RX02 Emulator v1.6 (IDE 1.6.13/gcc 4.9.2) - Dec  4 2016 - 12:34:56
 
 SD: cardType=SD3
 SD: cardSize=3781MB
@@ -151,6 +153,6 @@ Refer to:  http://playground.arduino.cc/Main/Printf  for instructions on how to 
 
 (3) This code was written with tap stops set at 4 (versus the default of 2). Manually edit the Arduino <B>preferences.txt</B> file tab size line to be: <B>editor.tabs.size=4</B> if desired.
 
-(4) Right now there is a lot of 'extraneous' code (ie, the TU58 driver interface) that is included by default but not currently used. A future plan is to add support to map a backend TU58 server to a file connection (ie, by using a pseudo filename) so that not only local MicroSD card file access can be supported, but simultaenous access to a backend PC-based file storage server can happen.
+(4) Right now there is some 'extraneous' code (ie, the TU58 driver interface) that is included by default but not currently used. A future plan is to add support to map a backend TU58 server to a file connection (ie, by using a pseudo filename) so that not only local MicroSD card file access can be supported, but simultaenous access to a backend PC-based file storage server can happen.
 
 Don

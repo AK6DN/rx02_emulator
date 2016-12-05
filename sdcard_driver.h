@@ -58,6 +58,7 @@ uint8_t  sd_initialize (void);
 void     sd_debug (HardwareSerial *serialPort, uint8_t level);
 void     sd_list_files (HardwareSerial *serialPort);
 uint8_t  sd_remove_file (char *name);
+uint8_t  sd_file_ext_matches (char *name, char *ext);
 uint16_t sd_read_bytes (char *name, uint32_t pos, uint8_t *buf, uint16_t len);
 uint16_t sd_write_bytes (char *name, uint32_t pos, uint8_t *buf, uint16_t len);
 uint32_t sd_get_file_size (char *name);

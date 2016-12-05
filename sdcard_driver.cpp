@@ -175,6 +175,20 @@ uint8_t sd_remove_file (char *name)
 
 
 //
+// check that file extension matches supplied string, return true/false
+//
+uint8_t sd_file_ext_matches (char *name, char *ext)
+{
+    // get ptr to the last filename dot, or NULL
+    char *ptr = strrchr(name, '.');
+
+    // if no extension, return false; else return TRUE if extension matches string
+    return ptr == NULL ? FALSE : (strcasecmp(ptr, ext) == 0 ? TRUE : FALSE);
+}
+
+
+
+//
 // read bytes from an sdcard file
 //
 uint16_t sd_read_bytes (char *name, uint32_t pos, uint8_t *buf, uint16_t len)

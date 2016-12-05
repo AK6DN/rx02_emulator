@@ -40,10 +40,10 @@
 //
 #define USE_TU58   0
 #define TEST_TU58  0
-#define DEBUG_TU58 
+#define DEBUG_TU58 0
 
 // program version id
-#define VERSION  "v1.5"
+#define VERSION  "v1.6"
 
 // baud rate for USB serial debug port
 //
@@ -183,6 +183,14 @@ void run_command (char *cmd)
         case '1':
             i = *cmd-'0';
             if (arg) {
+                size = sd_get_file_size(arg);
+                if (sd_file_ext_matches(arg, ".RX1") && size != rx_dsk_size(RX_DEN_SD)) {
+                    size = sd_set_file_size(arg, rx_dsk_size(RX_DEN_SD), SD_POS_AT_END);
+                    tty->printf(F("Updated file: '%s' to %lu. bytes\n"), arg, size);
+                } else if (sd_file_ext_matches(arg, ".RX2") && size != rx_dsk_size(RX_DEN_DD)) {
+                    size = sd_set_file_size(arg, rx_dsk_size(RX_DEN_DD), SD_POS_AT_END);
+                    tty->printf(F("Updated file: '%s' to %lu. bytes\n"), arg, size);
+                }
                 tty->printf(F("Setting file[%d]: '%s'\n"), i, rx_unit_file(i, arg));
                 size = sd_get_file_size(arg);
                 if (size != rx_dsk_size(RX_DEN_SD) && size != rx_dsk_size(RX_DEN_DD)) {
@@ -204,12 +212,15 @@ void run_command (char *cmd)
             }
             break;
 
-        // "e FILENAME" extend/create file name as single density sized
+        // "e FILENAME" extend/create file name as single density sized (but not .RX2 files)
         case 'E':
             if (arg) {
-                if (sd_get_file_size(arg) == rx_dsk_size(RX_DEN_SD)) {
+                size = sd_get_file_size(arg);
+                if (sd_file_ext_matches(arg, ".RX2")) {
+                    tty->printf(F("Unchanged file: '%s' is %lu. bytes (use F command)\n"), arg, size);
+                } else if (size == rx_dsk_size(RX_DEN_SD)) {
                     tty->printf(F("Unchanged file: '%s' is %lu. bytes (SD)\n"), arg, size);
-                } else if (sd_get_file_size(arg) < rx_dsk_size(RX_DEN_SD)) {
+                } else if (size < rx_dsk_size(RX_DEN_SD)) {
                     size = sd_set_file_size(arg, rx_dsk_size(RX_DEN_SD), SD_POS_AT_END);
                     tty->printf(F("Extended file: '%s' to %lu. bytes (SD)\n"), arg, size);
                 } else {
@@ -219,12 +230,15 @@ void run_command (char *cmd)
             }
             break;
 
-        // "f FILENAME" extend/create file name as double density sized
+        // "f FILENAME" extend/create file name as double density sized (but not .RX1 files)
         case 'F':
             if (arg) {
-                if (sd_get_file_size(arg) == rx_dsk_size(RX_DEN_DD)) {
+                size = sd_get_file_size(arg);
+                if (sd_file_ext_matches(arg, ".RX1")) {
+                    tty->printf(F("Unchanged file: '%s' is %lu. bytes (use E command)\n"), arg, size);
+                } else if (size == rx_dsk_size(RX_DEN_DD)) {
                     tty->printf(F("Unchanged file: '%s' is %lu. bytes (DD)\n"), arg, size);
-                } else if (sd_get_file_size(arg) < rx_dsk_size(RX_DEN_DD)) {
+                } else if (size < rx_dsk_size(RX_DEN_DD)) {
                     size = sd_set_file_size(arg, rx_dsk_size(RX_DEN_DD), SD_POS_AT_END);
                     tty->printf(F("Extended file: '%s' to %lu. bytes (DD)\n"), arg, size);
                 } else {
@@ -549,7 +563,10 @@ void setup (void)
     led_initialize();
 
     // say hello
-    tty->printf(F("RX02 Emulator %s - %s - %s\n"), VERSION, __DATE__, __TIME__);
+    tty->printf(F("RX02 Emulator %s (IDE %u.%u.%u/gcc %s) - %s - %s\n"),
+                VERSION,
+                (ARDUINO/10000)%100, (ARDUINO/100)%100, (ARDUINO/1)%100,
+                __VERSION__, __DATE__, __TIME__);
     delay(1000);
 
 #if USE_SD
