@@ -166,6 +166,8 @@ void run_command (char *cmd)
     static const char timing_mode[][9] = { "Fastest", "Medium", "RealRX02" };
     static const char  debug_mode[][8] = { "Off", "Low", "High", "Extreme" };
     static const char access_mode[][4] = { "R/W", "R/O" };
+    static const char ext_rx1[] = ".RX1";
+    static const char ext_rx2[] = ".RX2";
 
     // get pointer to next char after 1st space (else NULL if no spaces)
     if ((arg = strchr(cmd, ' ')) != NULL) arg++;
@@ -184,10 +186,10 @@ void run_command (char *cmd)
             i = *cmd-'0';
             if (arg) {
                 size = sd_get_file_size(arg);
-                if (sd_file_ext_matches(arg, ".RX1") && size != rx_dsk_size(RX_DEN_SD)) {
+                if (sd_file_ext_matches(arg, ext_rx1) && size != rx_dsk_size(RX_DEN_SD)) {
                     size = sd_set_file_size(arg, rx_dsk_size(RX_DEN_SD), SD_POS_AT_END);
                     tty->printf(F("Updated file: '%s' to %lu. bytes\n"), arg, size);
-                } else if (sd_file_ext_matches(arg, ".RX2") && size != rx_dsk_size(RX_DEN_DD)) {
+                } else if (sd_file_ext_matches(arg, ext_rx2) && size != rx_dsk_size(RX_DEN_DD)) {
                     size = sd_set_file_size(arg, rx_dsk_size(RX_DEN_DD), SD_POS_AT_END);
                     tty->printf(F("Updated file: '%s' to %lu. bytes\n"), arg, size);
                 }
@@ -216,7 +218,7 @@ void run_command (char *cmd)
         case 'E':
             if (arg) {
                 size = sd_get_file_size(arg);
-                if (sd_file_ext_matches(arg, ".RX2")) {
+                if (sd_file_ext_matches(arg, ext_rx2)) {
                     tty->printf(F("Unchanged file: '%s' is %lu. bytes (use F command)\n"), arg, size);
                 } else if (size == rx_dsk_size(RX_DEN_SD)) {
                     tty->printf(F("Unchanged file: '%s' is %lu. bytes (SD)\n"), arg, size);
@@ -234,7 +236,7 @@ void run_command (char *cmd)
         case 'F':
             if (arg) {
                 size = sd_get_file_size(arg);
-                if (sd_file_ext_matches(arg, ".RX1")) {
+                if (sd_file_ext_matches(arg, ext_rx1)) {
                     tty->printf(F("Unchanged file: '%s' is %lu. bytes (use E command)\n"), arg, size);
                 } else if (size == rx_dsk_size(RX_DEN_DD)) {
                     tty->printf(F("Unchanged file: '%s' is %lu. bytes (DD)\n"), arg, size);
@@ -389,7 +391,7 @@ void run_user (char c)
             i = 0;
         } else if (c == 'M'-'@' || c == 'J'-'@') {
             // CR or LF executes command
-            cmd[i] = NULL;
+            cmd[i] = '\0';
             run_command(cmd);
             i = 0;
         }

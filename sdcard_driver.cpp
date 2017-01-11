@@ -177,7 +177,7 @@ uint8_t sd_remove_file (char *name)
 //
 // check that file extension matches supplied string, return true/false
 //
-uint8_t sd_file_ext_matches (char *name, char *ext)
+uint8_t sd_file_ext_matches (char *name, const char *ext)
 {
     // get ptr to the last filename dot, or NULL
     char *ptr = strrchr(name, '.');
