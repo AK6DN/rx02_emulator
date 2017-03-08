@@ -43,7 +43,7 @@
 #define DEBUG_TU58 0
 
 // program version id
-#define VERSION  "v1.6"
+#define VERSION  "v1.7"
 
 // baud rate for USB serial debug port
 //
@@ -205,16 +205,7 @@ void run_command (char *cmd)
             }
             break;
 
-        // "r FILENAME" remove file name
-        case 'R':
-            if (arg && sd_remove_file(arg)) {
-                tty->printf(F("Removed file: '%s'\n"), arg);
-            } else {
-                if (arg) tty->printf(F("No such file\n"));
-            }
-            break;
-
-        // "e FILENAME" extend/create file name as single density sized (but not .RX2 files)
+        // "extend FILENAME" extend/create file name as single density sized (but not .RX2 files)
         case 'E':
             if (arg) {
                 size = sd_get_file_size(arg);
@@ -232,7 +223,7 @@ void run_command (char *cmd)
             }
             break;
 
-        // "f FILENAME" extend/create file name as double density sized (but not .RX1 files)
+        // "full FILENAME" extend/create file name as double density sized (but not .RX1 files)
         case 'F':
             if (arg) {
                 size = sd_get_file_size(arg);
@@ -268,7 +259,27 @@ void run_command (char *cmd)
             }
             break;
 
-        //  "mode N" set emulation mode, 1/2/3 as RX01/RX02/RX03
+        // "remove FILENAME" remove file name
+        case 'R':
+            if (arg && sd_remove_file(arg)) {
+                tty->printf(F("Removed file: '%s'\n"), arg);
+            } else {
+                if (arg) tty->printf(F("No such file\n"));
+            }
+            break;
+
+        // "show" show filename assignments
+        case 'S':
+            for (i = RX_UNIT_MIN; i <= RX_UNIT_MAX; ++i)
+                tty->printf(F("Current file[%d]: '%s' (%s)\n"), i, rx_unit_file(i), access_mode[rx_unit_mode(i)]);
+            break;
+
+        // "list" files on the SD card
+        case 'L':
+            sd_list_files(tty);
+            break;
+
+        // "mode N" mode set emulation mode, 1/2/3 as RX01/RX02/RX03
         case 'M':
             if (arg && isdigit(c = *arg)) {
                 i = rx_emulation_type(c-'0');
@@ -301,20 +312,9 @@ void run_command (char *cmd)
             }
             break;
 
-        // "show" show filename assignments
-        case 'S':
-            for (i = RX_UNIT_MIN; i <= RX_UNIT_MAX; ++i)
-                tty->printf(F("Current file[%d]: '%s' (%s)\n"), i, rx_unit_file(i), access_mode[rx_unit_mode(i)]);
-            break;
-
         // "print" print emulation state
         case 'P':
             rx_print_state(tty);
-            break;
-
-        // "list" files on the SD card
-        case 'L':
-            sd_list_files(tty);
             break;
 
         // "init" do an RX emulator initialize
@@ -324,10 +324,30 @@ void run_command (char *cmd)
             tty->printf(F("... INIT complete\n"));
             break;
 
-        // "write" the setup file from the current configuration
+        // "write" write the setup file from the current configuration
         case 'W':
             setup_write(setup_filename);
             break;
+
+#ifdef USE_TIMELIB_H
+        // "zap" setup the initial timestamp, as in: Z 2017-03-31 19:30:45
+        case 'Z':
+            if (arg) {
+                uint16_t yr; uint8_t mo, da, hh, mm, ss;
+                // scan a time string
+                if (sscanf(arg, "%u-%hhu-%hhu %hhu:%hhu:%hhu", &yr, &mo, &da, &hh, &mm, &ss) == 6) {
+                    if (1970 <= yr && yr <= 2099 && 01 <= mo && mo <= 12 && 01 <= da && da <= 31 &&
+                        00 <= hh && hh <= 23 && 00 <= mm && mm <= 59 && 00 <= ss && ss <= 59) {
+                        // initialize time
+                        setTime(hh,mm,ss, da,mo,yr);
+                        tty->printf(F("Date/time set!\n"));
+                    } else {
+                        tty->printf(F("Invalid date/time format!\n"));
+                    }
+                }
+            }
+            break;
+#endif // USE_TIMELIB_H
 
         // "help" or "?"
         case 'H':
@@ -352,6 +372,10 @@ void run_command (char *cmd)
             tty->printf(F("  p(rint)       -- print full emulation state\n"));
             tty->printf(F("  i(nit)        -- initialize emulator (like unibus INIT)\n"));
             tty->printf(F("  w(rite)       -- write current configuration into the SETUP.INI file\n"));
+#ifdef USE_TIMELIB_H
+            tty->printf(F("  z(ap) STAMP   -- set current timestamp for file access\n"));
+            tty->printf(F("                   format is: YYYY-MO-DA HH:MM:SS\n"));
+#endif // USE_TIMELIB_H
             tty->printf(F("  h(elp)        -- display this text\n"));
             tty->printf(F("\nNote: chars in () are optional. Case does not matter.\n"));
             break;

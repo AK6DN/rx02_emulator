@@ -676,6 +676,9 @@ static void rx_init_es (void)
     // insert init done if in INITIALIZE state
     if (rx.fcn.code == RXFCN_INIT) rx.es |= RXES_INIT;
 
+    // always insert deleted data flag on write with deleted data function
+    if (rx.fcn.code == RXFCN_WRDDSECT) rx.es |= RXES_DELDATA;
+
     // done
     return;
 }
@@ -1097,6 +1100,29 @@ void rx_function (void)
         }
 
         // transfer data words in/out
+        //
+        // For 8b mode, the 8b data is in position <04:11> of the 12b PDP-8 word, and bits <00:03> are zeroed/ignored.
+        //
+        //  12b word:    00  03 04  07 08  11              8b word:    00  03 04  07
+        //              +------+------+------+                        +------+------+
+        //        even  |  00  |  N1  |  N2  |                    +0  |  N1  |  N2  |
+        //              +------+------+------+                        +------+------+
+        //         odd  |  00  |  N3  |  N4  |                    +1  |  N3  |  N4  |
+        //              +------+------+------+                        +------+------+
+        //                  ... repeat ...                             ... repeat ...
+        //
+        // For 12b mode, all bits <00:11> of the PDP-8 word are transferred, and are packed into the 8b wide sector buffer.
+        //
+        //  12b word:    00  03 04  07 08  11              8b word:    00  03 04  07
+        //              +------+------+------+                        +------+------+
+        //        even  |  N1  |  N2  |  N3  |                    +0  |  N1  |  N2  |
+        //              +------+------+------+                        +------+------+
+        //         odd  |  N4  |  N5  |  N6  |                    +1  |  N3  |  N4  |
+        //              +------+------+------+                        +------+------+
+        //                  ... repeat ...                        +2  |  N5  |  N6  |
+        //                                                            +------+------+
+        //                                                             ... repeat ...
+        //
         if (rx.fcn.code == RXFCN_EMPTY) {
             // empty buffer (RX controller buffer to host interface)
             for (i = j = 0; i < rx.tc; ++i) {

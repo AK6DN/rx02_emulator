@@ -31,6 +31,14 @@
 
 
 //
+// configuration
+//
+// use:  https://github.com/PaulStoffregen/Time  TimeLib.H if defined (uncomment next line)
+//#define USE_TIMELIB_H
+
+
+
+//
 // includes
 //
 #include <Arduino.h>
@@ -44,6 +52,10 @@
 //
 #include <SPI.h>
 #include <SdFat.h>
+//
+#ifdef USE_TIMELIB_H
+#include <TimeLib.h>
+#endif // USE_TIMELIB_H
 
 
 

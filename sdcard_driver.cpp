@@ -56,6 +56,28 @@ static uint8_t initOk = FALSE; // set to TRUE on initialize OK
 
 
 
+#ifdef USE_TIMELIB_H
+//
+// date/time callback function
+//
+void dateTime (uint16_t *dateptr, uint16_t *timeptr)
+{
+    // get current time
+    time_t t = now();
+
+    // return date using FAT_DATE(yyyy,mm,dd) macro to format fields
+    *dateptr = FAT_DATE(year(t), month(t), day(t));
+
+    // return time using FAT_TIME(hh,mm,ss) macro to format fields
+    *timeptr = FAT_TIME(hour(t), minute(t), second(t));
+
+    // and done
+    return;
+}
+#endif // USE_TIMELIB_H
+
+
+
 // PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC
 // PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC
 // PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC PUBLIC
@@ -119,6 +141,11 @@ uint8_t sd_initialize (void)
         debugPort->printf(F("SD: volClusterCount=%lu\n"), vucc);
         debugPort->printf(F("SD: volSizeBytes=%luMB\n"), vsize);
     }
+
+#ifdef USE_TIMELIB_H
+    // set date time callback function
+    SdFile::dateTimeCallback(dateTime);
+#endif // USE_TIMELIB_H
 
     // success!
     initOk = TRUE;
