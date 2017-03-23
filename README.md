@@ -1,3 +1,5 @@
+# OVERVIEW #
+
 <B>rx02_emulator</B> is a hardware/software emulation of a DEC RX02 (or RX01) dual 8" floppy disk drive. The software runs on an Arduino Mega2560 processor board with a custom hardware interface shield that maps a dozen or so digital port bits to the custom DEC RX drive interface protocol.
 
 The emulator simulates two RX02 drives mapped to files on an attached MicroSD card.
@@ -10,9 +12,9 @@ Testing to date has been performed as an RX02/RX211 interface combo in a UNIBUS 
 
 The MicroSD card in the emulator is a FAT32 formatted filesystem, and it can be inserted (offline) into a WindowsPC to copy files to/from the device. By default, the files 'RX0.DSK' and 'RX1.DSK' are mapped to drive 0 and 1 on initialization.
 
-Detection of single density media (SD; 256,256 bytes total) and double density media (DD; 512,512 bytes total) is done thru two differrent mechanisms. Files with the extension .RX1 will be forced to be SD, and resized appropriately (zero padded at the end, and truncated to size if required). Similarly files with the extension .RX2 will be forced to DD, and resized if necessary. Files with any other extension (ie, like .DSK) will be detected as SD if they are EXACTLY 256,256 bytes in size; and detected as DD if they are EXACTLY 512,512 bytes in size. Files that are other sizes will NOT be capable of being mounted until they are resized appropriately (the E and F commands can do this).
+Detection of single density media (SD; 256,256 bytes total) and double density media (DD; 512,512 bytes total) is done thru two differrent mechanisms. Files with the extension .RX1 will be forced to be single density, and resized appropriately (zero padded at the end, and truncated to size if required). Similarly files with the extension .RX2 will be forced to double density, and resized if necessary. Files with any other extension (ie, like .DSK) will be detected as single density if they are EXACTLY 256,256 bytes in size; and detected as double density if they are EXACTLY 512,512 bytes in size. Files that are other sizes will NOT be capable of being mounted until they are resized appropriately (the E and F commands can do this).
 
-The emulator interfaces thru a simple ASCII terminal command line via the USB port on the Arduino device. After booting, typing:  H<cr>  types out the available commands. Here is a sample interaction showing the use of the H, L, S and 0 commands, and the debug level 1 log of what happens when 'b dy0' is typed on the attached PDP-11/44 console terminal.
+The emulator interfaces thru a simple ASCII terminal command line via the USB port on the Arduino device. After booting, typing: `H<cr>` types out the available commands. Here is a sample interaction showing the use of the H, L, S and 0 commands, and the debug level 1 log of what happens when `b dy0` is typed on the attached PDP-11/44 console terminal.
 
 Startup configuration is saved in an ASCII text file SETUP.INI that contains user interface commands that are replayed on startup. The SETUP.INI file is written using the W command, and the current 0/1/Y/N/D/M/T options are saved in the file.
 
@@ -24,6 +26,8 @@ The hardware shield has three indicator LEDs:
 </OL>
 
 Normal operation will see the GRN/YEL LEDs blinking rapidly or mostly ON. For non-storage commands (eg, buffer fill/empty) only GRN will be ON.
+
+## EXAMPLE ##
 
 Sample boot log in the Arduino USB serial monitor window:
 ```
@@ -144,7 +148,7 @@ RX: EMPBUF rx_xmit_es(0000)
 ...
 ```
 
-Notes:
+## Notes ##
 
 (1) This code has been written with the assumption that <B>Xprintf</B> support has been added to the PRINT class in the Arduino development environment.
 Refer to:  http://playground.arduino.cc/Main/Printf  for instructions on how to do this.
@@ -155,4 +159,7 @@ Refer to:  http://playground.arduino.cc/Main/Printf  for instructions on how to 
 
 (4) Right now there is some 'extraneous' code (ie, the TU58 driver interface) that is included by default but not currently used. A future plan is to add support to map a backend TU58 server to a file connection (ie, by using a pseudo filename) so that not only local MicroSD card file access can be supported, but simultaenous access to a backend PC-based file storage server can happen.
 
-Don
+# INSTALLATION #
+
+TBD
+
