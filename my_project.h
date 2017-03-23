@@ -34,7 +34,7 @@
 // configuration
 //
 // use:  https://github.com/PaulStoffregen/Time  TimeLib.H if defined (uncomment next line)
-#define USE_TIMELIB_H
+// #define USE_TIMELIB_H
 
 
 

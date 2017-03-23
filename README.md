@@ -8,13 +8,13 @@ This implementation was originally based on the design at:  http://www.chdickman
 
 Currently this design boots/runs under the XXDP and RT-11 operating systems, and passes the DEC RX02 hardware diagnostics ZRXDC0 Performance Exerciser, ZRXEA0 Formatter, and ZRXFB0 RX02/RX211 Logic/Function tests error free.
 
-Testing to date has been performed as an RX02/RX211 interface combo in a UNIBUS PDP-11/44, and in a PDP-8m with an RX8E/RX28 interface so RX01/RX8E and RX02/RX28 configurations can be tested. I do not have access to RX11, RXV11, or RXV21 boards for testing.
+Testing to date has been performed as an RX02/RX211 interface combo in a UNIBUS PDP-11/44, and in a PDP-8m with an RX8E/RX28 interface so RX01/RX8E and RX02/RX28 configurations can be tested. I do not have access to RX11, RXV11, or RXV21 boards for testing. Limited user testing is ongoing on these other configurations.
 
 The MicroSD card in the emulator is a FAT32 formatted filesystem, and it can be inserted (offline) into a WindowsPC to copy files to/from the device. By default, the files 'RX0.DSK' and 'RX1.DSK' are mapped to drive 0 and 1 on initialization.
 
-Detection of single density media (256,256 bytes total) and double density media (512,512 bytes total) is done thru two differrent mechanisms. Files with the extension .RX1 will be forced to be single density, and resized appropriately (zero padded at the end, and truncated to size if required). Similarly files with the extension .RX2 will be forced to double density, and resized if necessary. Files with any other extension (ie, like .DSK) will be detected as single density if they are EXACTLY 256,256 bytes in size; and detected as double density if they are EXACTLY 512,512 bytes in size. Files that are other sizes will NOT be capable of being mounted until they are resized appropriately (the E and F commands can do this).
+Detection of single density media (256,256 bytes total) and double density media (512,512 bytes total) is done thru two differrent mechanisms. Files with the extension .RX1 will be forced to be single density, and resized appropriately (zero padded at the end, and truncated to size if required). Similarly files with the extension .RX2 will be forced to double density, and resized if necessary. Files with any other extension (ie, like .DSK) will be detected as single density if they are EXACTLY 256,256 bytes in size; and detected as double density if they are EXACTLY 512,512 bytes in size. Files that are other sizes will NOT be capable of being mounted until they are resized appropriately (the `E` and `F` commands can do this).
 
-The emulator interfaces thru a simple ASCII terminal command line via the USB port on the Arduino device. After booting, typing: `H<cr>` types out the available commands. Here is a sample interaction showing the use of the `H`, `L`, `S` and `0` commands, and the debug level 1 log of what happens when `b dy0` is typed on the attached PDP-11/44 console terminal.
+The emulator interfaces thru a simple ASCII terminal command line via the USB port on the Arduino device. After booting, typing: `H<cr>` types out the available commands. Below is a sample interaction showing the use of the `H`, `L`, `S` and `0` commands, and the debug level 1 log of what happens when `b dy0` is typed on the attached PDP-11/44 console terminal.
 
 Startup configuration is saved in an ASCII text file SETUP.INI that contains user interface commands that are replayed on startup. The SETUP.INI file is written using the `W` command, and the current 0/1/Y/N/D/M/T options are saved in the file.
 
@@ -26,6 +26,10 @@ The hardware shield has three indicator LEDs:
 </OL>
 
 Normal operation will see the GRN/YEL LEDs blinking rapidly or mostly ON. For non-storage commands (eg, buffer fill/empty) only GRN will be ON.
+
+Hardware design files (schematics, PCB layout, BOM) are available here:
+
+https://drive.google.com/open?id=0B7Csc-dWWfTYR3plTmtWd2VtWlU
 
 ## Example ##
 
@@ -150,7 +154,7 @@ RX: EMPBUF rx_xmit_es(0000)
 
 ## Notes ##
 
-(1) This code has been written with the assumption that <B>Xprintf</B> support has been added to the PRINT class in the Arduino development environment.
+(1) This code has been written with the assumption that `Xprintf` support has been added to the PRINT class in the Arduino development environment.
 
 (2) This code uses the SDfat library available at:  https://github.com/greiman/SdFat
 
