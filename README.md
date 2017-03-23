@@ -12,11 +12,11 @@ Testing to date has been performed as an RX02/RX211 interface combo in a UNIBUS 
 
 The MicroSD card in the emulator is a FAT32 formatted filesystem, and it can be inserted (offline) into a WindowsPC to copy files to/from the device. By default, the files 'RX0.DSK' and 'RX1.DSK' are mapped to drive 0 and 1 on initialization.
 
-Detection of single density media (SD; 256,256 bytes total) and double density media (DD; 512,512 bytes total) is done thru two differrent mechanisms. Files with the extension .RX1 will be forced to be single density, and resized appropriately (zero padded at the end, and truncated to size if required). Similarly files with the extension .RX2 will be forced to double density, and resized if necessary. Files with any other extension (ie, like .DSK) will be detected as single density if they are EXACTLY 256,256 bytes in size; and detected as double density if they are EXACTLY 512,512 bytes in size. Files that are other sizes will NOT be capable of being mounted until they are resized appropriately (the E and F commands can do this).
+Detection of single density media (256,256 bytes total) and double density media (512,512 bytes total) is done thru two differrent mechanisms. Files with the extension .RX1 will be forced to be single density, and resized appropriately (zero padded at the end, and truncated to size if required). Similarly files with the extension .RX2 will be forced to double density, and resized if necessary. Files with any other extension (ie, like .DSK) will be detected as single density if they are EXACTLY 256,256 bytes in size; and detected as double density if they are EXACTLY 512,512 bytes in size. Files that are other sizes will NOT be capable of being mounted until they are resized appropriately (the E and F commands can do this).
 
-The emulator interfaces thru a simple ASCII terminal command line via the USB port on the Arduino device. After booting, typing: `H<cr>` types out the available commands. Here is a sample interaction showing the use of the H, L, S and 0 commands, and the debug level 1 log of what happens when `b dy0` is typed on the attached PDP-11/44 console terminal.
+The emulator interfaces thru a simple ASCII terminal command line via the USB port on the Arduino device. After booting, typing: `H<cr>` types out the available commands. Here is a sample interaction showing the use of the `H`, `L`, `S` and `0` commands, and the debug level 1 log of what happens when `b dy0` is typed on the attached PDP-11/44 console terminal.
 
-Startup configuration is saved in an ASCII text file SETUP.INI that contains user interface commands that are replayed on startup. The SETUP.INI file is written using the W command, and the current 0/1/Y/N/D/M/T options are saved in the file.
+Startup configuration is saved in an ASCII text file SETUP.INI that contains user interface commands that are replayed on startup. The SETUP.INI file is written using the `W` command, and the current 0/1/Y/N/D/M/T options are saved in the file.
 
 The hardware shield has three indicator LEDs:
 <OL>
@@ -152,7 +152,7 @@ RX: EMPBUF rx_xmit_es(0000)
 
 (1) This code has been written with the assumption that <B>Xprintf</B> support has been added to the PRINT class in the Arduino development environment.
 
-(2) This code uses the SDfat library available at:  https://github.com/greiman/SdFat . It must be installed as an accessible library in your Arduino environment.
+(2) This code uses the SDfat library available at:  https://github.com/greiman/SdFat
 
 (3) This code was written with tap stops set at 4 (versus the default of 2). Manually edit the Arduino <B>preferences.txt</B> file tab size line to be: <B>editor.tabs.size=4</B> if desired.
 
@@ -166,7 +166,7 @@ The following sections detail the installation and configuration of the Arduino 
 
 If you don't have the Arduino development environment installed on your system, the first step is to download and install it. Go to:
 
-   `https://www.arduino.cc/`
+   https://www.arduino.cc/
 
 and click on the `Software` tab to get to the download page.
 
@@ -178,7 +178,7 @@ Run the install.
 
 The emulator software requires a third party SD card FAT filesystem access library. Go to:
 
-    `https://github.com/greiman/SdFat`
+    https://github.com/greiman/SdFat
 
 On the right hand side of the page there is a `Clone or download` green button; click it and select `Download ZIP` and save the file. It will likely be named `SdFat-master.zip`.
 
@@ -186,7 +186,9 @@ Unzip the contents of `SdFat-master.zip` into a folder. There should be a folder
 
 Move the folder `SdFat` into your Arduino local library folder. On Windows, this would be into the folder:
 
-    `C:\Users\yourname\My Documents\Arduino\libraries`
+```
+    C:\Users\yourname\My Documents\Arduino\libraries
+```
 
 which probably just contains a `readme.txt` file. The `SdFat` library is now installed and ready for use.
 
@@ -196,7 +198,7 @@ The emulator code is written assuming that the printf/sprintf methods have been 
 
 The following page:
 
-    `http://playground.arduino.cc/Main/Printf`
+    http://playground.arduino.cc/Main/Printf
 
 describes several ways to do this; the preferred method I suggest is described under `Adding printf() to Print class`.
 
@@ -204,7 +206,9 @@ It is not difficult, but does require editing a standard Arduino system file and
 
 On windows, the target file to be modified is:
 
-    `C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino\Print.h`
+```
+    C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino\Print.h
+```
 
 the following code:
 
@@ -261,7 +265,7 @@ I also recommend checking the `Verify code after upload` box in the same dialog.
 
 To download the RX02 emulator Arduino software, go to:
 
-    `https://github.com/AK6DN/rx02_emulator`
+    https://github.com/AK6DN/rx02_emulator
 
 and (like in the library download) click the `Clone or download` green button on the right side of the page, select `Download ZIP`, and save the file. It will likely be named `rx02_emulator-master.zip`.
 
