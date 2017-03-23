@@ -1,6 +1,6 @@
-# OVERVIEW #
+# Overview #
 
-<B>rx02_emulator</B> is a hardware/software emulation of a DEC RX02 (or RX01) dual 8" floppy disk drive. The software runs on an Arduino Mega2560 processor board with a custom hardware interface shield that maps a dozen or so digital port bits to the custom DEC RX drive interface protocol.
+`rx02_emulator` is a hardware/software emulation of a DEC RX02 (or RX01) dual 8" floppy disk drive. The software runs on an Arduino Mega2560 processor board with a custom hardware interface shield that maps a dozen or so digital port bits to the custom DEC RX drive interface protocol.
 
 The emulator simulates two RX02 drives mapped to files on an attached MicroSD card.
 
@@ -27,7 +27,7 @@ The hardware shield has three indicator LEDs:
 
 Normal operation will see the GRN/YEL LEDs blinking rapidly or mostly ON. For non-storage commands (eg, buffer fill/empty) only GRN will be ON.
 
-## EXAMPLE ##
+## Example ##
 
 Sample boot log in the Arduino USB serial monitor window:
 ```
@@ -151,7 +151,6 @@ RX: EMPBUF rx_xmit_es(0000)
 ## Notes ##
 
 (1) This code has been written with the assumption that <B>Xprintf</B> support has been added to the PRINT class in the Arduino development environment.
-Refer to:  http://playground.arduino.cc/Main/Printf  for instructions on how to do this.
 
 (2) This code uses the SDfat library available at:  https://github.com/greiman/SdFat . It must be installed as an accessible library in your Arduino environment.
 
@@ -161,5 +160,148 @@ Refer to:  http://playground.arduino.cc/Main/Printf  for instructions on how to 
 
 # INSTALLATION #
 
-TBD
+The following sections detail the installation and configuration of the Arduino software environment, getting the `rx02_emulator` code, compiling it, and downloading it to a target board.
+
+## Arduino IDE ##
+
+If you don't have the Arduino development environment installed on your system, the first step is to download and install it. Go to:
+
+   `https://www.arduino.cc/`
+
+and click on the `Software` tab to get to the download page.
+
+Scroll down to the `Download the Arduino IDE` section and download the installer appropriate for your system.
+
+Run the install.
+
+## SD FAT Library ##
+
+The emulator software requires a third party SD card FAT filesystem access library. Go to:
+
+    `https://github.com/greiman/SdFat`
+
+On the right hand side of the page there is a `Clone or download` green button; click it and select `Download ZIP` and save the file. It will likely be named `SdFat-master.zip`.
+
+Unzip the contents of `SdFat-master.zip` into a folder. There should be a folder inside the top level folder named `SdFat`.
+
+Move the folder `SdFat` into your Arduino local library folder. On Windows, this would be into the folder:
+
+    `C:\Users\yourname\My Documents\Arduino\libraries`
+
+which probably just contains a `readme.txt` file. The `SdFat` library is now installed and ready for use.
+
+## PRINTF Configuration ##
+
+The emulator code is written assuming that the printf/sprintf methods have been added to the serial I/O and file access routines. The default Arduino install does not have this support so it needs to be configured.
+
+The following page:
+
+    `http://playground.arduino.cc/Main/Printf`
+
+describes several ways to do this; the preferred method I suggest is described under `Adding printf() to Print class`.
+
+It is not difficult, but does require editing a standard Arduino system file and adding some code.
+
+On windows, the target file to be modified is:
+
+    `C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino\Print.h`
+
+the following code:
+
+```
+#include <stdarg.h>
+#define PRINTF_BUF 80 // define the tmp buffer size (change if desired)
+   void printf(const char *format, ...)
+   {
+   char buf[PRINTF_BUF];
+   va_list ap;
+        va_start(ap, format);
+        vsnprintf(buf, sizeof(buf), format, ap);
+        for(char *p = &buf[0]; *p; p++) // emulate cooked mode for newlines
+        {
+                if(*p == '\n')
+                        write('\r');
+                write(*p);
+        }
+        va_end(ap);
+   }
+#ifdef F // check to see if F() macro is available
+   void printf(const __FlashStringHelper *format, ...)
+   {
+   char buf[PRINTF_BUF];
+   va_list ap;
+        va_start(ap, format);
+#ifdef __AVR__
+        vsnprintf_P(buf, sizeof(buf), (const char *)format, ap); // progmem for AVR
+#else
+        vsnprintf(buf, sizeof(buf), (const char *)format, ap); // for the rest of the world
+#endif
+        for(char *p = &buf[0]; *p; p++) // emulate cooked mode for newlines
+        {
+                if(*p == '\n')
+                        write('\r');
+                write(*p);
+        }
+        va_end(ap);
+   }
+#endif
+```
+
+needs to be added near the end of the file, just prior to the second to last non blank line:  `};`
+
+NOTE this change must be made ANY TIME a new version of the Arduino IDE is installed, as the new install will overwrite the change to the `Print.h` file. In most recent Arduino upddates (since 1.6.X at least) the `Print.h` file has not changed, so a copy of the updated file can be squirreled away to save some time in the update process.
+
+At this point the Arduino IDE should be fully setup for use in compiling the emulator software.
+
+Under the `Preferences` menu, I find ticking the `Show verbose output` `compilation` and `upload` boxes to be useful.
+
+I also recommend checking the `Verify code after upload` box in the same dialog.
+
+## RX02 Emulator ##
+
+To download the RX02 emulator Arduino software, go to:
+
+    `https://github.com/AK6DN/rx02_emulator`
+
+and (like in the library download) click the `Clone or download` green button on the right side of the page, select `Download ZIP`, and save the file. It will likely be named `rx02_emulator-master.zip`.
+
+Unzip the contents into a folder, it will likely end up being named `rx02_emulator-master`. You must rename it to `rx02_emulator` as the Arduino IDE requires the outer level folder name match the project name (which is `rx02_emulator.ino`).
+
+## Compiling ##
+
+You should now be able to launch the Arduino IDE by going into the `rx02_emulator` folder and double clicking on the top level design file `rx02_emulator.ino`.
+
+Before compiling you need to select the board and processor type.
+
+Under the `Tools` menu select `Board:` and validate it is: `Arduino/Genuino Mega or Mega 2560`
+
+Under the `Tools` menu select `Processor:` and validate it is: `ATmega2560`
+
+You should now be able to, under the `Sketch` menu, select `Verify/Compile` (or type `CTRL-R`) to compile.
+
+There should be no errors flagged if the SDfat library was installed correctly, the printf mod was performed, and the board and processor type have been configured correctly.
+
+## Uploading ##
+
+After verifying the compile you are now ready to be able to upload the code to your board.
+
+NOW plug your Arduino Mega2560 board into a USB port on your system and wait for the USB driver to install.
+
+When done, go to the `Tools` menu (again) and select the `Port:` entry to correspond to the USB serial port your board has been configured as.
+
+You should now be able to select menu `Sketch` then `Upload` (or type `CTRL-U`) to upload the code to your board.
+
+## Running ##
+
+After a successful upload, your Arduino should start running immediately. To get access to the menu window, select under the `Tools` menu the `Serial Monitor` item (or type `CTRL-SHIFT-M`).
+
+You will need to configure the baud rate / line ending of the monitor window before you can see output and type input.
+
+In the lower right, select the baud rate `250000 baud` (highest possible) that the Arduino supports over USB. This minimizes the impact of the debug output window on performance, and the emulator software selects this rate by default.
+
+In the lower right, select `Carriage Return` line ending, so when you type in the text box at the top of the window, and then click `SEND` a `CR` character will be appended to the end of the string.
+
+At this point you should be seeing debug output in the serial monitor window, and be able to send menu commands to it.
+
+## The End ##
 
