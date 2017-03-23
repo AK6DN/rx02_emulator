@@ -166,7 +166,7 @@ The following sections detail the installation and configuration of the Arduino 
 
 If you don't have the Arduino development environment installed on your system, the first step is to download and install it. Go to:
 
-   https://www.arduino.cc/
+https://www.arduino.cc/
 
 and click on the `Software` tab to get to the download page.
 
@@ -178,7 +178,7 @@ Run the install.
 
 The emulator software requires a third party SD card FAT filesystem access library. Go to:
 
-    https://github.com/greiman/SdFat
+https://github.com/greiman/SdFat
 
 On the right hand side of the page there is a `Clone or download` green button; click it and select `Download ZIP` and save the file. It will likely be named `SdFat-master.zip`.
 
@@ -187,7 +187,7 @@ Unzip the contents of `SdFat-master.zip` into a folder. There should be a folder
 Move the folder `SdFat` into your Arduino local library folder. On Windows, this would be into the folder:
 
 ```
-    C:\Users\yourname\My Documents\Arduino\libraries
+C:\Users\yourname\My Documents\Arduino\libraries
 ```
 
 which probably just contains a `readme.txt` file. The `SdFat` library is now installed and ready for use.
@@ -198,7 +198,7 @@ The emulator code is written assuming that the printf/sprintf methods have been 
 
 The following page:
 
-    http://playground.arduino.cc/Main/Printf
+http://playground.arduino.cc/Main/Printf
 
 describes several ways to do this; the preferred method I suggest is described under `Adding printf() to Print class`.
 
@@ -207,7 +207,7 @@ It is not difficult, but does require editing a standard Arduino system file and
 On windows, the target file to be modified is:
 
 ```
-    C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino\Print.h
+C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino\Print.h
 ```
 
 the following code:
@@ -265,7 +265,7 @@ I also recommend checking the `Verify code after upload` box in the same dialog.
 
 To download the RX02 emulator Arduino software, go to:
 
-    https://github.com/AK6DN/rx02_emulator
+https://github.com/AK6DN/rx02_emulator
 
 and (like in the library download) click the `Clone or download` green button on the right side of the page, select `Download ZIP`, and save the file. It will likely be named `rx02_emulator-master.zip`.
 
