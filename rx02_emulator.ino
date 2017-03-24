@@ -74,7 +74,7 @@
 //
 // global variables
 //
-HardwareSerial *tty = &Serial;
+HardwareSerial *tty = &Serial; // optionally &Serial1 or &Serial2 for other UART connectors
 
 char setup_filename[] = "SETUP.INI";
 

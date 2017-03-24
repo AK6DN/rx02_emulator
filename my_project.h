@@ -33,8 +33,11 @@
 //
 // configuration
 //
-// use:  https://github.com/PaulStoffregen/Time  TimeLib.H if defined (uncomment next line)
+// use:  https://github.com/PaulStoffregen/Time  TimeLib.h if defined (uncomment next line)
 // #define USE_TIMELIB_H
+//
+// use:  https://github.com/greiman/SdFat  SdFat.h if defined (uncomment next line)
+#define USE_SDFAT_H
 
 
 
@@ -50,8 +53,10 @@
 #include <string.h>
 #include <setjmp.h>
 //
+#ifdef USE_SDFAT_H
 #include <SPI.h>
 #include <SdFat.h>
+#endif // USE_SDFAT_H
 //
 #ifdef USE_TIMELIB_H
 #include <TimeLib.h>
