@@ -257,7 +257,7 @@ the following code:
 
 needs to be added near the end of the file, just prior to the second to last non blank line:  `};`
 
-NOTE this change must be made ANY TIME a new version of the Arduino IDE is installed, as the new install will overwrite the change to the `Print.h` file. In most recent Arduino upddates (since 1.6.X at least) the `Print.h` file has not changed, so a copy of the updated file can be squirreled away to save some time in the update process.
+NOTE this change must be made ANY TIME a new version of the Arduino IDE is installed, as the new install will overwrite the change to the `Print.h` file. In most recent Arduino upddates (since 1.6.X at least) the `Print.h` file has not changed, so a copy of the updated file can be squirreled away to save some time in the update process. Note that there was a minor change to the base `Print.h` file as of Arduino IDE 1.8.2 (this change should be integrated in the updated Print.h file as well).
 
 At this point the Arduino IDE should be fully setup for use in compiling the emulator software.
 
@@ -305,7 +305,7 @@ After a successful upload, your Arduino should start running immediately. To get
 
 You will need to configure the baud rate / line ending of the monitor window before you can see output and type input.
 
-In the lower right, select the baud rate `250000 baud` (highest possible) that the Arduino supports over USB. This minimizes the impact of the debug output window on performance, and the emulator software selects this rate by default.
+In the lower right of the window, select the maximum baud rate `250000 baud` (Arduino IDE 1.8.1 or earlier) or `2000000 baud` (Arduino IDE 1.8.2 or later) that the Arduino supports over USB. This minimizes the impact of the debug output window on performance, and the emulator software selects this rate by default. As of emulator code v1.8, the default baud rate is 250Kb for Arduino IDE 1.8.1 or earlier, and 2Mb for Arduino IDE 1.8.2 or later.
 
 In the lower right, select `Carriage Return` line ending, so when you type in the text box at the top of the window, and then click `SEND` a `CR` character will be appended to the end of the string.
 
