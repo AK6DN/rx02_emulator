@@ -57,10 +57,20 @@
 //   On some of these boards 230.4K or 115.2K may be the highest possible
 //   rate possible. This will have an impact if using any 'debug' mode.
 //
+//   Depending upon the Mega2560 board, 2Mb or 1Mb may not even work 100%
+//   reliably, so if enabling those modes you must test your Arduino board
+//   to see if it performs as you expect (the L command is a good test).
+//
 #if ARDUINO >= 10802
+// IDE 1.8.2 and later enable 500Kb, 1Mb, and 2Mb baud rates.
+// Note last baud rate listed will be the one used.
 #define SERIAL_BAUD_RATE 2000000L
+#define SERIAL_BAUD_RATE 1000000L
+#define SERIAL_BAUD_RATE  500000L
+#define SERIAL_BAUD_RATE  250000L
 #else
-#define SERIAL_BAUD_RATE 250000L
+// IDE 1.8.1 and earlier 250Kb is the max baud rate.
+#define SERIAL_BAUD_RATE  250000L
 #endif
 
 
