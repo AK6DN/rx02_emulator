@@ -305,7 +305,7 @@ After a successful upload, your Arduino should start running immediately. To get
 
 You will need to configure the baud rate / line ending of the monitor window before you can see output and type input.
 
-In the lower right of the window, select the maximum baud rate `250000 baud` that the Arduino supports over USB. This minimizes the impact of the debug output window on performance, and the emulator software selects this rate by default. As of emulator code v1.8 and Arduino IDE 1.8.2 or later it is possible to enable higher debug window baud rates (500KB, 1Mb, or 2Mb) but not all Arduino Mega2560 boards may support these rates 100% reliably. You will have to test your board individually to see if a higher baud rate can be enabled.
+In the lower right of the window, select the maximum baud rate `250000 baud` that the Arduino supports over USB. This minimizes the impact of the debug output window on performance, and the emulator software selects this rate by default. As of emulator code v1.8 and Arduino IDE 1.8.2 or later it is possible to enable higher debug window baud rates (500Kb, 1Mb, or 2Mb) but not all Arduino Mega2560 boards may support these rates 100% reliably. You will have to test your board individually to see if a higher baud rate can be enabled.
 
 In the lower right, select `Carriage Return` line ending, so when you type in the text box at the top of the window, and then click `SEND` a `CR` character will be appended to the end of the string.
 
