@@ -43,7 +43,7 @@
 #define DEBUG_TU58 0
 
 // program version id
-#define VERSION  "v1.8"
+#define VERSION  "v1.9"
 
 // baud rate for USB serial debug port
 //
@@ -63,10 +63,9 @@
 //
 #if ARDUINO >= 10802
 // IDE 1.8.2 and later enable 500Kb, 1Mb, and 2Mb baud rates.
-// Note last baud rate listed will be the one used.
-#define SERIAL_BAUD_RATE 2000000L
-#define SERIAL_BAUD_RATE 1000000L
-#define SERIAL_BAUD_RATE  500000L
+//#define SERIAL_BAUD_RATE 2000000L
+//#define SERIAL_BAUD_RATE 1000000L
+//#define SERIAL_BAUD_RATE  500000L
 #define SERIAL_BAUD_RATE  250000L
 #else
 // IDE 1.8.1 and earlier 250Kb is the max baud rate.
@@ -210,7 +209,7 @@ void run_command (char *cmd)
                 }
                 tty->printf(F("Setting file[%d]: '%s'\n"), i, rx_unit_file(i, arg));
                 size = sd_get_file_size(arg);
-                if (size != rx_dsk_size(RX_DEN_SD) && size != rx_dsk_size(RX_DEN_DD)) {
+                if (size != 0 && size != rx_dsk_size(RX_DEN_SD) && size != rx_dsk_size(RX_DEN_DD)) {
                     tty->printf(F("WARNING: file size not SD or DD ... use E/F command to correct!\n"));
                 } else if (size == rx_dsk_size(RX_DEN_DD) && rx_emulation_type() == RX_TYPE_RX01) {
                     tty->printf(F("WARNING: file size DD mounted in mode RX01!\n"));

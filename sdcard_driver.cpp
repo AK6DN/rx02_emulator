@@ -287,6 +287,9 @@ uint32_t sd_get_file_size (char *name)
     // error if not setup
     if (!initOk) return 0;
 
+    // missing files have zero size
+    if (!sdcard.exists(name)) return 0;
+
     // close existing file, if open
     if (sdfile.isOpen()) sdfile.close();
 

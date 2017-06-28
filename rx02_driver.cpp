@@ -832,11 +832,11 @@ char *rx_unit_file (uint8_t unit, char *name)
     // zap the deleted data state to normal
     memset(rx.drv[unit].dd, RX_DATA_NORMAL, sizeof(rx.drv[unit].dd));
 
-    // special file name of "NONE" (any capitalization) maps to an unmounted drive
-    if (strcasecmp(rx.drv[unit].name, "NONE") == 0) {
+    // special file name (any capitalization) maps to an unmounted drive
+    if (strcasecmp(rx.drv[unit].name, RX_FILENAME_NONE) == 0) {
         // no online disk
         rx.drv[unit].rdy = FALSE;
-        rx.drv[unit].den = RX_DEN_SD;
+        rx.drv[unit].den = (rx.type == RX_TYPE_RX01) ? RX_DEN_SD : RX_DEN_DD;
         rx.drv[unit].mode = RX_FILE_READ_ONLY;
         // return the name
         return rx.drv[unit].name;

@@ -59,6 +59,10 @@
 #define RX_FILE_READ_WRITE      0       // file is read write (default)
 #define RX_FILE_READ_ONLY       1       // file is read only
 
+// special filename(s)
+//
+#define RX_FILENAME_NONE      "NONE"    // special filename for unmounted file
+
 // drive density
 //
 #define RX_DEN_SD               0       // single density mode (128B/sector)
