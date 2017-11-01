@@ -27,15 +27,15 @@ The hardware shield has three indicator LEDs:
 
 Normal operation will see the GRN/YEL LEDs blinking rapidly or mostly ON. For non-storage commands (eg, buffer fill/empty) only GRN will be ON.
 
-Hardware design files (schematics, PCB layout, BOM) are available here:
+Hardware design files (schematics, PCB layout, BOM) are available in the documentation directory. Includes full schematic, PCB layout plots, and all gerbers.
 
-https://drive.google.com/open?id=0B7Csc-dWWfTYR3plTmtWd2VtWlU
+The Arduino controller software has been moved into the source directory.
 
 ## Example ##
 
 Sample boot log in the Arduino USB serial monitor window:
 ```
-RX02 Emulator v1.6 (IDE 1.6.13/gcc 4.9.2) - Dec  4 2016 - 12:34:56
+RX02 Emulator v1.9 (IDE 1.8.5/gcc 4.9.2) - Oct 31 2017 - 12:34:56
 
 SD: cardType=SD3
 SD: cardSize=3781MB
@@ -277,7 +277,7 @@ Unzip the contents into a folder, it will likely end up being named `rx02_emulat
 
 ## Compiling ##
 
-You should now be able to launch the Arduino IDE by going into the `rx02_emulator` folder and double clicking on the top level design file `rx02_emulator.ino`.
+You should now be able to launch the Arduino IDE by going into the `source/rx02_emulator` folder and double clicking on the top level design file `rx02_emulator.ino`.
 
 Before compiling you need to select the board and processor type.
 

@@ -1,0 +1,26 @@
+Assembly,Quantity,Reference,Side,Note,Description
+----------,-------------,---------------,----------,-------------,----------------------------------------------------------------------------------------
+Common,1,J1,Top,-,20x2P 100mil male box header
+Common,5,"P1,P2,P3,P5,P6",Bottom,-,"8x1P 100mil male header, 11.5mm pin length, breakaway strip"
+Common,1,P4,Bottom,-,"10x1P 100mil male header, 11.5mm pin length, breakaway strip"
+Common,1,P7,Bottom,-,"18x2P 100mil male header, 11.5mm pin length, breakaway strip"
+Common,2,"P8,P9",Top,Optional,"6x1P 100mil male header, 11.5mm pin length, breakaway strip"
+Common,1,P10,Top,-,"7x1P 100mil male header, 11.5mm pin length, breakaway strip"
+Common,1,P10,Top,-,Sparkfun microSD breakout board (https://www.sparkfun.com/products/13743)
+Common,3,"C1,C2,C3",Top,-,"100nF/16V ceramic capacitor, 100mil spacing"
+Common,2,"C4,C5",Top,-,"33uF/16V electrolytic capacitor, radial, 100mil spacing, 6mm max diameter"
+Common,1,D1,Top,-,"LED, RED, 5mm diameter, 100mil spacing"
+Common,1,D2,Top,-,"LED, YEL, 5mm diameter, 100mil spacing"
+Common,1,D3,Top,-,"LED, GRN, 5mm diameter, 100mil spacing"
+Common,3,"R24,R25,R26",Top,-,"330ohm,1/8W resistor (for 9mA LED current; value appropriate to LED)"
+Common,5,"R3,R12,R18,R22,R23",Top,-,"390ohm,1/4W resistor"
+Common,3,"R10,R11,R21",Top,-,"180ohm,1/4W resistor"
+Common,1,R4,Top,-,"120ohm,1/4W resistor"
+----------,-------------,---------------,----------,-------------,----------------------------------------------------------------------------------------
+v3 Version,3,"U1,U2,U3",Top,-,DS8641N quad bus transceiver
+v3 Version,3,"U1,U2,U3",Top,Optional,16p 300mil DIP socket
+----------,-------------,---------------,----------,-------------,----------------------------------------------------------------------------------------
+v4 Version,7,Q1-Q7,Top,-,"2N7000 transistor, TO-92 package"
+v4 Version,1,U1,Top,-,74HCT/AHCT14 hex schmitt inverter (or HC/AHC14)
+v4 Version,1,U1,Top,Optional,14p 300mil DIP socket
+----------,-------------,---------------,----------,-------------,----------------------------------------------------------------------------------------
