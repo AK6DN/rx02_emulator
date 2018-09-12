@@ -211,7 +211,7 @@ It is not difficult, but does require editing a standard Arduino system file and
 On windows, the target file to be modified is:
 
 ```
-C:\Program Files (x86)\Arduino\hardware\arduino\avr\cores\arduino\Print.h
+%ProgramFiles(x86)%\Arduino\hardware\arduino\avr\cores\arduino\Print.h
 ```
 
 the following code:
