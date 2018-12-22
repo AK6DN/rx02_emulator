@@ -35,14 +35,12 @@
 //
 #ifndef TRUE
 #define TRUE true
-#endif
-#ifndef true
+#else
 #define true TRUE
 #endif
 #ifndef FALSE
 #define FALSE false
-#endif
-#ifndef false
+#else
 #define false FALSE
 #endif
 #ifndef NULL
