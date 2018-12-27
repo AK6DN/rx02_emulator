@@ -43,7 +43,7 @@
 #define DEBUG_TU58 0
 
 // program version id
-#define VERSION  "v1.91"
+#define VERSION  "v1.92"
 
 // baud rate for USB serial debug port
 //
