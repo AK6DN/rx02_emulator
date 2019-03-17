@@ -131,7 +131,7 @@ void sd_test (void)
 
     tty->printf("\nSDtest removing test file: %s\n", name);
     sd_remove_file(name);
-    sd_list_files();
+    sd_list_files(tty);
 
     pos = sizeof(wrorder)*sizeof(wrdata);
     tty->printf("\nSDtest setting file size to %lu.\n", pos);
