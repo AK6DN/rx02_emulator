@@ -21,5 +21,5 @@ v3 Version,18,3,"U1,U2,U3",Top,-,DS8641N quad bus transceiver,-,-,-
 v3 Version,19,3,"U1,U2,U3",Top,Optional,16p 300mil DIP socket,-,-,-
 ,,,,,,,,,
 v4 Version,20,7,Q1-Q7,Top,-,"2N7000 transistor, TO-92 package",Microchip,2N7000-G,2N7000-G-ND
-v4 Version,21,1,U1,Top,-,74HCT/AHCT14 hex schmitt inverter (or HC/AHC14),Texas Instruments,SN74HCT14N,296-8394-5-ND
+v4 Version,21,1,U1,Top,-,74HCT/AHCT14 hex schmitt inverter (or HC/AHC14),Texas Instruments,SN74AHCT14N,296-4674-5-ND
 v4 Version,22,1,U1,Top,Optional,14p 300mil DIP socket,Assman,A 14-LC-TT,AE9989-ND
