@@ -1,6 +1,6 @@
 Assembly,Id,Quantity,Reference,Side,Note,Description,Manufacturer,ManufacturerPN,DigikeyPN
 Common,1,1,J1,Top,-,20x2P 100mil male box header,Sullins Connector,SBH11-PBPC-D20-ST-BK,S9175-ND
-Common,2,4,Px,Bottom,-,"40x1P 100mil male header, 11.5mm pin length, breakaway strip",Sullins Connector,PRPC040SAAN-RC,S1011EC-40-ND
+Common,2,3,Px,Bottom,-,"40x1P 100mil male header, 11.5mm pin length, breakaway strip",Sullins Connector,PRPC040SAAN-RC,S1011EC-40-ND
 Common,3,5,"P1,P2,P3,P5,P6",Bottom,see Id#2,"8x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
 Common,4,1,P4,Bottom,see Id#2,"10x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
 Common,5,1,P7,Bottom,see Id#2,"18x2P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
