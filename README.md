@@ -35,25 +35,22 @@ The Arduino controller software has been moved into the source directory.
 
 Sample boot log in the Arduino USB serial monitor window:
 ```
-RX02 Emulator v1.9 (IDE 1.8.5/gcc 4.9.2) - Oct 31 2017 - 12:34:56
-
+RX02 Emulator v1.93 (IDE 1.8.12/gcc 7.3.0) - Apr 23 2020 - 19:51:36
 SD: cardType=SD3
 SD: cardSize=3781MB
 SD: volType=FAT32
 SD: volBytesPerCluster=4096
 SD: volClusterCount=964992
 SD: volSizeBytes=3768MB
-
 2016-09-24 18:02:14     512512 RX0.DSK
-2016-09-24 18:02:14     512512 RX1.DSK
-2016-09-24 18:36:02     512512 XXDP.DSK
-2016-09-26 15:37:38     512512 RT11.DSK
-2016-09-24 17:02:12         50 SETUP.INI
-
+2016-09-27 15:06:44     512512 RX1.DSK
+2020-04-01 00:00:26         50 SETUP.INI
+2017-10-31 20:37:04     512512 RT11.RX2
+2017-10-31 20:37:14     512512 OS8V3D.RX2
+2016-10-24 11:31:02     256256 OS8V3Q.RX1
 Valid MicroSD card detected.
-
-RX: waiting for INIT to clear ... t=1132ms
-RX: INIT has cleared t=1206ms
+RX: waiting for INIT to clear ... t=1154ms
+RX: INIT has NOT cleared t=11155ms
 RX: INIT rx_xmit_es(0244)
 
 Processing setup file 'SETUP.INI' ...
@@ -68,7 +65,7 @@ Setting file[1] mode: R/W
 D 1
 Setting debug mode: 1 (Low)
 M 2
-Setting emulation mode: 2 (RX02)
+Setting emulation mode: 2 (RX02+any)
 T 0
 Setting timing mode: 0 (Fastest)
 S
@@ -87,7 +84,7 @@ Commands available:
                    file name 'none' (any case) for no disk present
   y(es) N       -- set unit N file read-write (default)
   n(o) N        -- set unit N file read-only
-  m(ode) N      -- set emulation mode, 0=NONE, n=RX0n; default 2
+  m(ode) N      -- set emulation mode, 0=RX01+RX11, 1=RX01+RX8E, 2=RX02+any; default 2
   d(ebug) N     -- debug level, 0=none, 3=max; default 1
   t(iming) N    -- timing mode, 0=fast, 1=medium, 2=normal; default 0
                    0 as fast as possible; 2 simulates real RX02 drive
