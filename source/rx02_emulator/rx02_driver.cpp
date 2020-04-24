@@ -29,6 +29,7 @@
 // 23 Sep 2016 - donorth - Added clr_request to end of rx_xmit_es()
 // 25 Sep 2016 - donorth - Reworked rx_init_es() to set status function dependent
 // 02 Oct 2016 - donorth - RX8E/RX28 mode debug...
+// 23 Apr 2020 - donorth - Fixed RX01+RX8E mode to ignore DD mode bit in command word
 //
 
 
@@ -53,21 +54,21 @@
 
 // RXCS control/status bit definitions
 
-//efine RXCS_GO		    (1<<0)		// GO bit                       (reference only; not used in drive)
-#define RXCS_FUNCTION	(7<<1)		// function bitfield                            
-#define RXCS_UNITSEL	(1<<4)		// unit select
-//efine RXCS_DONE	    (1<<5)		// function complete            (reference only; not used in drive)
-//efine RXCS_INTENB     (1<<6)		// interrupt enable             (reference only; not used in drive)
-//efine RXCS_8BIT       (1<<6)      // 8b mode                      (RX8E/RX28 ONLY)
-//efine RXCS_TR		    (1<<7)		// transfer request             (reference only; not used in drive)
-//efine RXCS_MAINT      (1<<7)      // maintenance mode             (RX8E/RX28 ONLY)
+#define RXCS_GO		    (1<<0)		// GO bit                       (reference only; not used in drive)
+#define RXCS_FUNCTION	(7<<1)		// function bitfield            (all)
+#define RXCS_UNITSEL	(1<<4)		// unit select                  (all)
+#define RXCS_DONE	    (1<<5)		// function complete            (reference only; not used in drive)
+#define RXCS_INTENB     (1<<6)		// interrupt enable             (reference only; not used in drive)
+#define RXCS_8BIT       (1<<6)      // 8b mode                      (RX8E/RX28 ONLY)
+#define RXCS_TR		    (1<<7)		// transfer request             (reference only; not used in drive)
+#define RXCS_MAINT      (1<<7)      // maintenance mode             (RX8E/RX28 ONLY)
 #define RXCS_DENSEL	    (1<<8)		// density select               (RX211/RX28 w/RX02 ONLY)
-//efine RXCS_HEADSEL	(1<<9)		// head select                  (RX211/RX28 w/RX03 ONLY)
-//efine RXCS_NU10      (1<<10)      // not used
-//efine RXCS_RX02	   (1<<11)		// RX02 interface               (reference only; not used in drive)
-//efine RXCS_EXTADDR   (3<<12)		// upper bits of phys address   (reference only; not used in drive)
-//efine RXCS_INIT	   (1<<14)		// initialize RX                (reference only; not used in drive)
-//efine RXCS_ERROR	   (1<<15)		// error flag                   (reference only; not used in drive)
+#define RXCS_HEADSEL	(1<<9)		// head select                  (RX211/RX28 w/RX03 ONLY)
+#define RXCS_NU10      (1<<10)      // not used                     (all)
+#define RXCS_RX02	   (1<<11)		// RX02 interface               (reference only; not used in drive)
+#define RXCS_EXTADDR   (3<<12)		// upper bits of phys address   (reference only; not used in drive)
+#define RXCS_INIT	   (1<<14)		// initialize RX                (reference only; not used in drive)
+#define RXCS_ERROR	   (1<<15)		// error flag                   (reference only; not used in drive)
 
 #define RXFCN_FILL   	  (0)       // fill buffer
 #define RXFCN_EMPTY	      (1)       // empty buffer
@@ -81,43 +82,43 @@
 
 // RXES status bit definitions
 
-//efine RXES_CRC	    (1<<0)		// CRC aka READ error
-//efine RXES_SIDRDY	    (1<<1)		// side ready                   (RX211/RX28 ONLY)
-//efine RXES_PERR       (1<<1)      // parity error                 (RX11/RX8E w/RX01 ONLY)
-#define RXES_INIT		(1<<2)		// controller init done
+#define RXES_CRC	    (1<<0)		// CRC aka READ error           (all)
+#define RXES_SIDRDY	    (1<<1)		// side ready                   (RX211/RX28 ONLY)
+#define RXES_PERR       (1<<1)      // parity error                 (RX11/RX8E w/RX01 ONLY)
+#define RXES_INIT		(1<<2)		// controller init done         (all)
 #define RXES_RX02       (1<<3)      // set for RX02 drive           (RX28 w/ RX02 ONLY)
-//efine RXES_ACLO	    (1<<3)		// set for AC low               (RX211 w/RX02 ONLY)
+#define RXES_ACLO	    (1<<3)		// set for AC low               (RX211 w/RX02 ONLY)
 #define RXES_WPERR      (1<<3)      // set for write to WP drive    (RX11/RX8E w/RX01 ONLY)
-#define RXES_DENERR	    (1<<4)		// density error
-#define RXES_DRVDEN	    (1<<5)		// diskette double density
-#define RXES_DELDATA    (1<<6)		// deleted data detected 
-#define RXES_DRVRDY	    (1<<7)		// selected drive ready
+#define RXES_DENERR	    (1<<4)		// density error                (all except RX8E w/RX01)
+#define RXES_DRVDEN	    (1<<5)		// diskette double density      (all except RX8E w/RX01)
+#define RXES_DELDATA    (1<<6)		// deleted data detected        (all)
+#define RXES_DRVRDY	    (1<<7)		// selected drive ready         (all)
 #define RXES_UNITSEL    (1<<8)		// unit selected                (RX211 w/RX02 ONLY)
-//efine RXES_HEADSEL    (1<<9)      // head selected                (RX211 w/RX03 ONLY
+#define RXES_HEADSEL    (1<<9)      // head selected                (RX211 w/RX03 ONLY
 #define RXES_WCOVF	   (1<<10)		// word count overflow          (RX211 w/RX02 ONLY)
-//efine RXES_NXM       (1<<11)      // nonexistent memory           (RX211 w/RX02 reference only; not used in drive)
+#define RXES_NXM       (1<<11)      // nonexistent memory           (RX211 w/RX02 reference only; not used in drive)
 
 // RX error codes
 
 #define RXERR_SUCCESS    0000       // success, no error
-//efine RXERR_DR0INIT	 0010		// drive 0 failed to init
-//efine RXERR_DR1INIT	 0020		// drive 1 failed to init
-//efine RXERR_STEPHOME   0030       // found home when stepping for init (RX01 ONLY)
+#define RXERR_DR0INIT	 0010		// drive 0 failed to init
+#define RXERR_DR1INIT	 0020		// drive 1 failed to init
+#define RXERR_STEPHOME   0030       // found home when stepping for init (RX01 ONLY)
 #define RXERR_TRKERR	 0040		// access to track > 76
 #define RXERR_TRKFAIL	 0050		// track not found
-//efine RXERR_SELFDIAG   0060       // self diagnostic fail (RX01 ONLY)
+#define RXERR_SELFDIAG   0060       // self diagnostic fail (RX01 ONLY)
 #define RXERR_SECFAIL	 0070		// sector not found
 #define RXERR_WRITEWP    0100       // write to a WP drive
-//efine RXERR_SEPFAIL	 0110		// no SEP clock in 40us
-//efine RXERR_PREFAIL	 0120		// preamble not found
+#define RXERR_SEPFAIL	 0110		// no SEP clock in 40us
+#define RXERR_PREFAIL	 0120		// preamble not found
 #define RXERR_IDMFAIL	 0130		// ID mark not found
-//efine RXERR_CRCHEAD    0140       // CRC error on a header (RX01 ONLY)
-//efine RXERR_TRKCMP	 0150		// header track miscompare
-//efine RXERR_IDMTRYS    0160		// too many tries for IDAM
-//efine RXERR_DAMFAIL	 0170		// data AM not found
-//efine RXERR_CRCERR	 0200		// CRC error on read
-//efine RXERR_PERR       0210       // parity error on word from i/f to controller (RX01 ONLY)
-//efine RXERR_RWFAIL	 0220	   	// r/w failed maint test (RX02 ONLY)
+#define RXERR_CRCHEAD    0140       // CRC error on a header (RX01 ONLY)
+#define RXERR_TRKCMP	 0150		// header track miscompare
+#define RXERR_IDMTRYS    0160		// too many tries for IDAM
+#define RXERR_DAMFAIL	 0170		// data AM not found
+#define RXERR_CRCERR	 0200		// CRC error on read
+#define RXERR_PERR       0210       // parity error on word from i/f to controller (RX01 ONLY)
+#define RXERR_RWFAIL	 0220	   	// r/w failed maint test (RX02 ONLY)
 #define RXERR_WCOVF	     0230		// word count overflow (RX02 ONLY)
 #define RXERR_DENERR	 0240		// density error (RX02 ONLY)
 #define RXERR_KEYERR	 0250		// wrong key word for set density (RX02 ONLY)
@@ -661,10 +662,13 @@ static void rx_init_es (void)
         if (rx.drv[rx.unit].rdy) rx.es |= RXES_DRVRDY;
     }
 
-    // certain bits for RX02/RX03
-    if (rx.type >= RX_TYPE_RX02) {
+    // interface specific bits
+    if (rx.type == RX_TYPE_RX01_RX11) {
+        if (rx.unit == 1) rx.es |= RXES_UNITSEL;
+    } else if (rx.type == RX_TYPE_RX02) {
         // insert drive type (RX28 only)
         if (rx_tst_12b()) rx.es |= RXES_RX02;
+        // any RX02 controller
         if (!(rx.fcn.code == RXFCN_FILL || rx.fcn.code == RXFCN_EMPTY)) {
             // insert unit selected (RX211 only)
             if (rx.unit == 1 && rx_tst_dma()) rx.es |= RXES_UNITSEL;
@@ -755,7 +759,7 @@ void rx_initialize (uint8_t flag)
     rx.type = rx_type;
     rx.fcn.code = RXFCN_INIT;
     rx.fcn.name = fcn_list[rx.fcn.code];
-    rx.den = (rx.type >= RX_TYPE_RX02 ? RX_DEN_DD : RX_DEN_SD);
+    rx.den = (rx.type == RX_TYPE_RX02 ? RX_DEN_DD : RX_DEN_SD);
     rx.cs = 0;
     rx.es = 0;
     rx.ec = 0;
@@ -836,7 +840,7 @@ char *rx_unit_file (uint8_t unit, char *name)
     if (strcasecmp(rx.drv[unit].name, RX_FILENAME_NONE) == 0) {
         // no online disk
         rx.drv[unit].rdy = FALSE;
-        rx.drv[unit].den = (rx.type == RX_TYPE_RX01) ? RX_DEN_SD : RX_DEN_DD;
+        rx.drv[unit].den = (rx.type == RX_TYPE_RX02) ? RX_DEN_DD : RX_DEN_SD;
         rx.drv[unit].mode = RX_FILE_READ_ONLY;
         // return the name
         return rx.drv[unit].name;
@@ -846,16 +850,16 @@ char *rx_unit_file (uint8_t unit, char *name)
     // if the current file is 'new' (ie, size == zero). Specifically do NOT modify nonzero length files
     // that are not exactly of SD (256,256 bytes) or DD (512,512 bytes) size
     size = sd_get_file_size(rx.drv[unit].name);
-    if (rx.type == RX_TYPE_RX01) {
+    if (rx.type == RX_TYPE_RX01_RX11 || rx.type == RX_TYPE_RX01_RX8E) {
         // RX01 only supports SD disks
         if (size == 0) size = sd_set_file_size(rx.drv[unit].name, rx_dsk_size(RX_DEN_SD), SD_POS_AT_END);
-    } else if (rx.type >= RX_TYPE_RX02) {
-        // RX02/RX03 supports SD or DD disks, default to DD
+    } else if (rx.type == RX_TYPE_RX02) {
+        // RX02 supports SD or DD disks, default to DD
         if (size == 0) size = sd_set_file_size(rx.drv[unit].name, rx_dsk_size(RX_DEN_DD), SD_POS_AT_END);
     }
 
-    // set drive ready if file exists and is a right size (SD, or DD and RX02/3 mode)
-    rx.drv[unit].rdy = (size == rx_dsk_size(RX_DEN_SD)) || (size == rx_dsk_size(RX_DEN_DD) && rx.type >= RX_TYPE_RX02);
+    // set drive ready if file exists and is a right size (SD, or DD and RX02 mode)
+    rx.drv[unit].rdy = (size == rx_dsk_size(RX_DEN_SD)) || (size == rx_dsk_size(RX_DEN_DD) && rx.type == RX_TYPE_RX02);
 
     // set drive density based on file size
     rx.drv[unit].den = (size == rx_dsk_size(RX_DEN_DD)) ? RX_DEN_DD : RX_DEN_SD;
@@ -895,11 +899,11 @@ uint8_t rx_unit_mode (uint8_t unit)
 
 
 //
-// setup the default emulation type (1=RX01, 2=RX02, etc)
+// setup the default emulation type
 //
 uint8_t rx_emulation_type (uint8_t type)
 {
-    rx.type = rx_type = constrain(type, RX_TYPE_RX01, RX_TYPE_RX03);
+    rx.type = rx_type = constrain(type, RX_TYPE_RX01_RX11, RX_TYPE_RX02);
 
     return rx.type;
 }
@@ -1037,7 +1041,7 @@ void rx_function (void)
         // RX11/RXV11 or RX8E/RX28 in 8b mode: 8b command
         rx.cs = rx_recv(8);
         // RX28 in 8b mode: 8b command extension
-        if (rx.type >= RX_TYPE_RX02) rx.cs |= rx_recv_hs(8)<<8;
+        if (rx.type == RX_TYPE_RX02) rx.cs |= rx_recv_hs(8)<<8;
     }
     if (debugLevel) debugPort->printf(F("RX: cmd=%04o\n"), rx.cs);
 
@@ -1053,8 +1057,8 @@ void rx_function (void)
     // separate out the unit number in the command
     rx.unit = (rx.cs & RXCS_UNITSEL) ? RX_UNIT_MAX : RX_UNIT_MIN;
 
-    // separate out the density flag in the command
-    rx.den = (rx.cs & RXCS_DENSEL) ? RX_DEN_DD : RX_DEN_SD;
+    // separate out the density flag in the command ... only for RX02 drives
+    rx.den = (rx.type == RX_TYPE_RX02) && (rx.cs & RXCS_DENSEL) ? RX_DEN_DD : RX_DEN_SD;
 
     // initial error code: success!
     rx.ec = RXERR_SUCCESS;
@@ -1214,7 +1218,7 @@ void rx_function (void)
         if (rx.fcn.code != RXFCN_RDSECT && rx.drv[rx.unit].mode == RX_FILE_READ_ONLY) {
             // yup, error
             rx.ec = RXERR_WRITEWP;
-            if (rx.type == RX_TYPE_RX01)
+            if (rx.type == RX_TYPE_RX01_RX11 || rx.type == RX_TYPE_RX01_RX8E)
                 rx.es |= RXES_WPERR;
             goto error;
         }
@@ -1296,7 +1300,7 @@ void rx_function (void)
     case RXFCN_SETMEDIA:
 
         // this function is a NOP for the RX01
-        if (rx.type == RX_TYPE_RX01) break;
+        if (rx.type == RX_TYPE_RX01_RX11 || rx.type == RX_TYPE_RX01_RX8E) break;
 
         // first word must be the magic key 'I'
         value = rx_recv_hs();
@@ -1402,7 +1406,7 @@ void rx_function (void)
             rx_xmit_hs(value, 8);
             rx_xmit_hs(rx.drv[rx.unit].ta, 8);
 
-        } else if (rx.type == RX_TYPE_RX01) {
+        } else if (rx.type == RX_TYPE_RX01_RX11 || rx.type == RX_TYPE_RX01_RX8E) {
 
             // RX11/RXV11/RX8E; return EC register in DB
 

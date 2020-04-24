@@ -43,7 +43,7 @@
 #define DEBUG_TU58 0
 
 // program version id
-#define VERSION  "v1.92"
+#define VERSION  "v1.93"
 
 // baud rate for USB serial debug port
 //
@@ -177,9 +177,10 @@ void run_command (char *cmd)
     uint8_t i, j;
     char *arg;
     uint32_t size;
-    static const char timing_mode[][9] = { "Fastest", "Medium", "RealRX02" };
-    static const char  debug_mode[][8] = { "Off", "Low", "High", "Extreme" };
-    static const char access_mode[][4] = { "R/W", "R/O" };
+    static const char timing_mode[][9]  = { "Fastest", "Medium", "RealRX02" };
+    static const char  debug_mode[][8]  = { "Off", "Low", "High", "Extreme" };
+    static const char access_mode[][4]  = { "R/W", "R/O" };
+    static const char  drive_mode[][10] = { "RX01+RX11", "RX01+RX8E", "RX02+any" };
     static const char ext_rx1[] = ".RX1";
     static const char ext_rx2[] = ".RX2";
 
@@ -211,7 +212,7 @@ void run_command (char *cmd)
                 size = sd_get_file_size(arg);
                 if (size != 0 && size != rx_dsk_size(RX_DEN_SD) && size != rx_dsk_size(RX_DEN_DD)) {
                     tty->printf(F("WARNING: file size not SD or DD ... use E/F command to correct!\n"));
-                } else if (size == rx_dsk_size(RX_DEN_DD) && rx_emulation_type() == RX_TYPE_RX01) {
+                } else if (size == rx_dsk_size(RX_DEN_DD) && rx_emulation_type() != RX_TYPE_RX02) {
                     tty->printf(F("WARNING: file size DD mounted in mode RX01!\n"));
                 }
             } else {
@@ -293,14 +294,14 @@ void run_command (char *cmd)
             sd_list_files(tty);
             break;
 
-        // "mode N" mode set emulation mode, 1/2/3 as RX01/RX02/RX03
+        // "mode N" mode set emulation mode, 0/1/2 as RX01+RX11, RX01+RX8E, RX02+any
         case 'M':
             if (arg && isdigit(c = *arg)) {
                 i = rx_emulation_type(c-'0');
-                tty->printf(F("Setting emulation mode: %d (RX0%d)\n"), i, i);
+                tty->printf(F("Setting emulation mode: %d (%s)\n"), i, drive_mode[i]);
             } else {
                 i = rx_emulation_type();
-                tty->printf(F("Current emulation type: %d (RX0%d)\n"), i, i);
+                tty->printf(F("Current emulation type: %d (%s)\n"), i, drive_mode[i]);
             }
             break;
 
@@ -374,7 +375,8 @@ void run_command (char *cmd)
             tty->printf(F("                   file name 'none' (any case) for no disk present\n"));
             tty->printf(F("  y(es) N       -- set unit N file read-write (default)\n"));
             tty->printf(F("  n(o) N        -- set unit N file read-only\n"));
-            tty->printf(F("  m(ode) N      -- set emulation mode, 0=NONE, n=RX0n; default 2\n"));
+            tty->printf(F("  m(ode) N      -- set emulation mode, 0=RX01+RX11, 1=RX01+RX8E, "));
+            tty->printf(F("2=RX02+any; default 2\n"));
             tty->printf(F("  d(ebug) N     -- debug level, 0=none, 3=max; default 1\n"));
             tty->printf(F("  t(iming) N    -- timing mode, 0=fast, 1=medium, 2=normal; default 0\n"));
             tty->printf(F("                   0 as fast as possible; 2 simulates real RX02 drive\n"));

@@ -38,10 +38,9 @@
 
 // emulation type
 //
-#define RX_TYPE_NONE            0       // no type defined
-#define RX_TYPE_RX01            1       // RX02 in RX01 mode
-#define RX_TYPE_RX02            2       // RX02 in native mode
-#define RX_TYPE_RX03            3       // RX02 in dual-sided RX03 mode (***UNSUPPORTED***)
+#define RX_TYPE_RX01_RX11       0       // RX01 w/ RX11/V11
+#define RX_TYPE_RX01_RX8E       1       // RX01 w/ RX8E
+#define RX_TYPE_RX02            2       // RX02 w/ RX28, RX211/V21
 
 // unit numbers
 //
