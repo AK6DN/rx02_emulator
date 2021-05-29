@@ -35,7 +35,8 @@ The Arduino controller software has been moved into the source directory.
 
 Sample boot log in the Arduino USB serial monitor window:
 ```
-RX02 Emulator v1.93 (IDE 1.8.12/gcc 7.3.0) - Apr 23 2020 - 19:51:36
+RX02 Emulator v1.94 (IDE 1.8.13/gcc 7.3.0) - May 28 2021 - 23:35:14
+SD: libVersion=2.0.6
 SD: cardType=SD3
 SD: cardSize=3781MB
 SD: volType=FAT32
@@ -192,6 +193,8 @@ C:\Users\yourname\My Documents\Arduino\libraries
 ```
 
 which probably just contains a `readme.txt` file. The `SdFat` library is now installed and ready for use.
+
+As of version v1.94 release the code is compatible with either the existing v1 SDfat library (eg, v1.1.4) or the newer v2 SDfat library (eg, v2.0.6) code.
 
 ## PRINTF Configuration ##
 

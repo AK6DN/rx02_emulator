@@ -1,7 +1,7 @@
 //
 // RX8E/RX28/RX11/RX211/RXV11/RXV21 to TU58/serial or SDcard Interface
 //
-// Copyright (c) 2015-2016, Donald N North
+// Copyright (c) 2015-2021, Donald N North
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the "Software"),
@@ -43,7 +43,7 @@
 #define DEBUG_TU58 0
 
 // program version id
-#define VERSION  "v1.93"
+#define VERSION  "v1.94"
 
 // baud rate for USB serial debug port
 //

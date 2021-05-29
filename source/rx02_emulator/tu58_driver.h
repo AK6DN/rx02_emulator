@@ -1,9 +1,7 @@
 //
 // tu58_driver - Simple TU58 driver external interface
 //
-// (C) 2016 Don North <ak6dn_at_mindspring_dot_com>
-//
-// Copyright (c) 2015-2016, Donald N North
+// Copyright (c) 2015-2021, Donald N North
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the "Software"),
