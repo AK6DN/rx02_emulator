@@ -6,7 +6,7 @@ Common,4,1,P4,Bottom,see Id#2,"10x1P 100mil male header, 11.5mm pin length, brea
 Common,5,1,P7,Bottom,see Id#2,"18x2P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
 Common,6,2,"P8,P9",Top,Unused,"6x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
 Common,7,1,P10,Top,see Id#2,"7x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
-Common,8,1,P10,Top,-,Sparkfun microSD breakout board (https://www.sparkfun.com/products/13743),-,-,-
+Common,8,1,P10,Top,-,Sparkfun microSD breakout board (https://www.sparkfun.com/products/13743),SparkFun,DEV-13743,-
 Common,9,3,"C1,C2,C3",Top,-,"100nF/16V ceramic capacitor, 100mil spacing",Vishay,K104K10X7RF53L2,BC5137-ND
 Common,10,2,"C4,C5",Top,-,"33uF/16V electrolytic capacitor, radial, 100mil spacing, 6mm max diameter",Panasonic,ECE-A1CKS330,P968-ND
 Common,11,1,D1,Top,-,"LED, RED, 5mm diameter, 100mil spacing",Broadcom,HLMP-4700,516-1325-ND
