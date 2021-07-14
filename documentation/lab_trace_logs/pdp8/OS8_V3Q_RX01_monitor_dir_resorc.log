@@ -1,0 +1,5825 @@
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=002
+RX: RDSECT pos=8064. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=002
+RX: RDSECT pos=8320. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=020
+RX: RDSECT ta=002
+RX: RDSECT pos=8576. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=022
+RX: RDSECT ta=002
+RX: RDSECT pos=8832. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=024
+RX: RDSECT ta=002
+RX: RDSECT pos=9088. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=026
+RX: RDSECT ta=002
+RX: RDSECT pos=9344. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=030
+RX: RDSECT ta=002
+RX: RDSECT pos=9600. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=032
+RX: RDSECT ta=002
+RX: RDSECT pos=9856. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=001
+RX: RDSECT ta=003
+RX: RDSECT pos=9984. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=003
+RX: RDSECT ta=003
+RX: RDSECT pos=10240. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=005
+RX: RDSECT ta=003
+RX: RDSECT pos=10496. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=007
+RX: RDSECT ta=003
+RX: RDSECT pos=10752. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=011
+RX: RDSECT pos=33024. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=011
+RX: RDSECT pos=30080. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=011
+RX: RDSECT pos=30336. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=011
+RX: RDSECT pos=30592. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=001
+RX: RDSECT pos=4352. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=001
+RX: RDSECT pos=4608. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=001
+RX: RDSECT pos=4864. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=001
+RX: RDSECT pos=5120. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=021
+RX: RDSECT pos=57600. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=021
+RX: RDSECT pos=57856. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=021
+RX: RDSECT pos=58112. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=021
+RX: RDSECT pos=58368. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=021
+RX: RDSECT ta=021
+RX: RDSECT pos=58624. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=023
+RX: RDSECT ta=021
+RX: RDSECT pos=58880. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=025
+RX: RDSECT ta=021
+RX: RDSECT pos=59136. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=027
+RX: RDSECT ta=021
+RX: RDSECT pos=59392. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=021
+RX: RDSECT pos=59648. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=021
+RX: RDSECT pos=56704. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=021
+RX: RDSECT pos=56960. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=021
+RX: RDSECT pos=57216. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=021
+RX: RDSECT pos=57472. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=021
+RX: RDSECT pos=57728. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=021
+RX: RDSECT pos=57984. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=021
+RX: RDSECT pos=58240. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=020
+RX: RDSECT ta=021
+RX: RDSECT pos=58496. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=022
+RX: RDSECT ta=021
+RX: RDSECT pos=58752. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=024
+RX: RDSECT ta=021
+RX: RDSECT pos=59008. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=026
+RX: RDSECT ta=021
+RX: RDSECT pos=59264. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=030
+RX: RDSECT ta=021
+RX: RDSECT pos=59520. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=032
+RX: RDSECT ta=021
+RX: RDSECT pos=59776. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=001
+RX: RDSECT ta=022
+RX: RDSECT pos=59904. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=003
+RX: RDSECT ta=022
+RX: RDSECT pos=60160. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=005
+RX: RDSECT ta=022
+RX: RDSECT pos=60416. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=007
+RX: RDSECT ta=022
+RX: RDSECT pos=60672. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=022
+RX: RDSECT pos=60928. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=022
+RX: RDSECT pos=61184. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=022
+RX: RDSECT pos=61440. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=022
+RX: RDSECT pos=61696. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=021
+RX: RDSECT ta=022
+RX: RDSECT pos=61952. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=023
+RX: RDSECT ta=022
+RX: RDSECT pos=62208. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=025
+RX: RDSECT ta=022
+RX: RDSECT pos=62464. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=027
+RX: RDSECT ta=022
+RX: RDSECT pos=62720. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=022
+RX: RDSECT pos=62976. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=022
+RX: RDSECT pos=60032. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=022
+RX: RDSECT pos=60288. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=022
+RX: RDSECT pos=60544. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=022
+RX: RDSECT pos=60800. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=022
+RX: RDSECT pos=61056. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=022
+RX: RDSECT pos=61312. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=022
+RX: RDSECT pos=61568. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=020
+RX: RDSECT ta=022
+RX: RDSECT pos=61824. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=022
+RX: RDSECT ta=022
+RX: RDSECT pos=62080. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=024
+RX: RDSECT ta=022
+RX: RDSECT pos=62336. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=026
+RX: RDSECT ta=022
+RX: RDSECT pos=62592. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=023
+RX: RDSECT pos=64256. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=023
+RX: RDSECT pos=64512. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=023
+RX: RDSECT pos=64768. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=023
+RX: RDSECT pos=65024. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=021
+RX: RDSECT ta=023
+RX: RDSECT pos=65280. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=023
+RX: RDSECT ta=023
+RX: RDSECT pos=65536. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=025
+RX: RDSECT ta=023
+RX: RDSECT pos=65792. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=027
+RX: RDSECT ta=023
+RX: RDSECT pos=66048. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=023
+RX: RDSECT pos=66304. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=023
+RX: RDSECT pos=63360. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=023
+RX: RDSECT pos=63616. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=023
+RX: RDSECT pos=63872. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=023
+RX: RDSECT pos=64128. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=023
+RX: RDSECT pos=64384. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=010
+RX: RDSECT pos=28160. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=010
+RX: RDSECT pos=28416. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=020
+RX: RDSECT ta=025
+RX: RDSECT pos=71808. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=022
+RX: RDSECT ta=025
+RX: RDSECT pos=72064. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=030
+RX: RDSECT ta=025
+RX: RDSECT pos=72832. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=032
+RX: RDSECT ta=025
+RX: RDSECT pos=73088. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=001
+RX: RDSECT ta=026
+RX: RDSECT pos=73216. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=003
+RX: RDSECT ta=026
+RX: RDSECT pos=73472. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=005
+RX: RDSECT ta=026
+RX: RDSECT pos=73728. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=007
+RX: RDSECT ta=026
+RX: RDSECT pos=73984. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=026
+RX: RDSECT pos=74240. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=026
+RX: RDSECT pos=74496. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=026
+RX: RDSECT pos=74752. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=026
+RX: RDSECT pos=75008. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=021
+RX: RDSECT ta=026
+RX: RDSECT pos=75264. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=023
+RX: RDSECT ta=026
+RX: RDSECT pos=75520. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=025
+RX: RDSECT ta=026
+RX: RDSECT pos=75776. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=027
+RX: RDSECT ta=026
+RX: RDSECT pos=76032. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=026
+RX: RDSECT pos=76288. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=026
+RX: RDSECT pos=73344. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=026
+RX: RDSECT pos=73600. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=026
+RX: RDSECT pos=73856. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=026
+RX: RDSECT pos=74112. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=026
+RX: RDSECT pos=74368. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=026
+RX: RDSECT pos=74624. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=026
+RX: RDSECT pos=74880. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=020
+RX: RDSECT ta=026
+RX: RDSECT pos=75136. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=022
+RX: RDSECT ta=026
+RX: RDSECT pos=75392. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=003
+RX: RDSECT pos=10880. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=003
+RX: RDSECT pos=11136. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=003
+RX: RDSECT pos=11392. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=003
+RX: RDSECT pos=11648. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=001
+RX: RDSECT pos=4352. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=001
+RX: RDSECT pos=4608. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=001
+RX: RDSECT pos=4864. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=001
+RX: RDSECT pos=5120. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=021
+RX: RDSECT ta=001
+RX: RDSECT pos=5376. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=023
+RX: RDSECT ta=001
+RX: RDSECT pos=5632. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=025
+RX: RDSECT ta=001
+RX: RDSECT pos=5888. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=027
+RX: RDSECT ta=001
+RX: RDSECT pos=6144. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=001
+RX: RDSECT pos=6400. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=001
+RX: RDSECT pos=3456. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=001
+RX: RDSECT pos=3712. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=001
+RX: RDSECT pos=3968. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=001
+RX: RDSECT pos=4224. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=001
+RX: RDSECT pos=4480. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=001
+RX: RDSECT pos=4736. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=001
+RX: RDSECT pos=4992. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=020
+RX: RDSECT ta=001
+RX: RDSECT pos=5248. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=022
+RX: RDSECT ta=001
+RX: RDSECT pos=5504. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=024
+RX: RDSECT ta=001
+RX: RDSECT pos=5760. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=026
+RX: RDSECT ta=001
+RX: RDSECT pos=6016. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=030
+RX: RDSECT ta=001
+RX: RDSECT pos=6272. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=032
+RX: RDSECT ta=001
+RX: RDSECT pos=6528. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=001
+RX: RDSECT ta=002
+RX: RDSECT pos=6656. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=003
+RX: RDSECT ta=002
+RX: RDSECT pos=6912. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=005
+RX: RDSECT ta=002
+RX: RDSECT pos=7168. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=007
+RX: RDSECT ta=002
+RX: RDSECT pos=7424. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=002
+RX: RDSECT pos=7680. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=002
+RX: RDSECT pos=7936. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=002
+RX: RDSECT pos=8192. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=002
+RX: RDSECT pos=8448. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=021
+RX: RDSECT ta=002
+RX: RDSECT pos=8704. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=023
+RX: RDSECT ta=002
+RX: RDSECT pos=8960. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=025
+RX: RDSECT ta=002
+RX: RDSECT pos=9216. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=027
+RX: RDSECT ta=002
+RX: RDSECT pos=9472. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=002
+RX: RDSECT pos=9728. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=002
+RX: RDSECT pos=6784. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=002
+RX: RDSECT pos=7040. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=002
+RX: RDSECT pos=7296. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=002
+RX: RDSECT pos=7552. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=002
+RX: RDSECT pos=7808. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=002
+RX: RDSECT pos=8064. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=002
+RX: RDSECT pos=8320. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=020
+RX: RDSECT ta=002
+RX: RDSECT pos=8576. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=022
+RX: RDSECT ta=002
+RX: RDSECT pos=8832. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=024
+RX: RDSECT ta=002
+RX: RDSECT pos=9088. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=026
+RX: RDSECT ta=002
+RX: RDSECT pos=9344. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=030
+RX: RDSECT ta=002
+RX: RDSECT pos=9600. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=032
+RX: RDSECT ta=002
+RX: RDSECT pos=9856. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=001
+RX: RDSECT ta=003
+RX: RDSECT pos=9984. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=003
+RX: RDSECT ta=003
+RX: RDSECT pos=10240. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=005
+RX: RDSECT ta=003
+RX: RDSECT pos=10496. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=007
+RX: RDSECT ta=003
+RX: RDSECT pos=10752. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=011
+RX: RDSECT pos=33024. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=011
+RX: RDSECT pos=30080. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=011
+RX: RDSECT pos=30336. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=011
+RX: RDSECT pos=30592. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=001
+RX: RDSECT pos=4352. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=001
+RX: RDSECT pos=4608. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=001
+RX: RDSECT pos=4864. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=001
+RX: RDSECT pos=5120. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=021
+RX: RDSECT pos=57600. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=021
+RX: RDSECT pos=57856. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=021
+RX: RDSECT pos=58112. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=021
+RX: RDSECT pos=58368. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=021
+RX: RDSECT ta=021
+RX: RDSECT pos=58624. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=023
+RX: RDSECT ta=021
+RX: RDSECT pos=58880. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=025
+RX: RDSECT ta=021
+RX: RDSECT pos=59136. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=027
+RX: RDSECT ta=021
+RX: RDSECT pos=59392. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=021
+RX: RDSECT pos=59648. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=021
+RX: RDSECT pos=56704. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=021
+RX: RDSECT pos=56960. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=021
+RX: RDSECT pos=57216. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=021
+RX: RDSECT pos=57472. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=021
+RX: RDSECT pos=57728. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=021
+RX: RDSECT pos=57984. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=021
+RX: RDSECT pos=58240. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=020
+RX: RDSECT ta=021
+RX: RDSECT pos=58496. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=022
+RX: RDSECT ta=021
+RX: RDSECT pos=58752. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=024
+RX: RDSECT ta=021
+RX: RDSECT pos=59008. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=026
+RX: RDSECT ta=021
+RX: RDSECT pos=59264. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=030
+RX: RDSECT ta=021
+RX: RDSECT pos=59520. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=032
+RX: RDSECT ta=021
+RX: RDSECT pos=59776. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=001
+RX: RDSECT ta=022
+RX: RDSECT pos=59904. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=003
+RX: RDSECT ta=022
+RX: RDSECT pos=60160. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=005
+RX: RDSECT ta=022
+RX: RDSECT pos=60416. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=007
+RX: RDSECT ta=022
+RX: RDSECT pos=60672. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=022
+RX: RDSECT pos=60928. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=022
+RX: RDSECT pos=61184. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=022
+RX: RDSECT pos=61440. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=022
+RX: RDSECT pos=61696. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=021
+RX: RDSECT ta=022
+RX: RDSECT pos=61952. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=023
+RX: RDSECT ta=022
+RX: RDSECT pos=62208. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=025
+RX: RDSECT ta=022
+RX: RDSECT pos=62464. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=027
+RX: RDSECT ta=022
+RX: RDSECT pos=62720. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=022
+RX: RDSECT pos=62976. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=022
+RX: RDSECT pos=60032. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=022
+RX: RDSECT pos=60288. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=022
+RX: RDSECT pos=60544. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=022
+RX: RDSECT pos=60800. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=022
+RX: RDSECT pos=61056. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=022
+RX: RDSECT pos=61312. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=022
+RX: RDSECT pos=61568. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=020
+RX: RDSECT ta=022
+RX: RDSECT pos=61824. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=022
+RX: RDSECT ta=022
+RX: RDSECT pos=62080. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=024
+RX: RDSECT ta=022
+RX: RDSECT pos=62336. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=026
+RX: RDSECT ta=022
+RX: RDSECT pos=62592. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=023
+RX: RDSECT pos=64256. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=023
+RX: RDSECT pos=64512. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=023
+RX: RDSECT pos=64768. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=023
+RX: RDSECT pos=65024. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=021
+RX: RDSECT ta=023
+RX: RDSECT pos=65280. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=023
+RX: RDSECT ta=023
+RX: RDSECT pos=65536. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=025
+RX: RDSECT ta=023
+RX: RDSECT pos=65792. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=027
+RX: RDSECT ta=023
+RX: RDSECT pos=66048. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=023
+RX: RDSECT pos=66304. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=023
+RX: RDSECT pos=63360. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=023
+RX: RDSECT pos=63616. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=023
+RX: RDSECT pos=63872. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=023
+RX: RDSECT pos=64128. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=023
+RX: RDSECT pos=64384. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=010
+RX: RDSECT pos=28160. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=010
+RX: RDSECT pos=28416. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=052
+RX: RDSECT pos=140160. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=052
+RX: RDSECT pos=140416. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=052
+RX: RDSECT pos=141184. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=052
+RX: RDSECT pos=141440. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=020
+RX: RDSECT ta=052
+RX: RDSECT pos=141696. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=022
+RX: RDSECT ta=052
+RX: RDSECT pos=141952. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=024
+RX: RDSECT ta=052
+RX: RDSECT pos=142208. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=026
+RX: RDSECT ta=052
+RX: RDSECT pos=142464. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=030
+RX: RDSECT ta=052
+RX: RDSECT pos=142720. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=032
+RX: RDSECT ta=052
+RX: RDSECT pos=142976. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=001
+RX: RDSECT ta=053
+RX: RDSECT pos=143104. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=003
+RX: RDSECT ta=053
+RX: RDSECT pos=143360. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=005
+RX: RDSECT ta=053
+RX: RDSECT pos=143616. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=007
+RX: RDSECT ta=053
+RX: RDSECT pos=143872. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=053
+RX: RDSECT pos=144128. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=053
+RX: RDSECT pos=144384. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=053
+RX: RDSECT pos=144640. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=053
+RX: RDSECT pos=144896. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=021
+RX: RDSECT ta=053
+RX: RDSECT pos=145152. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=023
+RX: RDSECT ta=053
+RX: RDSECT pos=145408. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=025
+RX: RDSECT ta=053
+RX: RDSECT pos=145664. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=027
+RX: RDSECT ta=053
+RX: RDSECT pos=145920. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=053
+RX: RDSECT pos=146176. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=053
+RX: RDSECT pos=143232. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=053
+RX: RDSECT pos=143488. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=053
+RX: RDSECT pos=143744. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=053
+RX: RDSECT pos=144000. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=053
+RX: RDSECT pos=144256. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=053
+RX: RDSECT pos=144512. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=053
+RX: RDSECT pos=144768. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=020
+RX: RDSECT ta=053
+RX: RDSECT pos=145024. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=022
+RX: RDSECT ta=053
+RX: RDSECT pos=145280. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=030
+RX: RDSECT ta=053
+RX: RDSECT pos=146048. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=032
+RX: RDSECT ta=053
+RX: RDSECT pos=146304. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=001
+RX: RDSECT ta=054
+RX: RDSECT pos=146432. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=003
+RX: RDSECT ta=054
+RX: RDSECT pos=146688. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=003
+RX: RDSECT pos=10880. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=003
+RX: RDSECT pos=11136. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=003
+RX: RDSECT pos=11392. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=003
+RX: RDSECT pos=11648. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=001
+RX: RDSECT pos=4352. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=001
+RX: RDSECT pos=4608. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=001
+RX: RDSECT pos=4864. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=001
+RX: RDSECT pos=5120. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=021
+RX: RDSECT ta=001
+RX: RDSECT pos=5376. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=023
+RX: RDSECT ta=001
+RX: RDSECT pos=5632. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=025
+RX: RDSECT ta=001
+RX: RDSECT pos=5888. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=027
+RX: RDSECT ta=001
+RX: RDSECT pos=6144. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=001
+RX: RDSECT pos=6400. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=001
+RX: RDSECT pos=3456. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=001
+RX: RDSECT pos=3712. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=001
+RX: RDSECT pos=3968. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=001
+RX: RDSECT pos=4224. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=001
+RX: RDSECT pos=4480. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=001
+RX: RDSECT pos=4736. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=001
+RX: RDSECT pos=4992. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=020
+RX: RDSECT ta=001
+RX: RDSECT pos=5248. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=022
+RX: RDSECT ta=001
+RX: RDSECT pos=5504. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=024
+RX: RDSECT ta=001
+RX: RDSECT pos=5760. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=026
+RX: RDSECT ta=001
+RX: RDSECT pos=6016. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=030
+RX: RDSECT ta=001
+RX: RDSECT pos=6272. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=032
+RX: RDSECT ta=001
+RX: RDSECT pos=6528. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=001
+RX: RDSECT ta=002
+RX: RDSECT pos=6656. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=003
+RX: RDSECT ta=002
+RX: RDSECT pos=6912. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=001
+RX: RDSECT ta=001
+RX: RDSECT pos=3328. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=003
+RX: RDSECT ta=001
+RX: RDSECT pos=3584. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=005
+RX: RDSECT ta=001
+RX: RDSECT pos=3840. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=007
+RX: RDSECT ta=001
+RX: RDSECT pos=4096. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=005
+RX: RDSECT ta=002
+RX: RDSECT pos=7168. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=007
+RX: RDSECT ta=002
+RX: RDSECT pos=7424. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=002
+RX: RDSECT pos=7680. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=002
+RX: RDSECT pos=7936. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=002
+RX: RDSECT pos=8064. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=002
+RX: RDSECT pos=8320. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=020
+RX: RDSECT ta=002
+RX: RDSECT pos=8576. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=022
+RX: RDSECT ta=002
+RX: RDSECT pos=8832. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=024
+RX: RDSECT ta=002
+RX: RDSECT pos=9088. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=026
+RX: RDSECT ta=002
+RX: RDSECT pos=9344. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=030
+RX: RDSECT ta=002
+RX: RDSECT pos=9600. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=032
+RX: RDSECT ta=002
+RX: RDSECT pos=9856. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=001
+RX: RDSECT ta=003
+RX: RDSECT pos=9984. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=003
+RX: RDSECT ta=003
+RX: RDSECT pos=10240. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=005
+RX: RDSECT ta=003
+RX: RDSECT pos=10496. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=007
+RX: RDSECT ta=003
+RX: RDSECT pos=10752. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=003
+RX: RDSECT pos=11008. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=003
+RX: RDSECT pos=11264. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=003
+RX: RDSECT pos=11520. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=003
+RX: RDSECT pos=11776. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=021
+RX: RDSECT ta=003
+RX: RDSECT pos=12032. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=023
+RX: RDSECT ta=003
+RX: RDSECT pos=12288. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=025
+RX: RDSECT ta=003
+RX: RDSECT pos=12544. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=027
+RX: RDSECT ta=003
+RX: RDSECT pos=12800. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=003
+RX: RDSECT pos=13056. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=003
+RX: RDSECT pos=10112. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=003
+RX: RDSECT pos=10368. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=003
+RX: RDSECT pos=10624. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=003
+RX: RDSECT pos=10880. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=003
+RX: RDSECT pos=11136. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=014
+RX: RDSECT ta=003
+RX: RDSECT pos=11392. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=016
+RX: RDSECT ta=003
+RX: RDSECT pos=11648. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=020
+RX: RDSECT ta=003
+RX: RDSECT pos=11904. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=022
+RX: RDSECT ta=003
+RX: RDSECT pos=12160. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=024
+RX: RDSECT ta=003
+RX: RDSECT pos=12416. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=026
+RX: RDSECT ta=003
+RX: RDSECT pos=12672. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=030
+RX: RDSECT ta=003
+RX: RDSECT pos=12928. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=032
+RX: RDSECT ta=003
+RX: RDSECT pos=13184. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=001
+RX: RDSECT ta=004
+RX: RDSECT pos=13312. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=003
+RX: RDSECT ta=004
+RX: RDSECT pos=13568. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=005
+RX: RDSECT ta=004
+RX: RDSECT pos=13824. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=007
+RX: RDSECT ta=004
+RX: RDSECT pos=14080. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=004
+RX: RDSECT pos=14336. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=004
+RX: RDSECT pos=14592. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=004
+RX: RDSECT pos=14848. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=004
+RX: RDSECT pos=15104. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=005
+RX: RDSECT ta=002
+RX: RDSECT pos=7168. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=007
+RX: RDSECT ta=002
+RX: RDSECT pos=7424. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=011
+RX: RDSECT ta=002
+RX: RDSECT pos=7680. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=013
+RX: RDSECT ta=002
+RX: RDSECT pos=7936. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=015
+RX: RDSECT ta=002
+RX: RDSECT pos=8192. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=017
+RX: RDSECT ta=002
+RX: RDSECT pos=8448. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=021
+RX: RDSECT ta=002
+RX: RDSECT pos=8704. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=023
+RX: RDSECT ta=002
+RX: RDSECT pos=8960. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=025
+RX: RDSECT ta=002
+RX: RDSECT pos=9216. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=027
+RX: RDSECT ta=002
+RX: RDSECT pos=9472. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=031
+RX: RDSECT ta=002
+RX: RDSECT pos=9728. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=002
+RX: RDSECT ta=002
+RX: RDSECT pos=6784. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=004
+RX: RDSECT ta=002
+RX: RDSECT pos=7040. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=006
+RX: RDSECT ta=002
+RX: RDSECT pos=7296. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=010
+RX: RDSECT ta=002
+RX: RDSECT pos=7552. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+
+RX: cmd=7006
+RX: RDSECT unit=0 den=S
+RX: RDSECT sa=012
+RX: RDSECT ta=002
+RX: RDSECT pos=7808. len=128.
+RX: RDSECT rx_xmit_es(0000)
+
+RX: cmd=7450
+RX: SETMED unit=0 den=S
+RX: SETMED rx_xmit_es(0000)
+
+RX: cmd=0002
+RX: EMPBUF unit=0 den=S
+RX: EMPBUF wc=040
+RX: EMPBUF rx_xmit_es(0000)
+

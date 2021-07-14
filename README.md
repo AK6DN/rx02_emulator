@@ -311,5 +311,9 @@ In the lower right, select `Carriage Return` line ending, so when you type in th
 
 At this point you should be seeing debug output in the serial monitor window, and be able to send menu commands to it.
 
+## Hardware ##
+
+Many original RX01/2 configurations come with an up to 5m controller card to connector cable (a 40p flat cable with 2x20p IDE connectors). It has been noticed that in some configurations using this same cable to connect to the RX02 emulator from the RXnn controller card results in unreliable operation or it does not work at all. The recommendation is to use a shorter 40p flat cable, on the order of 0.5m to 1.5m at most, for reliable operation.
+
 ## The End ##
 

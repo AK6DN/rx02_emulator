@@ -1,0 +1,221 @@
+>>>b dd3
+
+(Program)
+
+BOOTING UP XXDP-XM EXTENDED MONITOR
+
+XXDP-XM EXTENDED MONITOR - XXDP V2.5
+REVISION: F0
+BOOTED FROM DD3
+124KW OF MEMORY
+UNIBUS SYSTEM
+
+RESTART ADDRESS: 152000
+TYPE "H" FOR HELP !
+
+.R ZRXD??
+ZRXDC0.BIC
+
+DRSSM-G2
+CZRXDC0-0-0
+RX02 SS PERF EXER
+UNIT IS RX02
+RSTRT ADR 145702
+DR>STA
+
+CHANGE HW (L)  ? Y
+
+# UNITS (D)  ? 2
+
+UNIT 0
+RX BUS ADR (O)  177170 ?
+VECTOR ADR (O)  264 ?
+DRIVE #    (O)  0 ?
+EXP WRD-CR (O)  0 ?
+
+UNIT 1
+RX BUS ADR (O)  177170 ?
+VECTOR ADR (O)  264 ?
+DRIVE #    (O)  0 ? 1
+EXP WRD-CR (O)  0 ?
+
+CHANGE SW (L)  ? Y
+
+HELP TEST SETUP  (L) N ? Y
+EXERCISE OPTIONS
+   0 = WRITE-READ-DATA CK & READ-DATA CK
+   1 = WRITE ONLY
+   2 = WRITE-READ
+   3 = WRITE-READ-DATA CHECK
+   4 = READ-DATA CHECK ONLY
+   5 = READ ONLY (CRC CHECK)
+   6 = WRITE-READ-DATA CHECK ON ALTERNATE DRIVES
+DATA PATTERN OPTIONS
+   0 = RANDOM
+   1 = ZEROS
+   2 = ONES
+   3 = FLOATING ZERO
+   4 = FLOATING ONE
+   5 = 125
+   6 = 333
+TRACK SEQUENCE OPTIONS
+   0 = RANDOM
+   1 = INCREMENT O.D.
+   2 = DECREMENT I.D.
+   3 = INCREMENT O.D.-DECREMENT I.D.
+   4 = BOUNCE BETWEEN I.D. & O.D.
+   5 = BOUNCE BETWEEN INCR. O.D. & DECR. I.D.
+   6 = BOUNCE BETWEEN O.D. & DECR. I.D.
+      (O.D. = OUTSIDE DIA. & I.D. = INSIDE DIA.)
+->DEVICE FATAL THRESHOLD LVL=NO. OF HARD ERRS THAT CAUSE DEVICE FATAL ERR
+  IF DRS "EVL" FLAG IS SET, BUT HARD ERR WILL STILL LOG AS A HARD ERR.
+  THE "EVL" FLAG WILL CAUSE 10 RETRIED SOFT ERRS TO BECOME A HARD ERR
+TYPE "CR" TO CONTINUE (L) N ?
+EXERCISE #       (0-6) (O)  0 ? 3
+DATA PATTERN #   (0-6) (O)  0 ? 0
+TRACK SEQUENCE # (0-6) (O)  0 ? 0
+DEVICE FATAL THRESHOLD LEVEL (D)  1 ?
+RUN TEST IN DOUBLE DENSITY    (L) Y ?
+RUN TEST IN DELETED DATA MODE (L) N ? Y
+ANY PROGRAM CONTROL FLAGS     (L) N ?
+MODIFY TRACK ADDRESS LIMITS   (L) N ?
+MODIFY SECTOR ADDRESS LIMITS  (L) N ?
+RXXX EXPANSION TYPE <CR>  (L) N ?
+ UNIT#1- WRONG DENSITY -SINGLE DENSITY DISKETTE
+          ->REFORMAT DISKETTE - ARE YOU SURE? (L) N ? Y
+ UNIT#1-REFORMATTING, DO NOT INTERRUPT
+
+
+                      UNIT#0       UNIT#1
+# SECTOR READS  (8)=  00000004037  00000004037
+# SECTOR WRITES (8)=  00000004037  00000004037
+
+                    UNIT#0  UNIT#1
+CHECK SUM:               0       0
+FILL-EMP BUFF LOG:       0       0
+NO ERR BIT:              0       0
+INTER-NO DONE ERR:       0       0
+INTERRUPT ERR:           0       0
+SEEK:                    0       0
+CRC ERR:                 0       0
+CRC BAD:                 0       0
+READ ERR:                0       0
+WRITE ERR:               0       0
+DATA ERR:                0       0
+DEL. DATA ERR:           0       0
+HRD SEEK:                0       0
+HRD CRC ERR:             0       0
+HRD CRC BAD:             0       0
+HRD READ:                0       0
+HRD WRITE:               0       0
+HRD DATA:                0       0
+HRD DEL. DATA ERR:       0       0
+
+ERR
+CODE#   UNIT#0  UNIT#1
+010          0       0
+020          0       0
+030          0       0
+040          0       0
+050          0       0
+060          0       0
+070          0       0
+100          0       0
+110          0       0
+120          0       0
+130          0       0
+140          0       0
+150          0       0
+160          0       0
+170          0       0
+200          0       0
+210          0       0
+220          0       0
+230          0       0
+240          0       0
+250          0       0
+260          0       0
+
+TRACK#  UNIT#0  UNIT#1
+  0          0       0
+  1          0       0
+  2          0       0
+  3          0       0
+  4          0       0
+  5          0       0
+  6          0       0
+  7          0       0
+  8          0       0
+  9          0       0
+ 10          0       0
+ 11          0       0
+ 12          0       0
+ 13          0       0
+ 14          0       0
+ 15          0       0
+ 16          0       0
+ 17          0       0
+ 18          0       0
+ 19          0       0
+ 20          0       0
+ 21          0       0
+ 22          0       0
+ 23          0       0
+ 24          0       0
+ 25          0       0
+ 26          0       0
+ 27          0       0
+ 28          0       0
+ 29          0       0
+ 30          0       0
+ 31          0       0
+ 32          0       0
+ 33          0       0
+ 34          0       0
+ 35          0       0
+ 36          0       0
+ 37          0       0
+ 38          0       0
+ 39          0       0
+ 40          0       0
+ 41          0       0
+ 42          0       0
+ 43          0       0
+ 44          0       0
+ 45          0       0
+ 46          0       0
+ 47          0       0
+ 48          0       0
+ 49          0       0
+ 50          0       0
+ 51          0       0
+ 52          0       0
+ 53          0       0
+ 54          0       0
+ 55          0       0
+ 56          0       0
+ 57          0       0
+ 58          0       0
+ 59          0       0
+ 60          0       0
+ 61          0       0
+ 62          0       0
+ 63          0       0
+ 64          0       0
+ 65          0       0
+ 66          0       0
+ 67          0       0
+ 68          0       0
+ 69          0       0
+ 70          0       0
+ 71          0       0
+ 72          0       0
+ 73          0       0
+ 74          0       0
+ 75          0       0
+ 76          0       0
+CZRXDC0 EOP    1
+    0 TOTAL ERRS
+
+^C
+DR>EXIT

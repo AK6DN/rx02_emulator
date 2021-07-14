@@ -1,0 +1,25 @@
+.DIR
+
+SYS  VOLUME--   1
+SYS:=RX8E
+OS/8 SYSTEM   VERSION   3Q
+
+BUILD .SV  33           HELP  .SV   8           BASIC .UF   4
+ABSLDR.SV   5           PAL8  .SV  19           BCOMP .SV  17
+BITMAP.SV   5           PIP   .SV  11           BLOAD .SV   8
+BOOT  .SV   5           PT8E  .BN   1           BRTS  .SV  15
+CCL   .SV  18           RESORC.SV  10           EABRTS.BN  24
+CREF  .SV  13           RXCOPY.SV   6           RESEQ .BA   6
+DIRECT.SV   7           SABR  .SV  24           ECHO  .SV   2
+EDIT  .SV  10           TECO  .SV  22           RKLFMT.SV   9
+EPIC  .SV  14           BASIC .AF   4           SET   .SV  14
+FBOOT .SV   2           BASIC .FF   4           BATCH .SV  10
+FOTP  .SV   8           BASIC .SF   4           FUTIL .SV  26
+HELP  .HL  55           BASIC .SV   9           IDS   .SV   5
+
+  36 FILES IN  437 BLOCKS -    1 FREE BLOCKS
+
+.RESORC
+SYS,DSK,PTP,PTR,RXA0,RXA1,RKA0,RKB0,RKA1,RKB1,TTY,LPT
+
+.

@@ -1,0 +1,110 @@
+
+>>>b dy1
+
+(Program)
+
+RT-11SB  V05.07
+
+.R MSCPCK
+
+.date
+?KMON-W-No date
+
+.da 21-jan-2000
+
+.dir
+ 21-Jan-2000
+SWAP  .SYS    28P 21-Jan-2000    RT11SB.SYS    97P 21-Jan-2000
+RT11FB.SYS   106P 21-Jan-2000    DL    .SYS     4P 21-Jan-2000
+DU    .SYS    10P 21-Jan-2000    DX    .SYS     4P 21-Jan-2000
+DY    .SYS     4P 21-Jan-2000    DZ    .SYS     4P 21-Jan-2000
+RK    .SYS     3P 21-Jan-2000    LD    .SYS    11P 21-Jan-2000
+LP    .SYS     2P 21-Jan-2000    LS    .SYS     5P 21-Jan-2000
+NL    .SYS     2P 21-Jan-2000    PI    .SYS    60P 21-Jan-2000
+SL    .SYS    17P 21-Jan-2000    SP    .SYS     7P 21-Jan-2000
+VM    .SYS     3P 21-Jan-2000    PIP   .SAV    30P 21-Jan-2000
+DIR   .SAV    20P 21-Jan-2000    DUP   .SAV    52P 21-Jan-2000
+RESORC.SAV    35P 21-Jan-2000    HELP  .SAV   161P 21-Jan-2000
+FORMAT.SAV    28P 21-Jan-2000    DUMP  .SAV    10P 21-Jan-2000
+DATIME.SAV     4P 21-Jan-2000    EDIT  .SAV    19P 21-Jan-2000
+TECO  .SAV    50P 21-Jan-2000    STRTSB.COM     1P 21-Jan-2000
+MSCPCK.SAV     4P 21-Jan-2000
+ 29 Files, 781 Blocks
+ 193 Free blocks
+
+.sho all
+
+RT-11SB  V05.07
+Booted from DY1:RT11SB
+
+USR     is set SWAP
+EXIT    is set SWAP
+KMON    is set NOIND
+MODE    is set NOSJ
+TT      is set NOQUIET
+ERROR   is set ERROR
+SL      is set OFF
+EDIT    is set KED
+FORTRAN is set FORTRA
+KMON nesting depth is 3
+
+CLI is set DCL, CCL, UCL, NO UCF
+
+PDP 11/44 Processor
+3840KB of memory
+FP11 Hardware Floating Point Unit
+Extended Instruction Set (EIS)
+Commercial Instruction Set (CIS)
+Memory Management Unit
+ECC Memory
+Cache Memory
+60 Hertz System Clock
+KW11-P User Programmable Clock
+
+FPU support
+
+Device    Status                   CSR     Vector(s)
+------    ------                   ---     ---------
+  DL      Not installed           174400   160
+  DU      Installed               172150   154
+  DX      Not installed           177170   264
+  DY      Resident                177170   264
+  DZ      Not installed           000000
+  RK      Not installed           177400   220
+  LD      Installed               000000   000
+  LP      Not installed           177514   200
+  LS      Installed               176500   470 474 300 304
+  NL      Installed               000000   000
+  PI      Not installed           000000   000
+  SL      Installed               000000   000
+  SP      Installed               000000   110
+  VM      Installed               177572   250
+
+TT  (Resident)
+DY  (Resident)
+    DY1 = DK , SY
+LD
+SL
+DU
+VM
+SP
+LS
+NL
+13 free slots
+
+Job  Name  Console Level State    Low    High  Impure
+---  ----  ------- ----- -----    ---    ----  ------
+ 0   RESORC   0      0   Run     000000 137010 140514
+
+No multi-terminal support
+
+Address   Module    Words
+-------   ------    -----
+160000    IOPAGE     4096.
+156542    DY          335.
+137054    RMON       3995.
+001000    ..BG..    24086.
+
+No LD units mounted
+
+.
