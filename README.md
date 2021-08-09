@@ -35,7 +35,7 @@ The Arduino controller software has been moved into the source directory.
 
 Sample boot log in the Arduino USB serial monitor window:
 ```
-RX02 Emulator v1.94 (IDE 1.8.13/gcc 7.3.0) - May 28 2021 - 23:35:14
+RX02 Emulator v1.95 (IDE 1.8.15/gcc 7.3.0) - Aug 09 2021 - 11:35:14
 SD: libVersion=2.0.6
 SD: cardType=SD3
 SD: cardSize=3781MB
@@ -313,7 +313,8 @@ At this point you should be seeing debug output in the serial monitor window, an
 
 ## Hardware ##
 
-Many original RX01/2 configurations come with an up to 5m controller card to connector cable (a 40p flat cable with 2x20p IDE connectors). It has been noticed that in some configurations using this same cable to connect to the RX02 emulator from the RXnn controller card results in unreliable operation or it does not work at all. The recommendation is to use a shorter 40p flat cable, on the order of 0.5m to 1.5m at most, for reliable operation.
+UPDATED 09-Aug-2021 -- the timing macros for the data transfer to/from the interface board have been modified to allow working with a longer flat cable. As of the v1.95 release the emulator has been tested and worked flawlessly using a DEC BC06R-12 cable (12' long, about 4m) on a PDP-11/44 with an RX211 interface. Performance degradation due to the slightly slower data transfer handshake timing has been measured at about 5% or less, which in practice is not noticeable. Of course it still works flawlessly using a shorter 0.5 to 1.5m cable as well.
+
+DEPRECATED 09-Aug-2021 -- Many original RX01/2 configurations come with an up to 5m controller card to connector cable (a 40p flat cable with 2x20p IDE connectors). It has been noticed that in some configurations using this same cable to connect to the RX02 emulator from the RXnn controller card results in unreliable operation or it does not work at all. The recommendation is to use a shorter 40p flat cable, on the order of 0.5m to 1.5m at most, for reliable operation.
 
 ## The End ##
-

@@ -53,13 +53,21 @@
 
 
 //
-// very short delays
+// very short delays, using 16MHz std clock
+//
+//    62.5ns@1c    125.0ns@2c    187.5ns@3c
+//   250.0ns@4c    312.5ns@5c    375.0ns@6c
+//   437.5ns@7c    500.0ns@8c    562.5ns@9c
 //
 #define delay_1c(xxx) {asm("nop");}
 #define delay_2c(xxx) {delay_1c();delay_1c();}
-#define delay_3c(xxx) {delay_1c();delay_2c();}
-#define delay_4c(xxx) {delay_2c();delay_2c();}
-#define delay_5c(xxx) {delay_1c();delay_4c();}
+#define delay_3c(xxx) {delay_2c();delay_1c();}
+#define delay_4c(xxx) {delay_3c();delay_1c();}
+#define delay_5c(xxx) {delay_4c();delay_1c();}
+#define delay_6c(xxx) {delay_5c();delay_1c();}
+#define delay_7c(xxx) {delay_6c();delay_1c();}
+#define delay_8c(xxx) {delay_7c();delay_1c();}
+#define delay_9c(xxx) {delay_8c();delay_1c();}
 
 
 
