@@ -194,7 +194,9 @@ C:\Users\yourname\My Documents\Arduino\libraries
 
 which probably just contains a `readme.txt` file. The `SdFat` library is now installed and ready for use.
 
-As of version v1.94 release the code is compatible with either the existing v1 SDfat library (eg, v1.1.4) or the newer v2 SDfat library (eg, v2.0.6) code.
+As of version v1.95 release the code is compatible with either the existing v1 SDfat library (eg, v1.1.4) or the newer v2 SDfat library (eg, v2.0.6) code.
+
+I have tested with the v2.1.x series of SDfat libraries and they are currently NOT COMPATIBLE. Substantial changes were made in those libraries and they do not compile. So the latest SDfat library you can reasonably use is v2.0.6. The source code has been modified to throw an error if you use a later library (ie won't cleanly compile anyway).
 
 ## PRINTF Configuration ##
 
