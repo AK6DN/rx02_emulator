@@ -34,7 +34,7 @@
 // configuration
 //
 // use:  https://github.com/PaulStoffregen/Time  TimeLib.h if defined (uncomment next line)
-// #define USE_TIMELIB_H
+//#define USE_TIMELIB_H
 //
 // use:  https://github.com/greiman/SdFat  SdFat.h if defined (uncomment next line)
 #define USE_SDFAT_H
@@ -56,9 +56,9 @@
 #ifdef USE_SDFAT_H
 #include <SPI.h>
 #include <SdFat.h>
-#if SD_FAT_VERSION > 20006
+#if SD_FAT_VERSION > 20007
     // check library version compatibility
-    #error This source code is only compatible with SdFat library v2.0.6 or earlier!
+    #error This source code is only compatible with SdFat library v2.0.7 or earlier!
 #endif
 #endif // USE_SDFAT_H
 //
