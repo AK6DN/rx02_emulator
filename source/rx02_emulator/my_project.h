@@ -56,10 +56,6 @@
 #ifdef USE_SDFAT_H
 #include <SPI.h>
 #include <SdFat.h>
-#if SD_FAT_VERSION > 20007
-    // check library version compatibility
-    #error This source code is only compatible with SdFat library v2.0.7 or earlier!
-#endif
 #endif // USE_SDFAT_H
 //
 #ifdef USE_TIMELIB_H
