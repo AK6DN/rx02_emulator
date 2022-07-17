@@ -43,7 +43,7 @@
 #define DEBUG_TU58 0
 
 // program version id
-#define VERSION  "v1.96"
+#define VERSION  "v1.97"
 
 // baud rate for USB serial debug port
 //
@@ -605,11 +605,18 @@ void setup (void)
     led_initialize();
 
     // say hello
-    tty->printf(F("RX02 Emulator %s (IDE %u.%u.%u/gcc %s) - %s - %s\n"),
+    tty->printf(F("\nRX02 Emulator %s (IDE %u.%u.%u/gcc %s) - %s - %s\n"),
                 VERSION,
                 (ARDUINO/10000)%100, (ARDUINO/100)%100, (ARDUINO/1)%100,
                 __VERSION__, __DATE__, __TIME__);
+
+    // test LEDs
+    led_state(red, on);
+    led_state(green, on);
+    led_state(yellow, on);
     delay(1000);
+    led_state(green, off);
+    led_state(yellow, off);
 
 #if USE_SD
     // check for SD card
