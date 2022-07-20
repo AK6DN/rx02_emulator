@@ -141,7 +141,7 @@ uint8_t sd_initialize (void)
 #if SD_FAT_VERSION <= 20007
     uint32_t vbpc = sdcard.vol()->blocksPerCluster()*512L;
 #else
-    uint32_t vbpc = sdcard.vol()->sectorsPerCluster()*512L;
+    uint32_t vbpc = sdcard.vol()->bytesPerCluster();
 #endif
     uint32_t vucc = sdcard.vol()->clusterCount();
     uint32_t vsize = (vbpc/1024L)*(vucc/1024L);
