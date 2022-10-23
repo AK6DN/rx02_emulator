@@ -1,11 +1,11 @@
 Assembly,Id,Quantity,Reference,Side,Note,Description,Manufacturer,ManufacturerPN,DigikeyPN
 Common,1,1,J1,Top,-,20x2P 100mil male box header,Sullins Connector,SBH11-PBPC-D20-ST-BK,S9175-ND
-Common,2,3,Px,Bottom,-,"40x1P 100mil male header, 11.5mm pin length, breakaway strip",Sullins Connector,PRPC040SAAN-RC,S1011EC-40-ND
-Common,3,5,"P1,P2,P3,P5,P6",Bottom,see Id#2,"8x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
-Common,4,1,P4,Bottom,see Id#2,"10x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
-Common,5,1,P7,Bottom,see Id#2,"18x2P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
-Common,6,2,"P8,P9",Top,Unused,"6x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
-Common,7,1,P10,Top,see Id#2,"7x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
+Common,2,3,"P1,P5,P6",Bottom,NOSTUFF,"8x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
+Common,3,5,"P2,P3",Bottom,-,"8x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
+Common,4,1,P4,Bottom,-,"10x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
+Common,5,1,P7,Bottom,-,"18x2P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
+Common,6,2,"P8,P9",Top,NOSTUFF,"6x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
+Common,7,1,P10,Top,-,"7x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
 Common,8,1,P10,Top,-,Sparkfun microSD breakout board (https://www.sparkfun.com/products/13743),SparkFun,DEV-13743,-
 Common,9,3,"C1,C2,C3",Top,-,"100nF/16V ceramic capacitor, 100mil spacing",Vishay,K104K10X7RF53L2,BC5137-ND
 Common,10,2,"C4,C5",Top,-,"33uF/16V electrolytic capacitor, radial, 100mil spacing, 6mm max diameter",Panasonic,ECE-A1CKS330,P968-ND
