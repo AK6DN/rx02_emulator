@@ -1,25 +1,21 @@
-Assembly,Id,Quantity,Reference,Side,Note,Description,Manufacturer,ManufacturerPN,DigikeyPN
-Common,1,1,J1,Top,-,20x2P 100mil male box header,Sullins Connector,SBH11-PBPC-D20-ST-BK,S9175-ND
-Common,2,3,"P1,P5,P6",Bottom,NOSTUFF,"8x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
-Common,3,2,"P2,P3",Bottom,-,"8x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
-Common,4,1,P4,Bottom,-,"10x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
-Common,5,1,P7,Bottom,-,"18x2P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
-Common,6,2,"P8,P9",Top,NOSTUFF,"6x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
-Common,7,1,P10,Top,-,"7x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
-Common,8,1,P10,Top,-,Sparkfun microSD breakout board (https://www.sparkfun.com/products/13743),SparkFun,DEV-13743,-
-Common,9,3,"C1,C2,C3",Top,-,"100nF/16V ceramic capacitor, 100mil spacing",Vishay,K104K10X7RF53L2,BC5137-ND
-Common,10,2,"C4,C5",Top,-,"33uF/16V electrolytic capacitor, radial, 100mil spacing, 6mm max diameter",Panasonic,ECE-A1CKS330,P968-ND
-Common,11,1,D1,Top,-,"LED, RED, 5mm diameter, 100mil spacing",Broadcom,HLMP-4700,516-1325-ND
-Common,12,1,D2,Top,-,"LED, YEL, 5mm diameter, 100mil spacing",Broadcom,HLMP-4719,516-1326-ND
-Common,13,1,D3,Top,-,"LED, GRN, 5mm diameter, 100mil spacing",Broadcom,HLMP-4740,516-1327-ND
-Common,14,3,"R24,R25,R26",Top,-,"1Kohm,1/8W resistor (for 2mA LED current; value appropriate to LED)",Stackpole,CF18JT1K00,CF18JT1K00CT-ND
-Common,15,5,"R3,R12,R18,R22,R23",Top,-,"390ohm,1/4W resistor",Yageo,CFR-25JB-52-390R,390QBK-ND
-Common,16,3,"R10,R11,R21",Top,-,"180ohm,1/4W resistor",Yageo,CFR-25JB-52-180R,180QBK-ND
-Common,17,1,R4,Top,-,"120ohm,1/4W resistor",Yageo,CFR-25JB-52-120R,120QBK-ND
-,,,,,,,,,
-v3 Version,18,3,"U1,U2,U3",Top,-,DS8641N quad bus transceiver,-,-,-
-v3 Version,19,3,"U1,U2,U3",Top,Optional,16p 300mil DIP socket,-,-,-
-,,,,,,,,,
-v4 Version,20,7,Q1-Q7,Top,-,"2N7000 transistor, TO-92 package",Microchip,2N7000-G,2N7000-G-ND
-v4 Version,21,1,U1,Top,-,74HCT/AHCT14 hex schmitt inverter (or HC/AHC14),Texas Instruments,SN74AHCT14N,296-4674-5-ND
-v4 Version,22,1,U1,Top,Optional,14p 300mil DIP socket,Assman,A 14-LC-TT,AE9989-ND
+Assembly Order,Quantity,Reference,Side,Note,Description,Manufacturer,ManufacturerPN,DigikeyPN
+1,3,"R24,R25,R26",Top,-,"1Kohm,1/8W resistor (for 2mA LED current; value appropriate to LED)",Stackpole,CF18JT1K00,CF18JT1K00CT-ND
+2,5,"R3,R12,R18,R22,R23",Top,-,"390ohm,1/4W resistor",Yageo,CFR-25JB-52-390R,390QBK-ND
+3,3,"R10,R11,R21",Top,-,"180ohm,1/4W resistor",Yageo,CFR-25JB-52-180R,180QBK-ND
+4,1,R4,Top,-,"120ohm,1/4W resistor",Yageo,CFR-25JB-52-120R,120QBK-ND
+5,1,U1,Top,-,14p 300mil DIP socket,Assman,A 14-LC-TT,AE9989-ND
+6,3,C1-C3,Top,-,"100nF/16V ceramic capacitor, 100mil spacing",Vishay,K104K10X7RF53L2,BC5137-ND
+7,7,Q1-Q7,Top,-,"2N7000 transistor, TO-92 package",Microchip,2N7000-G,2N7000-G-ND
+8,1,D1,Top,-,"LED, RED, 5mm diameter, 100mil spacing",Broadcom,HLMP-4700,516-1325-ND
+9,1,D2,Top,-,"LED, YEL, 5mm diameter, 100mil spacing",Broadcom,HLMP-4719,516-1326-ND
+10,1,D3,Top,-,"LED, GRN, 5mm diameter, 100mil spacing",Broadcom,HLMP-4740,516-1327-ND
+11,2,"C4,C5",Top,-,"33uF/16V electrolytic capacitor, radial, 100mil spacing, 6mm max diameter",Panasonic,ECE-A1CKS330,P968-ND
+12,2,"P2,P3",Bottom,-,"8x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
+13,1,P4,Bottom,-,"10x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
+14,1,P7,Bottom,-,"18x2P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
+15,1,J1,Top,-,20x2P 100mil male box header,Sullins Connector,SBH11-PBPC-D20-ST-BK,S9175-ND
+16,1,P10,Top,-,"7x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
+17,1,P10,Top,-,Sparkfun microSD breakout board (https://www.sparkfun.com/products/13743),SparkFun,DEV-13743,-
+18,1,U1,Top,-,74HCT/AHCT14 hex schmitt inverter (or HC/AHC14),Texas Instruments,SN74AHCT14N,296-4674-5-ND
+-,3,"P1,P5,P6",Bottom,NOSTUFF,"8x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
+-,2,"P8,P9",Top,NOSTUFF,"6x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
