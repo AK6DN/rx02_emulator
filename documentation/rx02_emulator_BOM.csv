@@ -6,16 +6,16 @@ Assembly Order,Quantity,Reference,Side,Note,Description,Manufacturer,Manufacture
 5,1,U1,Top,-,14p 300mil DIP socket,Assman,A 14-LC-TT,AE9989-ND
 6,3,C1-C3,Top,-,"100nF/16V ceramic capacitor, 100mil spacing",Vishay,K104K10X7RF53L2,BC5137-ND
 7,7,Q1-Q7,Top,-,"2N7000 transistor, TO-92 package",Microchip,2N7000-G,2N7000-G-ND
-8,1,D1,Top,-,"LED, RED, 5mm diameter, 100mil spacing",Broadcom,HLMP-4700,516-1325-ND
-9,1,D2,Top,-,"LED, YEL, 5mm diameter, 100mil spacing",Broadcom,HLMP-4719,516-1326-ND
-10,1,D3,Top,-,"LED, GRN, 5mm diameter, 100mil spacing",Broadcom,HLMP-4740,516-1327-ND
-11,2,"C4,C5",Top,-,"33uF/16V electrolytic capacitor, radial, 100mil spacing, 6mm max diameter",Panasonic,ECE-A1CKS330,P968-ND
-12,2,"P2,P3",Bottom,-,"8x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
-13,1,P4,Bottom,-,"10x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
-14,1,P7,Bottom,-,"18x2P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
-15,1,J1,Top,-,20x2P 100mil male box header,Sullins Connector,SBH11-PBPC-D20-ST-BK,S9175-ND
-16,1,P10,Top,-,"7x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
+8,1,J1,Top,-,20x2P 100mil male box header,Sullins Connector,SBH11-PBPC-D20-ST-BK,S9175-ND
+9,1,D1,Top,-,"LED, RED, 5mm diameter, 100mil spacing",Broadcom,HLMP-4700,516-1325-ND
+10,1,D2,Top,-,"LED, YEL, 5mm diameter, 100mil spacing",Broadcom,HLMP-4719,516-1326-ND
+11,1,D3,Top,-,"LED, GRN, 5mm diameter, 100mil spacing",Broadcom,HLMP-4740,516-1327-ND
+12,2,"C4,C5",Top,-,"33uF/16V electrolytic capacitor, radial, 100mil spacing, 6mm max diameter",Panasonic,ECE-A1CKS330,P968-ND
+13,1,P4,Bottom,-,"10x1P 100mil male header, 0.230/0.120 pin length, breakaway strip",Sullins Connector,PRPC040SAAN-RC,S1011EC-40-ND
+14,2,"P2,P3",Bottom,-,"8x1P 100mil male header, 0.230/0.120 pin length, breakaway strip",ref item 13,-,-
+15,1,P7,Bottom,-,"18x2P 100mil male header, 0.230/0.120 pin length, breakaway strip",Sullins Connector,PRPC018DAAN-RC,S2011EC-18-ND
+16,1,P10,Top,-,"7x1P 100mil male header, 0.230/0.120 pin length, breakaway strip",ref item 13,-,-
 17,1,P10,Top,-,Sparkfun microSD breakout board (https://www.sparkfun.com/products/13743),SparkFun,DEV-13743,-
 18,1,U1,Top,-,74HCT/AHCT14 hex schmitt inverter (or HC/AHC14),Texas Instruments,SN74AHCT14N,296-4674-5-ND
--,3,"P1,P5,P6",Bottom,NOSTUFF,"8x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
--,2,"P8,P9",Top,NOSTUFF,"6x1P 100mil male header, 11.5mm pin length, breakaway strip",-,-,-
+-,3,"P1,P5,P6",Bottom,NOSTUFF,"8x1P 100mil male header, 0.230/0.120 pin length, breakaway strip",-,-,-
+-,2,"P8,P9",Top,NOSTUFF,"6x1P 100mil male header, 0.230/0.120 pin length, breakaway strip",-,-,-
