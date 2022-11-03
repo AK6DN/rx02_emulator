@@ -43,7 +43,7 @@
 #define DEBUG_TU58 0
 
 // program version id
-#define VERSION  "v1.97"
+#define VERSION  "v1.98"
 
 // baud rate for USB serial debug port
 //
@@ -348,6 +348,7 @@ void run_command (char *cmd)
         // "zap" setup the initial timestamp, as in: Z 2017-03-31 19:30:45
         case 'Z':
             if (arg) {
+                // arguments set date and time
                 uint16_t yr; uint8_t mo, da, hh, mm, ss;
                 // scan a time string
                 if (sscanf(arg, "%u-%hhu-%hhu %hhu:%hhu:%hhu", &yr, &mo, &da, &hh, &mm, &ss) == 6) {
@@ -359,7 +360,21 @@ void run_command (char *cmd)
                     } else {
                         tty->printf(F("Invalid date/time format!\n"));
                     }
+                } else if (sscanf(arg, "%u-%hhu-%hhu %hhu:%hhu", &yr, &mo, &da, &hh, &mm) == 5) {
+                    if (1970 <= yr && yr <= 2099 && 01 <= mo && mo <= 12 && 01 <= da && da <= 31 &&
+                        00 <= hh && hh <= 23 && 00 <= mm && mm <= 59) {
+                        // initialize time
+                        setTime(hh,mm,00, da,mo,yr);
+                        tty->printf(F("Date/time set!\n"));
+                    } else {
+                        tty->printf(F("Invalid date/time format!\n"));
+                    }
+                } else {
+                    tty->printf(F("Unrecognized format, use YYYY-MM-DD HH:MM\n"));
                 }
+            } else {
+                // no arguments display date and time
+                tty->printf(F("%04d-%02d-%02d %02d:%02d:%02d\n"), year(), month(), day(), hour(), minute(), second());
             }
             break;
 #endif // USE_TIMELIB_H
@@ -390,7 +405,7 @@ void run_command (char *cmd)
             tty->printf(F("  w(rite)       -- write current configuration into the SETUP.INI file\n"));
 #ifdef USE_TIMELIB_H
             tty->printf(F("  z(ap) STAMP   -- set current timestamp for file access\n"));
-            tty->printf(F("                   format is: YYYY-MO-DA HH:MM:SS\n"));
+            tty->printf(F("                   format is: YYYY-MM-DD HH:MM:SS or YYYY-MM-DD HH:MM\n"));
 #endif // USE_TIMELIB_H
             tty->printf(F("  h(elp)        -- display this text\n"));
             tty->printf(F("\nNote: chars in () are optional. Case does not matter.\n"));
@@ -616,6 +631,7 @@ void setup (void)
     led_state(yellow, on);
     delay(1000);
     led_state(green, off);
+    delay(1000);
     led_state(yellow, off);
 
 #if USE_SD
