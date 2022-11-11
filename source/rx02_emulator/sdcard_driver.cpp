@@ -1,7 +1,7 @@
 //
 // sdcard_driver - SD card Fat filesystem access routines
 //
-// Copyright (c) 2015-2021, Donald N North
+// Copyright (c) 2015-2022, Donald N North
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the "Software"),

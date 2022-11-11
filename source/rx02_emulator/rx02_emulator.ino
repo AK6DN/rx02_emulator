@@ -1,7 +1,7 @@
 //
-// RX8E/RX28/RX11/RX211/RXV11/RXV21 to TU58/serial or SDcard Interface
+// RX8E/RX28/RX11/RX211/RXV11/RXV21 to SDcard Interface
 //
-// Copyright (c) 2015-2021, Donald N North
+// Copyright (c) 2015-2022, Donald N North
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the "Software"),
@@ -37,13 +37,9 @@
 #define USE_SD     1
 #define TEST_SD    0
 #define DEBUG_SD   1
-//
-#define USE_TU58   0
-#define TEST_TU58  0
-#define DEBUG_TU58 0
 
 // program version id
-#define VERSION  "v1.98"
+#define VERSION  "v1.99"
 
 // baud rate for USB serial debug port
 //
@@ -79,7 +75,6 @@
 //
 #include "my_project.h"
 #include "led_driver.h"
-#include "tu58_driver.h"
 #include "rx02_driver.h"
 #include "sdcard_driver.h"
 
@@ -91,22 +86,6 @@
 HardwareSerial *tty = &Serial; // optionally &Serial1 or &Serial2 for other UART connectors
 
 char setup_filename[] = "SETUP.INI";
-
-#if TEST_TU58
-uint8_t c_run;
-uint8_t c_nop;
-uint8_t c_init;
-uint8_t c_diag;
-uint8_t c_seek;
-uint8_t c_read;
-uint8_t c_write;
-//
-uint16_t number;
-uint16_t block;
-uint16_t value;
-//
-uint8_t tmp_buffer[128];
-#endif // TEST_TU58
 
 
 
@@ -460,95 +439,8 @@ void run_user (char c)
         }
     }
 
-#if TEST_TU58
-    if (isDigit(c))    { value = 10*value + (c - '0'); }
-    else if (c == 'B') { tty->printf("BLOCK %u\n", value);  block = value;  value = 0; }
-    else if (c == 'N') { tty->printf("NUMBER %u\n", value); number = value; value = 0; }
-    else if (c == 'I') { tty->printf("INIT\n");  c_init = 1; }
-    else if (c == 'R') { tty->printf("READ\n");  c_read = 1; }
-    else if (c == 'W') { tty->printf("WRITE\n"); c_write = 1; }
-    else if (c == 'C') { tty->printf("COPY\n");  c_read = c_write = 1; }
-    else if (c == 'D') { tty->printf("DIAG\n");  c_diag = 1; }
-    else if (c == 'P') { tty->printf("NOP\n");   c_nop = 1; }
-    else if (c == 'S') { tty->printf("SEEK\n");  c_seek = 1; }
-    else if (c == 'H') { tty->printf("HALT\n");  c_read = c_write = 0; }
-#endif // TEST_TU58
-
     return;
 }
-
-
-
-#if TEST_TU58
-//
-// run tu58 commands
-//
-void run_tu58 (void)
-{
-    int8_t sts;
-
-    if (true) {
-
-        if (c_init) {
-            sts = tu_init();
-            if (DEBUG_TU58) tty->printf("init: status=%d\n", sts);
-        }
-
-        if (c_diag) {
-            sts = tu_diag();
-            if (DEBUG_TU58) tty->printf("diag: status=%d\n", sts);
-        }
-
-        if (c_nop) {
-            sts = tu_nop();
-            if (DEBUG_TU58) tty->printf("nop: status=%d\n", sts);
-        }
-
-        if (c_seek) {
-            sts = tu_seek(0, block);
-            if (DEBUG_TU58) tty->printf("seek:  unit=%d block=0x%04X status=%d\n", 0, block, sts);
-        }
-
-        if (c_read) {
-            sts = tu_read(0, block, sizeof(tmp_buffer), tmp_buffer);
-            if (DEBUG_TU58) {
-                uint16_t i;
-                tty->printf("read:  unit=%d block=0x%04X count=0x%04X status=%d\n", 0, block, sizeof(tmp_buffer), sts);
-                for (i = 0; i < sizeof(tmp_buffer); ++i) {
-                    if (i % 32 == 0) tty->printf("  ");
-                    tty->printf(" %02X", tmp_buffer[i]);
-                    if (i % 32 == 31) tty->printf("\n");
-                }
-            }
-        }
-
-        if (c_write) {
-            sts = tu_write(1, block, sizeof(tmp_buffer), tmp_buffer);
-            if (DEBUG_TU58) {
-                uint16_t i;
-                tty->printf("write: unit=%d block=0x%04X count=0x%04X status=%d\n", 1, block, sizeof(tmp_buffer), sts);
-                for (i = 0; i < sizeof(tmp_buffer); ++i) {
-                    if (i % 32 == 0) tty->printf("  ");
-                    tty->printf(" %02X", tmp_buffer[i]);
-                    if (i % 32 == 31) tty->printf("\n");
-                }
-            }
-        }
-
-        if (c_read || c_write || c_seek || c_init || c_diag || c_nop) {
-            number -= 1;
-            block += 1;
-            if (number == 0) {
-                c_read = c_write = c_seek = c_init = c_diag = c_nop = 0;
-                number = 1;
-            }
-        }
-
-    }
-
-    return;
-}
-#endif // TEST_TU58
 
 
 
@@ -647,25 +539,6 @@ void setup (void)
     }
 #endif // USE_SD
 
-#if TEST_TU58
-    // init globals
-    number = 1;
-    block = 0;
-    value = 0;
-    c_write = 0;
-    c_read = 0;
-    c_seek = 0;
-    c_diag = 0;
-    c_init = 0;
-    c_nop = 0;
-#endif // TEST_TU58
-
-#if USE_TU58
-    // init tu58 interface
-    if (DEBUG_TU58) tu_debug(tty, DEBUG_TU58);
-    tu_initialize(1000000L, &Serial1);
-#endif // USE_TU58
-
 #if USE_RX02
     // init rx11/211/8e interface
     if (DEBUG_RX02) rx_debug(tty, DEBUG_RX02);
@@ -697,13 +570,6 @@ void loop (void)
 {
     // check if user typed a character
     if (tty->available()) run_user(tty->read());
-
-#if USE_TU58
-  #if TEST_TU58
-    // tu58 commands
-    run_tu58();
-   #endif // TEST_TU58
-#endif // USE_TU58
 
 #if USE_RX02
     // process RX function
