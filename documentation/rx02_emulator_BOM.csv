@@ -5,7 +5,7 @@ Assembly Order,Quantity,Reference,Side,Note,Description,Manufacturer,Manufacture
 4,1,R4,Top,-,"120ohm,1/4W resistor",Yageo,CFR-25JB-52-120R,120QBK-ND
 5,1,U1,Top,-,14p 300mil DIP socket,Assman,A 14-LC-TT,AE9989-ND
 6,3,C1-C3,Top,-,"100nF/16V ceramic capacitor, 100mil spacing",Vishay,K104K10X7RF53L2,BC5137-ND
-7,7,Q1-Q7,Top,-,"2N7000 transistor, TO-92 package",Microchip,2N7000-G,2N7000-G-ND
+7,7,Q1-Q7,Top,-,"2N7000 transistor, TO-92 package",Onsemi,2N7000BU,2N7000BU-ND
 8,1,J1,Top,-,20x2P 100mil male box header,Sullins Connector,SBH11-PBPC-D20-ST-BK,S9175-ND
 9,1,D1,Top,-,"LED, RED, 5mm diameter, 100mil spacing",Broadcom,HLMP-4700,516-1325-ND
 10,1,D2,Top,-,"LED, YEL, 5mm diameter, 100mil spacing",Broadcom,HLMP-4719,516-1326-ND
