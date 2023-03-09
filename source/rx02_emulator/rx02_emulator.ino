@@ -1,5 +1,5 @@
 //
-// RX8E/RX28/RX11/RX211/RXV11/RXV21 to SDcard Interface
+// RX8E/RX28/RX11/RX211/RXV11/RXV21 Interface to RX01/RX02 Drive Emulator with microSD Card Storage
 //
 // Copyright (c) 2015-2022, Donald N North
 //
@@ -30,9 +30,9 @@
 //
 // definitions
 //
-#define USE_RX02   1
-#define TEST_RX02  0
-#define DEBUG_RX02 1
+#define USE_RX     1
+#define TEST_RX    0
+#define DEBUG_RX   1
 //
 #define USE_SD     1
 #define TEST_SD    0
@@ -539,11 +539,11 @@ void setup (void)
     }
 #endif // USE_SD
 
-#if USE_RX02
+#if USE_RX
     // init rx11/211/8e interface
-    if (DEBUG_RX02) rx_debug(tty, DEBUG_RX02);
+    if (DEBUG_RX) rx_debug(tty, DEBUG_RX);
     rx_initialize(true);
-#endif // USE_RX02
+#endif // USE_RX
 
 #if USE_SD
     // initial configuration file ?
@@ -571,10 +571,10 @@ void loop (void)
     // check if user typed a character
     if (tty->available()) run_user(tty->read());
 
-#if USE_RX02
+#if USE_RX
     // process RX function
     rx_function();
-#endif // USE_RX02
+#endif // USE_RX
 
     // done
     return;

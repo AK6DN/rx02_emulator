@@ -172,7 +172,7 @@ https://www.arduino.cc/
 
 and click on the `Software` tab to get to the download page.
 
-Scroll down to the `Download the Arduino IDE` section and download the installer appropriate for your system.
+Scroll down to the `Download the Arduino IDELegacy IDE (1.8.X)` section and download the installer appropriate for your system. All development and testing to data has been with the legacy 1.X IDE. I have done nothing with the newer 2.X IDE, so if you want to use that you are on your own.
 
 Run the install.
 

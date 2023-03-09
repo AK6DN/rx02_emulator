@@ -55,74 +55,74 @@
 
 // RXCS control/status bit definitions
 
-#define RXCS_GO		      (1<<0)		// GO bit                       (reference only; not used in drive)
-#define RXCS_FUNCTION	  (7<<1)		// function bitfield            (all)
-#define RXCS_UNITSEL	  (1<<4)		// unit select                  (all)
-#define RXCS_DONE	      (1<<5)		// function complete            (reference only; not used in drive)
-#define RXCS_INTENB     (1<<6)		// interrupt enable             (reference only; not used in drive)
+#define RXCS_GO         (1<<0)    // GO bit                       (reference only; not used in drive)
+#define RXCS_FUNCTION   (7<<1)    // function bitfield            (all)
+#define RXCS_UNITSEL    (1<<4)    // unit select                  (all)
+#define RXCS_DONE       (1<<5)    // function complete            (reference only; not used in drive)
+#define RXCS_INTENB     (1<<6)    // interrupt enable             (reference only; not used in drive)
 #define RXCS_8BIT       (1<<6)    // 8b mode                      (RX8E/RX28 ONLY)
-#define RXCS_TR		      (1<<7)		// transfer request             (reference only; not used in drive)
+#define RXCS_TR         (1<<7)    // transfer request             (reference only; not used in drive)
 #define RXCS_MAINT      (1<<7)    // maintenance mode             (RX8E/RX28 ONLY)
-#define RXCS_DENSEL	    (1<<8)		// density select               (RX211/RX28 w/RX02 ONLY)
-#define RXCS_HEADSEL	  (1<<9)		// head select                  (RX211/RX28 w/RX03 ONLY)
+#define RXCS_DENSEL     (1<<8)    // density select               (RX211/RX28 w/RX02 ONLY)
+#define RXCS_HEADSEL    (1<<9)    // head select                  (RX211/RX28 w/RX03 ONLY)
 #define RXCS_NU10      (1<<10)    // not used                     (all)
-#define RXCS_RX02	     (1<<11)		// RX02 interface               (reference only; not used in drive)
-#define RXCS_EXTADDR   (3<<12)		// upper bits of phys address   (reference only; not used in drive)
-#define RXCS_INIT	     (1<<14)		// initialize RX                (reference only; not used in drive)
-#define RXCS_ERROR	   (1<<15)		// error flag                   (reference only; not used in drive)
+#define RXCS_RX02      (1<<11)    // RX02 interface               (reference only; not used in drive)
+#define RXCS_EXTADDR   (3<<12)    // upper bits of phys address   (reference only; not used in drive)
+#define RXCS_INIT      (1<<14)    // initialize RX                (reference only; not used in drive)
+#define RXCS_ERROR     (1<<15)    // error flag                   (reference only; not used in drive)
 
-#define RXFCN_FILL   	    (0)     // fill buffer
-#define RXFCN_EMPTY	      (1)     // empty buffer
-#define RXFCN_WRSECT	    (2)     // write sector
-#define RXFCN_RDSECT	    (3)     // read sector
-#define RXFCN_SETMEDIA	  (4)	    // set media density
-#define RXFCN_RDSTAT	    (5)	    // read status
-#define RXFCN_WRDDSECT	  (6)     // write deleted data sector
-#define RXFCN_RDERROR	    (7)     // read error code
+#define RXFCN_FILL        (0)     // fill buffer
+#define RXFCN_EMPTY       (1)     // empty buffer
+#define RXFCN_WRSECT      (2)     // write sector
+#define RXFCN_RDSECT      (3)     // read sector
+#define RXFCN_SETMEDIA    (4)     // set media density
+#define RXFCN_RDSTAT      (5)     // read status
+#define RXFCN_WRDDSECT    (6)     // write deleted data sector
+#define RXFCN_RDERROR     (7)     // read error code
 #define RXFCN_INIT        (8)     // init done; pseudo function code
 
 // RXES status bit definitions
 
-#define RXES_CRC	      (1<<0)		// CRC aka READ error           (all)
-#define RXES_SIDRDY	    (1<<1)		// side ready                   (RX211/RX28 ONLY)
+#define RXES_CRC        (1<<0)    // CRC aka READ error           (all)
+#define RXES_SIDRDY     (1<<1)    // side ready                   (RX211/RX28 ONLY)
 #define RXES_PERR       (1<<1)    // parity error                 (RX11/RX8E w/RX01 ONLY)
-#define RXES_INIT		    (1<<2)		// controller init done         (all)
+#define RXES_INIT       (1<<2)    // controller init done         (all)
 #define RXES_RX02       (1<<3)    // set for RX02 drive           (RX28 w/ RX02 ONLY)
-#define RXES_ACLO	      (1<<3)		// set for AC low               (RX211 w/RX02 ONLY)
+#define RXES_ACLO       (1<<3)    // set for AC low               (RX211 w/RX02 ONLY)
 #define RXES_WPERR      (1<<3)    // set for write to WP drive    (RX11/RX8E w/RX01 ONLY)
-#define RXES_DENERR	    (1<<4)		// density error                (all except RX8E w/RX01)
-#define RXES_DRVDEN	    (1<<5)		// diskette double density      (all except RX8E w/RX01)
-#define RXES_DELDATA    (1<<6)		// deleted data detected        (all)
-#define RXES_DRVRDY	    (1<<7)		// selected drive ready         (all)
-#define RXES_UNITSEL    (1<<8)		// unit selected                (RX211 w/RX02 ONLY)
+#define RXES_DENERR     (1<<4)    // density error                (all except RX8E w/RX01)
+#define RXES_DRVDEN     (1<<5)    // diskette double density      (all except RX8E w/RX01)
+#define RXES_DELDATA    (1<<6)    // deleted data detected        (all)
+#define RXES_DRVRDY     (1<<7)    // selected drive ready         (all)
+#define RXES_UNITSEL    (1<<8)    // unit selected                (RX211 w/RX02 ONLY)
 #define RXES_HEADSEL    (1<<9)    // head selected                (RX211 w/RX03 ONLY
-#define RXES_WCOVF	   (1<<10)		// word count overflow          (RX211 w/RX02 ONLY)
+#define RXES_WCOVF     (1<<10)    // word count overflow          (RX211 w/RX02 ONLY)
 #define RXES_NXM       (1<<11)    // nonexistent memory           (RX211 w/RX02 reference only; not used in drive)
 
 // RX error codes
 
 #define RXERR_SUCCESS    0000   // success, no error
-#define RXERR_DR0INIT	   0010		// drive 0 failed to init
-#define RXERR_DR1INIT	   0020		// drive 1 failed to init
+#define RXERR_DR0INIT    0010   // drive 0 failed to init
+#define RXERR_DR1INIT    0020   // drive 1 failed to init
 #define RXERR_STEPHOME   0030   // found home when stepping for init (RX01 ONLY)
-#define RXERR_TRKERR	   0040		// access to track > 76
-#define RXERR_TRKFAIL	   0050		// track not found
+#define RXERR_TRKERR     0040   // access to track > 76
+#define RXERR_TRKFAIL    0050   // track not found
 #define RXERR_SELFDIAG   0060   // self diagnostic fail (RX01 ONLY)
-#define RXERR_SECFAIL	   0070		// sector not found
+#define RXERR_SECFAIL    0070   // sector not found
 #define RXERR_WRITEWP    0100   // write to a WP drive
-#define RXERR_SEPFAIL	   0110		// no SEP clock in 40us
-#define RXERR_PREFAIL	   0120		// preamble not found
-#define RXERR_IDMFAIL	   0130		// ID mark not found
+#define RXERR_SEPFAIL    0110   // no SEP clock in 40us
+#define RXERR_PREFAIL    0120   // preamble not found
+#define RXERR_IDMFAIL    0130   // ID mark not found
 #define RXERR_CRCHEAD    0140   // CRC error on a header (RX01 ONLY)
-#define RXERR_TRKCMP	   0150		// header track miscompare
-#define RXERR_IDMTRYS    0160		// too many tries for IDAM
-#define RXERR_DAMFAIL	   0170		// data AM not found
-#define RXERR_CRCERR	   0200		// CRC error on read
+#define RXERR_TRKCMP     0150   // header track miscompare
+#define RXERR_IDMTRYS    0160   // too many tries for IDAM
+#define RXERR_DAMFAIL    0170   // data AM not found
+#define RXERR_CRCERR     0200   // CRC error on read
 #define RXERR_PERR       0210   // parity error on word from i/f to controller (RX01 ONLY)
-#define RXERR_RWFAIL	   0220	  // r/w failed maint test (RX02 ONLY)
-#define RXERR_WCOVF	     0230		// word count overflow (RX02 ONLY)
-#define RXERR_DENERR	   0240		// density error (RX02 ONLY)
-#define RXERR_KEYERR	   0250		// wrong key word for set density (RX02 ONLY)
+#define RXERR_RWFAIL     0220   // r/w failed maint test (RX02 ONLY)
+#define RXERR_WCOVF      0230   // word count overflow (RX02 ONLY)
+#define RXERR_DENERR     0240   // density error (RX02 ONLY)
+#define RXERR_KEYERR     0250   // wrong key word for set density (RX02 ONLY)
 
 // macros
 
@@ -226,7 +226,7 @@ struct drv_t {
     uint8_t  rdy;           // drive ready
     uint8_t  mode;          // file access read-only vs read-write
     uint8_t  den;           // density
-    uint8_t  ta;		    // track address
+    uint8_t  ta;            // track address
     uint8_t  sa;            // sector address
     uint16_t len;           // read/write length
     uint32_t pos;           // read/write position
