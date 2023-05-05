@@ -15,7 +15,7 @@ Assembly Order,Quantity,Reference,Side,Note,Description,Manufacturer,Manufacture
 14,2,"P2,P3",Bottom,-,"8x1P 100mil male header, 0.230/0.120 pin length, breakaway strip",ref item 13,-,-
 15,1,P7,Bottom,-,"18x2P 100mil male header, 0.230/0.120 pin length, breakaway strip",Sullins Connector,PRPC018DAAN-RC,S2011EC-18-ND
 16,1,P10,Top,-,"7x1P 100mil male header, 0.230/0.120 pin length, breakaway strip",ref item 13,-,-
-17,1,P10,Top,-,Sparkfun microSD breakout board (https://www.sparkfun.com/products/13743),SparkFun,DEV-13743,-
+17,1,P10,Top,-,microSD breakout board,AK6DN,-,-
 18,1,U1,Top,-,74HCT/AHCT14 hex schmitt inverter (or HC/AHC14),Texas Instruments,SN74AHCT14N,296-4674-5-ND
 -,3,"P1,P5,P6",Bottom,NOSTUFF,"8x1P 100mil male header, 0.230/0.120 pin length, breakaway strip",-,-,-
 -,2,"P8,P9",Top,NOSTUFF,"6x1P 100mil male header, 0.230/0.120 pin length, breakaway strip",-,-,-
