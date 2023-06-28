@@ -158,7 +158,11 @@ RX: EMPBUF rx_xmit_es(0000)
 
 (3) This code was written with tap stops set at 4 (versus the default of 2). Manually edit the Arduino <B>preferences.txt</B> file tab size line to be: <B>editor.tabs.size=4</B> if desired.
 
-(4) Right now there is some 'extraneous' code (ie, the TU58 driver interface) that is included by default but not currently used. A future plan is to add support to map a backend TU58 server to a file connection (ie, by using a pseudo filename) so that not only local MicroSD card file access can be supported, but simultaenous access to a backend PC-based file storage server can happen.
+# ALTERNATIVE to ARDUINO IDE #
+
+For those not interested in the source and/or installing the full Arduino IDE environment and tweaking it as necessary, I have now added a precompiled .hex version of the code representing the state of the current source. It is located in the 'binary' folder. There are two versions, without and with the bootloader image present. In most cases you would want to use the version of the .hex without the bootloader as it is already present (and required to be working) in any purchased ArduinoMEGA2560 board.
+
+The process to download the .hex image is documented here: https://www.aranacorp.com/en/generating-and-uploading-hex-files-to-an-arduino/ and uses the XLoader standalone tool that knows how to communicate with an attached Arduino bootlader. Just download the .zip file from the referenced link, and run the tool. No install required. Works on Windows 7 and 10.
 
 # INSTALLATION #
 
