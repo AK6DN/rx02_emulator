@@ -35,8 +35,8 @@ The Arduino controller software has been moved into the source directory.
 
 Sample boot log in the Arduino USB serial monitor window:
 ```
-RX02 Emulator v1.96 (IDE 1.8.19/gcc 7.3.0) - Jul 14 2022 - 14:05:14
-SD: libVersion=2.2.0
+RX02 Emulator v1.99 (IDE 1.8.19/gcc 7.3.0) - Mar 14 2023 - 09:05:14
+SD: libVersion=2.2.2
 SD: cardType=SD3
 SD: cardSize=3781MB
 SD: volType=FAT32
@@ -160,9 +160,9 @@ RX: EMPBUF rx_xmit_es(0000)
 
 # ALTERNATIVE to ARDUINO IDE #
 
-For those not interested in the source and/or installing the full Arduino IDE environment and tweaking it as necessary, I have now added a precompiled .hex version of the code representing the state of the current source. It is located in the 'binary' folder. There are two versions, without and with the bootloader image present. In most cases you would want to use the version of the .hex without the bootloader as it is already present (and required to be working) in any purchased ArduinoMEGA2560 board.
+For those not interested in the source and/or installing the full Arduino IDE environment and tweaking it as necessary, I have now added a precompiled .hex version of the code representing the state of the current source. It is located in the 'binary' folder. There are two versions, without and with the bootloader image present. In most cases you would want to use the version of the .hex without the bootloader as the bootloader is already present (and required to be working) in any purchased ArduinoMEGA2560 board.
 
-The process to download the .hex image is documented here: https://www.aranacorp.com/en/generating-and-uploading-hex-files-to-an-arduino/ and uses the XLoader standalone tool that knows how to communicate with an attached Arduino bootlader. Just download the .zip file from the referenced link, and run the tool. No install required. Works on Windows 7 and 10.
+The process to download the .hex image is documented here: https://www.aranacorp.com/en/generating-and-uploading-hex-files-to-an-arduino/ and uses the xLoader standalone tool that knows how to communicate with an attached Arduino bootlader. Just download the .zip file from the referenced link (or from https://github.com/binaryupdates/xLoader) and run the tool. No install required. Works on Windows 7 and 10.
 
 # INSTALLATION #
 
