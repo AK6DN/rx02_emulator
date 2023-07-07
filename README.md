@@ -162,7 +162,17 @@ RX: EMPBUF rx_xmit_es(0000)
 
 For those not interested in the source and/or installing the full Arduino IDE environment and tweaking it as necessary, I have now added a precompiled .hex version of the code representing the state of the current source. It is located in the 'binary' folder. There are two versions, without and with the bootloader image present. In most cases you would want to use the version of the .hex without the bootloader as the bootloader is already present (and required to be working) in any purchased ArduinoMEGA2560 board.
 
-The process to download the .hex image is documented here: https://www.aranacorp.com/en/generating-and-uploading-hex-files-to-an-arduino/ and uses the xLoader standalone tool that knows how to communicate with an attached Arduino bootlader. Just download the .zip file from the referenced link (or from https://github.com/binaryupdates/xLoader) and run the tool. No install required. Works on Windows 7 and 10.
+There are at least two methods to download a .hex image file to the Arduino that I know of (I am sure there are more ...):
+
+(1) Using `avrdude` in command line mode. This is the way the Arduino IDE does it when you install the IDE and use it to download the compiled .hex file. You can use the installed version of avrdude to do the download, or alternatively if you don't want to install the full IDE and compile from source, you can download the avrdude program directly from here: https://github.com/avrdudes/avrdude 
+
+On the command line:
+  avrdude -D -cwiring -pm2560 -b115200 -PCOM# -Uflash:w:rx02_emulator.ino.hex:i
+where COM# is the port that is associated with your mega2560 Arduino board, and other options that you may desire. Refer to the avrdude documentation.
+
+(2) Using a program called `xLoader` that is available from here: https://github.com/binaryupdates/xLoader . It is a simple Windows standalone application. 
+
+The process to download the .hex image using xLoader is documented here: https://www.aranacorp.com/en/generating-and-uploading-hex-files-to-an-arduino/ 
 
 # INSTALLATION #
 
