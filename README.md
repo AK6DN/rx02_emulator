@@ -35,7 +35,7 @@ The Arduino controller software has been moved into the source directory.
 
 Sample boot log in the Arduino USB serial monitor window:
 ```
-RX02 Emulator v1.99 (IDE 1.8.19/gcc 7.3.0) - Mar 14 2023 - 09:05:14
+RX02 Emulator v2.00 (IDE 1.8.19/gcc 7.3.0) - Jul 11 2023 - 18:52:39
 SD: libVersion=2.2.2
 SD: cardType=SD3
 SD: cardSize=3781MB
@@ -96,7 +96,10 @@ Commands available:
   s(how)        -- show current unit filename assignments
   p(rint)       -- print full emulation state
   i(nit)        -- initialize emulator (like unibus INIT)
+  k(ill)        -- kill the emulator (reset and restart, like reset button)
   w(rite)       -- write current configuration into the SETUP.INI file
+  z(ap) STAMP   -- set current timestamp for file access
+                   format is: YYYY-MM-DD HH:MM:SS or YYYY-MM-DD HH:MM
   h(elp)        -- display this text
 
 Note: chars in () are optional. Case does not matter.

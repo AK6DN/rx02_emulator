@@ -1,7 +1,7 @@
 //
 // RX8E/RX28/RX11/RX211/RXV11/RXV21 Interface to RX01/RX02 Drive Emulator with microSD Card Storage
 //
-// Copyright (c) 2015-2022, Donald N North
+// Copyright (c) 2015-2023, Donald N North
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the "Software"),
@@ -39,7 +39,7 @@
 #define DEBUG_SD   1
 
 // program version id
-#define VERSION  "v1.99"
+#define VERSION  "v2.00"
 
 // baud rate for USB serial debug port
 //
@@ -77,6 +77,13 @@
 #include "led_driver.h"
 #include "rx02_driver.h"
 #include "sdcard_driver.h"
+
+
+
+//
+// global routine definitions
+//
+void (*resetFunc) (void) = 0; // declare reset function at address 0
 
 
 
@@ -318,6 +325,14 @@ void run_command (char *cmd)
             tty->printf(F("... INIT complete\n"));
             break;
 
+        // "kill" do an RX emulator reboot and restart
+        case 'K':
+            tty->printf(F("\n*** Rebooting the emulator ***\n"));
+            delay(1000);
+            resetFunc();
+            tty->printf(F("*** SHOULD NEVER GET HERE***\n"));
+            break;
+
         // "write" write the setup file from the current configuration
         case 'W':
             setup_write(setup_filename);
@@ -381,6 +396,7 @@ void run_command (char *cmd)
             tty->printf(F("  s(how)        -- show current unit filename assignments\n"));
             tty->printf(F("  p(rint)       -- print full emulation state\n"));
             tty->printf(F("  i(nit)        -- initialize emulator (like unibus INIT)\n"));
+            tty->printf(F("  k(ill)        -- kill the emulator (reset and restart, like reset button)\n"));
             tty->printf(F("  w(rite)       -- write current configuration into the SETUP.INI file\n"));
 #ifdef USE_TIMELIB_H
             tty->printf(F("  z(ap) STAMP   -- set current timestamp for file access\n"));
