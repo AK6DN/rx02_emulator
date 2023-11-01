@@ -1062,7 +1062,7 @@ void rx_function (void)
     rx.den = (rx.type == RX_TYPE_RX02) && (rx.cs & RXCS_DENSEL) ? RX_DEN_DD : RX_DEN_SD;
 
     // initial error code: success!
-    rx.ec = RXERR_SUCCESS;
+    if (rx.fcn.code != RXFCN_RDERROR) rx.ec = RXERR_SUCCESS;
 
     // initial error status
     rx_init_es();

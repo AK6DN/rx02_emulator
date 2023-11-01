@@ -39,7 +39,7 @@
 #define DEBUG_SD   1
 
 // program version id
-#define VERSION  "v2.00"
+#define VERSION  "v2.01"
 
 // baud rate for USB serial debug port
 //

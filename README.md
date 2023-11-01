@@ -2,13 +2,11 @@
 
 `rx02_emulator` is a hardware/software emulation of a DEC RX02 (or RX01) dual 8" floppy disk drive. The software runs on an Arduino Mega2560 processor board with a custom hardware interface shield that maps a dozen or so digital port bits to the custom DEC RX drive interface protocol.
 
-The emulator simulates two RX02 drives mapped to files on an attached MicroSD card.
+The emulator simulates two RX02/RX01 drives mapped to files on an attached MicroSD card.
 
 This implementation was originally based on the design at:  http://www.chdickman.com/rx02/ but has been extensively modified for the Arduino and to provide the functionality necessary to pass the DEC RX02 hardware diagnostics.
 
-Currently this design boots/runs under the XXDP and RT-11 operating systems, and passes the DEC RX02 hardware diagnostics ZRXDC0 Performance Exerciser, ZRXEA0 Formatter, and ZRXFB0 RX02/RX211 Logic/Function tests error free.
-
-Testing to date has been performed as an RX02/RX211 interface combo in a UNIBUS PDP-11/44, and in a PDP-8m with an RX8E/RX28 interface so RX01/RX8E and RX02/RX28 configurations can be tested. I do not have access to RX11, RXV11, or RXV21 boards for testing. Limited user testing is ongoing on these other configurations.
+Currently this design boots/runs under the PDP-11 XXDP and RT-11 operating systems and the PDP-8 OS/8 operating system.
 
 The MicroSD card in the emulator is a FAT32 formatted filesystem, and it can be inserted (offline) into a WindowsPC to copy files to/from the device. By default, the files 'RX0.DSK' and 'RX1.DSK' are mapped to drive 0 and 1 on initialization.
 
@@ -35,7 +33,7 @@ The Arduino controller software has been moved into the source directory.
 
 Sample boot log in the Arduino USB serial monitor window:
 ```
-RX02 Emulator v2.00 (IDE 1.8.19/gcc 7.3.0) - Jul 11 2023 - 18:52:39
+RX02 Emulator v2.01 (IDE 1.8.19/gcc 7.3.0) - Nov  1 2023 - 13:34:45
 SD: libVersion=2.2.2
 SD: cardType=SD3
 SD: cardSize=3781MB
@@ -331,6 +329,35 @@ In the lower right of the window, select the maximum baud rate `250000 baud` tha
 In the lower right, select `Carriage Return` line ending, so when you type in the text box at the top of the window, and then click `SEND` a `CR` character will be appended to the end of the string.
 
 At this point you should be seeing debug output in the serial monitor window, and be able to send menu commands to it.
+
+## Validation ##
+
+Testing to date has been performed with a UNIBUS PDP-11/44 with each of an RX211 and an RX11, a UNIBUS PDP-11/34 with an RX211, and an OMNIBUS PDP-8m with an RX8E/RX28 so RX01/RX8E and RX02/RX28 configurations can be tested. I do not have access to RXV11 or RXV21 boards for testing (nor do I have an QBUS systems). Users have tested the emulator with QBUS RXV21 and RXV11 and provided positive feedback.
+
+I have personally tested and validated the following confgurations:
+
+```
+PDP-11/44 with M8256 RX211 ... ZRXFB0 RX211/RX02 Functional Test  ........ PASS
+                               ZRXDC0 RX211/RX02 Performance Exerciser ... PASS
+                               XXDPv25 DY boots and runs ................. PASS
+                               RT-11v5.7 DY boots and runs ............... PASS
+                               RX02WR and RX02RD home grown diagnostics .. PASS
+
+PDP-11/34A with M8256 RX211 .. ZRXFB0 RX211/RX02 Functional Test  ........ PASS
+                               ZRXDC0 RX211/RX02 Performance Exerciser ... PASS
+                               XXDPv25 DY boots and runs ................. PASS
+                               RT-11v5.7 DY boots and runs ............... PASS
+                               RX02WR and RX02RD home grown diagnostics .. PASS
+
+PDP-11/44 with M7846 RX11 .... ZRXBF0 RX11/RX01 Functional Test .......... PASS
+                               ZRXAF0 RX11/RX01 Performance Exerciser .... PASS
+
+PDP-8m with M8357 RX8E/RX01 .. OS8v3Q boots and runs ..................... PASS
+                               RXTEST home grown diagnostic .............. PASS
+
+PDP-8m with M8357 RX28/RX02 .. OS8v3D boots and runs ..................... PASS
+                               RXTEST home grown diagnostic .............. PASS
+```
 
 ## Hardware ##
 
