@@ -31,6 +31,10 @@
 // 02 Oct 2016 - donorth - RX8E/RX28 mode debug...
 // 23 Apr 2020 - donorth - Fixed RX01+RX8E mode to ignore DD mode bit in command word
 // 08 Aug 2021 - donorth - Updated _rx_recv_hs()/_rx_xmit_hs() macros to work w/longer cables
+// 03 Nov 2023 - thunter0512 - Fixes to allow diagnostic ZRXBF0 RX11+RX01 Functional Diagnostic
+//                 to run error free on an 11/34+RX11 configuration:
+//                 (1) Added rx_clr_done() in rx_intr_init() to reset DONE asap upon INIT seen
+//                 (2) In rx_function() do not overwrite rx.ec with RXERR_SUCCESS when rx.fcn.code is RXFCN_RDERROR
 //
 
 
@@ -267,7 +271,8 @@ static uint8_t debugLevel = 0; // debug level, 0=NONE, higher is more
 //
 static void rx_intr_init (void)
 {
-    rx_init_seen = 1;
+    rx_clr_done(); // 03 Nov 2023 fix (1) - clear DONE as soon as we can after INIT asserted
+    rx_init_seen = 1; // indicate INIT has been seen for subsequent processing
     return;
 }
 
@@ -1062,7 +1067,7 @@ void rx_function (void)
     rx.den = (rx.type == RX_TYPE_RX02) && (rx.cs & RXCS_DENSEL) ? RX_DEN_DD : RX_DEN_SD;
 
     // initial error code: success!
-    if (rx.fcn.code != RXFCN_RDERROR) rx.ec = RXERR_SUCCESS;
+    if (rx.fcn.code != RXFCN_RDERROR) rx.ec = RXERR_SUCCESS; // 03-Nov-2023 fix (2)
 
     // initial error status
     rx_init_es();

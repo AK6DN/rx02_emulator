@@ -33,7 +33,7 @@ The Arduino controller software has been moved into the source directory.
 
 Sample boot log in the Arduino USB serial monitor window:
 ```
-RX02 Emulator v2.01 (IDE 1.8.19/gcc 7.3.0) - Nov  1 2023 - 13:34:45
+RX02 Emulator v2.02 (IDE 1.8.19/gcc 7.3.0) - Nov  3 2023 - 22:16:19
 SD: libVersion=2.2.2
 SD: cardType=SD3
 SD: cardSize=3781MB
@@ -337,11 +337,15 @@ Testing to date has been performed with a UNIBUS PDP-11/44 with each of an RX211
 I have personally tested and validated the following confgurations:
 
 ```
-PDP-11/44 with M8256 RX211 ... ZRXFB0 RX211/RX02 Functional Test  ........ PASS
-                               ZRXDC0 RX211/RX02 Performance Exerciser ... PASS
-                               XXDPv25 DY boots and runs ................. PASS
-                               RT-11v5.7 DY boots and runs ............... PASS
-                               RX02WR and RX02RD home grown diagnostics .. PASS
+PDP-11/44 with M8256 RX211 ... ZRXFB0 RX211/RX02 Functional Test  ........ tbd
+                               ZRXDC0 RX211/RX02 Performance Exerciser ... tbd
+                               XXDPv25 DY boots and runs ................. tbd
+                               RT-11v5.7 DY boots and runs ............... tbd
+                               RX02WR and RX02RD home grown diagnostics .. tbd
+
+PDP-11/44 with M7846 RX11 .... ZRXBF0 RX11/RX01 Functional Test .......... PASS
+                               ZRXAF0 RX11/RX01 Performance Exerciser .... PASS
+                               RT-11v5.3 DX boots and runs ............... PASS
 
 PDP-11/34A with M8256 RX211 .. ZRXFB0 RX211/RX02 Functional Test  ........ PASS
                                ZRXDC0 RX211/RX02 Performance Exerciser ... PASS
@@ -349,14 +353,22 @@ PDP-11/34A with M8256 RX211 .. ZRXFB0 RX211/RX02 Functional Test  ........ PASS
                                RT-11v5.7 DY boots and runs ............... PASS
                                RX02WR and RX02RD home grown diagnostics .. PASS
 
-PDP-11/44 with M7846 RX11 .... ZRXBF0 RX11/RX01 Functional Test .......... PASS
-                               ZRXAF0 RX11/RX01 Performance Exerciser .... PASS
+PDP-11/34A with M7846 RX11 ... ZRXBF0 RX11/RX01 Functional Test .......... tbd
+                               ZRXAF0 RX11/RX01 Performance Exerciser .... tbd
+                               RT-11v5.3 DX boots and runs ............... tbd
 
-PDP-8m with M8357 RX8E/RX01 .. OS8v3Q boots and runs ..................... PASS
-                               RXTEST home grown diagnostic .............. PASS
+PDP-8m with M8357 RX8E/RX01 .. OS8v3Q boots and runs ..................... tbd
+                               RXTEST home grown diagnostic .............. tbd
 
-PDP-8m with M8357 RX28/RX02 .. OS8v3D boots and runs ..................... PASS
-                               RXTEST home grown diagnostic .............. PASS
+PDP-8m with M8357 RX28/RX02 .. OS8v3D boots and runs ..................... tbd
+                               RXTEST home grown diagnostic .............. tbd
+```
+
+Other users have supplied the following test results:
+
+```
+PDP-11/34 with M7846 RX11 .... ZRXBF0 RX11/RX01 Functional Test .......... PASS (thunter0512)
+                               ZRXAF0 RX11/RX01 Performance Exerciser .... PASS (thunter0512)
 ```
 
 ## Hardware ##
