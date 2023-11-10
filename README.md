@@ -337,15 +337,11 @@ Testing to date has been performed with a UNIBUS PDP-11/44 with each of an RX211
 I have personally tested and validated the following confgurations:
 
 ```
-PDP-11/44 with M8256 RX211 ... ZRXFB0 RX211/RX02 Functional Test  ........ tbd
-                               ZRXDC0 RX211/RX02 Performance Exerciser ... tbd
-                               XXDPv25 DY boots and runs ................. tbd
-                               RT-11v5.7 DY boots and runs ............... tbd
-                               RX02WR and RX02RD home grown diagnostics .. tbd
-
-PDP-11/44 with M7846 RX11 .... ZRXBF0 RX11/RX01 Functional Test .......... PASS
-                               ZRXAF0 RX11/RX01 Performance Exerciser .... PASS
-                               RT-11v5.3 DX boots and runs ............... PASS
+PDP-11/44 with M8256 RX211 ... ZRXFB0 RX211/RX02 Functional Test  ........ PASS
+                               ZRXDC0 RX211/RX02 Performance Exerciser ... PASS
+                               XXDPv25 DY boots and runs ................. PASS
+                               RT-11v5.7 DY boots and runs ............... PASS
+                               RX02WR and RX02RD home grown diagnostics .. PASS
 
 PDP-11/34A with M8256 RX211 .. ZRXFB0 RX211/RX02 Functional Test  ........ PASS
                                ZRXDC0 RX211/RX02 Performance Exerciser ... PASS
@@ -353,15 +349,19 @@ PDP-11/34A with M8256 RX211 .. ZRXFB0 RX211/RX02 Functional Test  ........ PASS
                                RT-11v5.7 DY boots and runs ............... PASS
                                RX02WR and RX02RD home grown diagnostics .. PASS
 
+PDP-11/44 with M7846 RX11 .... ZRXBF0 RX11/RX01 Functional Test .......... PASS
+                               ZRXAF0 RX11/RX01 Performance Exerciser .... PASS
+                               RT-11v5.3 DX boots and runs ............... PASS
+
 PDP-11/34A with M7846 RX11 ... ZRXBF0 RX11/RX01 Functional Test .......... tbd
                                ZRXAF0 RX11/RX01 Performance Exerciser .... tbd
                                RT-11v5.3 DX boots and runs ............... tbd
 
-PDP-8m with M8357 RX8E/RX01 .. OS8v3Q boots and runs ..................... tbd
-                               RXTEST home grown diagnostic .............. tbd
+PDP-8m with M8357 RX8E/RX01 .. OS8v3Q boots and runs ..................... PASS
+                               RXTEST home grown diagnostic .............. PASS
 
-PDP-8m with M8357 RX28/RX02 .. OS8v3D boots and runs ..................... tbd
-                               RXTEST home grown diagnostic .............. tbd
+PDP-8m with M8357 RX28/RX02 .. OS8v3D boots and runs ..................... PASS
+                               RXTEST home grown diagnostic .............. PASS
 ```
 
 Other users have supplied the following test results:
