@@ -332,7 +332,7 @@ At this point you should be seeing debug output in the serial monitor window, an
 
 ## Validation ##
 
-Testing to date has been performed with a UNIBUS PDP-11/44 with each of an RX211 and an RX11, a UNIBUS PDP-11/34 with an RX211, and an OMNIBUS PDP-8m with an RX8E/RX28 so RX01/RX8E and RX02/RX28 configurations can be tested. I do not have access to RXV11 or RXV21 boards for testing (nor do I have an QBUS systems). Users have tested the emulator with QBUS RXV21 and RXV11 and provided positive feedback.
+Testing to date has been performed with a UNIBUS PDP-11/44 with each of an RX211 and an RX11, a UNIBUS PDP-11/34A with each of an RX211 and an RX11, and an OMNIBUS PDP-8m with an RX8E/RX28 so RX01/RX8E and RX02/RX28 configurations can be tested. I do not have access to RXV11 or RXV21 boards for testing (nor do I have an QBUS systems). Users have tested the emulator with QBUS RXV21 and RXV11 and provided positive feedback.
 
 I have personally tested and validated the following confgurations:
 
