@@ -191,6 +191,8 @@ and click on the `Software` tab to get to the download page.
 
 Scroll down to the `Download the Arduino IDELegacy IDE (1.8.X)` section and download the installer appropriate for your system. All development and testing to data has been with the legacy 1.X IDE. I have done nothing with the newer 2.X IDE, so if you want to use that you are on your own.
 
+Update: I have installed the IDE 2.2.1 alongside my existing IDE 1.8.19. They live in separate directories so can be simultaneously installed. They share library and board file definitions, so I was able to launch IDE 2.2.1 and recompile and download the existing design done under IDE 1.8.19 with no errors. So the changes below for adding printf support and installing the SDFAT (and optional TIMELIB) libraries should take place following the existing instructions. One anomaly is after the compile the Arduino IDE version reported is IDE 1.6.7, when one might expect it to be IDE 2.2.1. This is a 'bug' reported in github and it appears the Arduino developers don't seem to feel it makes a difference and are reluctant to change it. So just be warned about the somewhat bogus report the program was compiled under IDE 1.6.7 when it appears in the compiled code welcome message.
+
 Run the install.
 
 ## SD FAT Library ##
